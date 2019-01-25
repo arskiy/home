@@ -1,0 +1,84 @@
+alignment top_right
+background no
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont Arial:size=12 #	Editar depois
+gap_x 20
+gap_y 0
+border_inner_margin 20
+max_specials 1024
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_class Conky
+own_window_type desktop
+own_window_argb_visual yes
+own_window_argb_value 150
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+text_buffer_size 1024
+
+TEXT
+${alignc}Info
+${voffset -8}$hr${voffset 10}
+${color grey}Date:$color ${time %A %B %e, %l:%M:%S %p}
+${color grey}Uptime:$color $uptime
+${color grey}Hostname:$color $nodename
+${color grey}Outdated packages:$color ${execi 300 apt search '~U' | wc -l}
+${voffset -10}
+${alignc}Weather
+${voffset -8}$hr${voffset 10}
+${color grey}${exec cat /tmp/weather | sed -n '1p' | cut -c 1-15} $alignr $color ${exec cat /tmp/weather | sed -n '1p' | cut -c 16-30 | xargs}
+${color grey}${exec cat /tmp/weather | sed -n '2p' | cut -c 1-15} $alignr $color ${exec cat /tmp/weather | sed -n '2p' | cut -c 16-30 | xargs}
+${color grey}${exec cat /tmp/weather | sed -n '3p' | cut -c 1-15} $alignr $color ${exec cat /tmp/weather | sed -n '3p' | cut -c 16-30 | xargs}
+${color grey}${exec cat /tmp/weather | sed -n '4p' | cut -c 1-15} $alignr $color ${exec cat /tmp/weather | sed -n '4p' | cut -c 16-30 | xargs}
+${color grey}${exec cat /tmp/weather | sed -n '5p' | cut -c 1-15} $alignr $color ${exec cat /tmp/weather | sed -n '5p' | cut -c 16-30 | xargs}
+${color grey}${exec cat /tmp/weather | sed -n '6p' | cut -c 1-15} $alignr $color ${exec cat /tmp/weather | sed -n '6p' | cut -c 16-30 | xargs}
+${voffset -50}${execi 300 curl -4 wttr.in | sed -n '3,7p' | perl -pe 's/\e\[?.*?[\@-~]//g' > /tmp/weather}
+${voffset -10}
+${alignc}CPU
+${voffset -8}$hr${voffset 10}
+${color grey}CPU:$color ${execi 100000 cat /proc/cpuinfo | grep -m 1 'model name' | sed -e 's/model name.*: //' | sed -e 's/(tm)//'}
+${color grey}Frequency:$color $freq_g GHz
+${voffset -10}
+${color grey}Core 1:$color ${cpu cpu1}%$alignr${cpubar cpu1 6,250}
+${color grey}Core 2:$color ${cpu cpu2}%$alignr${cpubar cpu2 6,250}
+${color grey}Core 3:$color ${cpu cpu3}%$alignr${cpubar cpu3 6,250}
+${color grey}Core 4:$color ${cpu cpu4}%$alignr${cpubar cpu4 6,250}
+${color grey}${top name 1} ${alignr}${color}${top cpu 1} %
+${color grey}${top name 2} ${alignr}${color}${top cpu 2} %
+${color grey}${top name 3} ${alignr}${color}${top cpu 3} %
+${color grey}${top name 4} ${alignr}${color}${top cpu 4} %
+${voffset -10}
+${alignc}RAM
+${voffset -8}$hr${voffset 10}
+${color grey}RAM:$color ${membar 6}
+$alignr ${color grey}$mem / $memmax$color [ $memperc% ]
+
+${voffset -10}
+${color grey}${top_mem name 1} ${alignr}${color}${top_mem mem_res 1}
+${color grey}${top_mem name 2} ${alignr}${color}${top_mem mem_res 2}
+${color grey}${top_mem name 3} ${alignr}${color}${top_mem mem_res 3}
+${color grey}${top_mem name 4} ${alignr}${color}${top_mem mem_res 4}
+${voffset -10}
+${alignc}Drives
+${voffset -8}$hr${voffset 10}
+${color grey}/$color ${fs_bar 6 /}
+$alignr${color grey}${fs_used /} / ${fs_size /}$color [ ${fs_used_perc /}% ]
+
