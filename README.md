@@ -1,5 +1,6 @@
 ## My dotfiles
 My collection of dotfiles
+![image](https://imgur.com/6L7hByd.png)
 
 ![image](https://imgur.com/axtanYJ.png)
 
