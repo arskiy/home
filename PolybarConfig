@@ -45,7 +45,7 @@ border-color = 0
 ;---------------;
 
 fixed-center = true
-padding-left = 2 
+padding-left = 2
 padding-right = 2
 module-margin = 1.5
 
@@ -102,11 +102,11 @@ border-color = 0
 ;---------------;
 
 fixed-center = true
-padding-left = 2 
+padding-left = 2
 padding-right = 2
 module-margin = 1.5
 
-;modules-right = 
+;modules-right =
 
 
 ;---------;
@@ -234,7 +234,7 @@ label-connected =  %downspeed% |  %upspeed%
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+format-prefix = " "
 format = <label>
 exec = python /home/arskiy/.config/spotify_status.py
 format-underline = #1db954
