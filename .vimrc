@@ -1,4 +1,3 @@
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle For Managing Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -16,11 +15,7 @@ Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
 Plugin 'scrooloose/nerdtree'						" added nerdtree
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'vim-python/python-syntax'
-Plugin 'jreybert/vimagit'
-Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'anned20/vimsence'
-Plugin 'liuchengxu/space-vim-theme'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'rust-lang/rust.vim'
@@ -113,7 +108,7 @@ set tabstop=4
 " Uncomment to autostart the NERDTree
 " autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
-map <F2> :RustFmt
+map <F2> :RustFmt<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeShowLineNumbers=1
@@ -180,6 +175,9 @@ cnoremap %s/ %sm/
 
 map H ^
 map L $
+
+set hidden
+let g:racer_cmd = "/home/user/.cargo/bin/racer"
 
 nnoremap ; :
 
