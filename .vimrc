@@ -10,7 +10,6 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()		" required, all plugins must appear after this line.
-
 Plugin 'gmarik/Vundle.vim'							" Vundle
 Plugin 'vim-airline/vim-airline'					" Airline
 Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
@@ -21,6 +20,13 @@ Plugin 'vim-python/python-syntax'
 Plugin 'jreybert/vimagit'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'anned20/vimsence'
+Plugin 'liuchengxu/space-vim-theme'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'rust-lang/rust.vim'
+Plugin 'cespare/vim-toml'
+Plugin 'racer-rust/vim-racer'
+"Plugin 'townk/vim-autoclose'
 "Plugin 'klen/python-mode'                          " Python Mode
 
 call vundle#end()		" required, all plugins must appear before this line.
@@ -66,7 +72,7 @@ set rtp+=/usr/share/powerline/bindings/vim/
 set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
-" set t_Co=256
+set t_Co=256
 
 syntax on
 set number relativenumber
@@ -91,6 +97,12 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
+
+set autoindent
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
@@ -101,6 +113,7 @@ set tabstop=4
 " Uncomment to autostart the NERDTree
 " autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
+map <F2> :RustFmt
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeShowLineNumbers=1
@@ -118,7 +131,7 @@ hi Statement ctermfg=3
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mouse Scrolling
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set mouse=nicr
+set mouse=a
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Splits and Tabbed Files
@@ -128,12 +141,49 @@ set splitbelow splitright
 set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
 set incsearch
-set nobackup
+set backup
 set noswapfile
-
+set background=dark
+colorscheme monokai
 let g:minimap_highlight='Visual'
-
+let g:space_vim_transp_bg = 1
 let g:python_highlight_all = 1
 syntax on
 
+let g:rustfmt_autosave = 1
 
+set diffopt+=iwhite " No whitespace in vimdiff
+" Make diffing better: https://vimways.org/2018/the-power-of-diff/
+set diffopt+=algorithm:patience
+set diffopt+=indent-heuristic
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+set splitright
+set splitbelow
+set ruler
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap {<CR> {<CR>}<ESC>O<tab>
+
+nnoremap ? ?\v
+nnoremap / /\v
+cnoremap %s/ %sm/
+
+map H ^
+map L $
+
+nnoremap ; :
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
