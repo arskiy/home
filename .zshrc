@@ -1,4 +1,19 @@
-# Created by newuser for 5.7.1
+# Path to your oh-my-zsh installation.
+export ZSH="/home/arskiy/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+DISABLE_AUTO_UPDATE="true"
+
+plugins=(git rust sudo)
+
+source $ZSH/oh-my-zsh.sh
+
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 POWERLEVEL9K_COLOR_SCHEME='dark'
@@ -49,5 +64,12 @@ function extract () {
   fi
 }
 alias paset="ponymix set-volume"
+alias ls="lsd"
+alias l="lsd -l"
+alias la="lsd -la"
+alias sl="lsd"
 todo
-PATH=$PATH:/home/arskiy/.local/bin
+export PATH=$PATH:/home/arskiy/.local/bin:$HOME/.cargo/bin
+[[ -s /home/arskiy/.autojump/etc/profile.d/autojump.sh ]] && source /home/arskiy/.autojump/etc/profile.d/autojump.sh
+
+	autoload -U compinit && compinit -u
