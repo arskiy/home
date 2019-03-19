@@ -71,5 +71,10 @@ alias la="lsd -la"
 alias sl="lsd"
 alias celar="clear"
 todo
+echo ''
+fortune
 [[ -s /home/arskiy/.autojump/etc/profile.d/autojump.sh ]] && source /home/arskiy/.autojump/etc/profile.d/autojump.sh
+
 	autoload -U compinit && compinit -u
+
+eval $(thefuck --alias)
