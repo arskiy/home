@@ -1,10 +1,11 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vundle For Managing Plugins
+" => Vundle For Managing Pluginins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+let mapleader = "\<Space>"
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -17,13 +18,16 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'anned20/vimsence'
 Plugin 'crusoexia/vim-monokai'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'rust-lang/rust.vim'
-Plugin 'cespare/vim-toml'
-Plugin 'racer-rust/vim-racer'
-"Plugin 'townk/vim-autoclose'
-"Plugin 'klen/python-mode'                          " Python Mode
+Plugin 'ncm2/ncm2'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+" Completion plugins
+Plugin 'ncm2/ncm2-bufword'
+Plugin 'ncm2/ncm2-path'
 
+" Syntactic language support
+Plugin 'cespare/vim-toml'
 call vundle#end()		" required, all plugins must appear before this line.
 
 filetype plugin indent on    " required
@@ -31,13 +35,13 @@ filetype plugin indent on    " required
 "filetype plugin on
 
 " Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PlugininList       - lists configured plugins
+" :PlugininInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PlugininSearch foo - searches for foo; append `!` to refresh local cache
+" :PlugininClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Put your non-Pluginin stuff after this line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remap Keys
@@ -167,6 +171,7 @@ set ruler
 
 inoremap " ""<left>
 inoremap ' ''<left>
+inoremap ( ()<left>
 inoremap {<CR> {<CR>}<ESC>O<tab>
 
 nnoremap ? ?\v
@@ -181,6 +186,23 @@ let g:racer_cmd = "/home/user/.cargo/bin/racer"
 
 nnoremap ; :
 
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+" tab to select
+" and don't hijack my enter key
+set shortmess+=c
+
+    " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
+inoremap <c-c> <ESC>
+
+    " When the <Enter> key is pressed while the popup menu is visible, it only
+    " hides the menu. Use this mapping to close the menu and also start a new
+    " line.
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+let g:python3_host_prog = '/usr/bin/python3'
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
