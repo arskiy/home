@@ -1,6 +1,6 @@
-export PATH=$PATH:/home/arskiy/.local/bin:$HOME/.cargo/bin
+export PATH=$PATH:/home/arskiy/.local/bin:$HOME/.cargo/bin:/home/arskiy/.gem/ruby/2.6.0
 export ZSH="/home/arskiy/.oh-my-zsh"
-
+export CARGO_HOME="/home/arskiy/.cargo"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -69,6 +69,7 @@ alias ls="lsd"
 alias l="lsd -l"
 alias la="lsd -la"
 alias sl="lsd"
+alias ks="lsd"
 alias celar="clear"
 todo
 echo ''
