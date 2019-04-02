@@ -45,13 +45,13 @@ border-color = 0
 ;---------------;
 
 fixed-center = true
-padding-left = 2
+padding-left = 2 
 padding-right = 2
 module-margin = 1.5
 
 modules-left = volume backlight battery network spotify
 modules-center = i3
-modules-right = memory wlan cpu date time
+modules-right = memory wlan cpu date time powermenu
 
 tray-position = none
 tray-detached = true
@@ -102,11 +102,11 @@ border-color = 0
 ;---------------;
 
 fixed-center = true
-padding-left = 2
+padding-left = 2 
 padding-right = 2
 module-margin = 1.5
 
-;modules-right =
+;modules-right = 
 
 
 ;---------;
@@ -170,28 +170,6 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
-[module/mpd]
-type = internal/mpd
-
-label-offline = mpd is offline
-format-online = <icon-prev> <toggle> <icon-next> <label-song>
-format-offline = <label-offline>
-host = 127.0.0.1
-port = 6600
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
-bar-progress-width = 10
-bar-progress-indicator = |
-bar-progress-fill = ─
-bar-progress-empty = ─
-
 [module/backlight]
 type = internal/backlight
 
@@ -206,6 +184,26 @@ label = %percentage%%
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
+
+
+[module/powermenu]
+type = custom/menu
+
+format-padding = 0
+
+label-open = 
+label-close = 
+
+menu-0-0 = "  "
+menu-0-0-foreground = #fba922
+menu-0-0-exec = "reboot"
+menu-0-1 = "  " 
+menu-0-1-foreground = #fba922
+menu-0-1-exec = "shutdown now"
+menu-0-2 = "  "
+menu-0-2-foreground = #fba922
+menu-0-2-exec = "systemctl suspend"
+
 
 [module/wlan]
 type = internal/network
@@ -234,9 +232,9 @@ label-connected =  %downspeed% |  %upspeed%
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+format-prefix = ""
 format = <label>
-exec = python /home/arskiy/.config/spotify_status.py
+exec = python /home/arskiy/.config/spotify_status.py -f '{play_pause} {artist} - {song}'
 format-underline = #1db954
 
 [bar/float]
