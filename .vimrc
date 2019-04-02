@@ -19,13 +19,11 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'anned20/vimsence'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'rust-lang/rust.vim'
-Plugin 'ncm2/ncm2'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'racer-rust/vim-racer'
+Plugin 'w0rp/ale'
+Plugin 'Valloric/YouCompleteMe'
 " Completion plugins
-Plugin 'ncm2/ncm2-bufword'
-Plugin 'ncm2/ncm2-path'
-
 " Syntactic language support
 Plugin 'cespare/vim-toml'
 call vundle#end()		" required, all plugins must appear before this line.
@@ -48,8 +46,12 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Remap ESC to ii
 :imap ii <Esc>
-
 "Disable arrow keys in Normal mode
+" python provider for neovim
+let g:racer_cmd = "/home/user/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let g:powerline_pycmd = "py3"
+"
 no <Up> <Nop>
 no <Down> <Nop>
 no <Left> <Nop>
@@ -90,11 +92,7 @@ set noshowmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
-
 " Be smart when using tabs ;)
-set smarttab
 
 set incsearch
 set ignorecase
@@ -172,21 +170,30 @@ set ruler
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
-inoremap {<CR> {<CR>}<ESC>O<tab>
+inoremap [ []<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 nnoremap ? ?\v
 nnoremap / /\v
 cnoremap %s/ %sm/
 
+map j gj
+map k gk
+
 map H ^
 map L $
+map J 5j
+map K 5k
+
+ino <F1> <ESC>
 
 set hidden
-let g:racer_cmd = "/home/user/.cargo/bin/racer"
 
 nnoremap ; :
 
-autocmd BufEnter * call ncm2#enable_for_buffer()
+let g:minimap_toggle='<C-M>'
+
 set completeopt=noinsert,menuone,noselect
 " tab to select
 " and don't hijack my enter key
@@ -207,3 +214,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <C-Q> tabnext
+nnoremap <C-W> tabprevious
+nnoremap <C-T> tabnew
