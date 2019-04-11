@@ -21,8 +21,9 @@ Plugin 'crusoexia/vim-monokai'
 Plugin 'rust-lang/rust.vim'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'racer-rust/vim-racer'
-Plugin 'w0rp/ale'
+""Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 " Completion plugins
 " Syntactic language support
 Plugin 'cespare/vim-toml'
@@ -56,6 +57,8 @@ no <Up> <Nop>
 no <Down> <Nop>
 no <Left> <Nop>
 no <Right> <Nop>
+no y "+y
+no x "+x
 
 "Disable arrow keys in Insert mode
 ino <Up> <Nop>
@@ -67,13 +70,25 @@ ino <Right> <Nop>
 " => Powerline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline
-set rtp+=/usr/share/powerline/bindings/vim/
+"set rtp+=/usr/share/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
+" set insert mode as beam cursor and normal as block cursor
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" optional reset cursor on start:
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
+
+" Enable commenting an entire line
+nno c ^i//<Space><ESC>^
 
 syntax on
 set number relativenumber
@@ -139,7 +154,7 @@ set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
 set incsearch
 set backup
-set noswapfile
+set swapfile
 set background=dark
 colorscheme monokai
 let g:minimap_highlight='Visual'
@@ -178,6 +193,8 @@ nnoremap ? ?\v
 nnoremap / /\v
 cnoremap %s/ %sm/
 
+no <F3> :!clang-format -style=chromium -i %<CR>
+
 map j gj
 map k gk
 
@@ -209,6 +226,9 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<X1Mouse>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<X2Mouse>"
+
 let g:python3_host_prog = '/usr/bin/python3'
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>

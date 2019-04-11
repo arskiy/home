@@ -43,6 +43,8 @@ alias less="bat"
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 alias clearcmuscache="rm /home/arskiy/.config/cmus/cache"
 function weather(){ curl -s "wttr.in"}
+function hex2dec(){ python -c "print(int('$1', 16))" }
+function dec2hex(){ printf "%X\n" $1 }
 function extract () {
   if [ -f $1 ] ; then
     case $1 in
