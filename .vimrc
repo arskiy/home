@@ -21,11 +21,9 @@ Plugin 'crusoexia/vim-monokai'
 Plugin 'rust-lang/rust.vim'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'racer-rust/vim-racer'
-""Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
-" Completion plugins
-" Syntactic language support
+Plugin 'honza/vim-snippets'
 Plugin 'cespare/vim-toml'
 call vundle#end()		" required, all plugins must appear before this line.
 
@@ -87,6 +85,7 @@ au!
 autocmd VimEnter * silent !echo -ne "\e[2 q"
 augroup END
 
+nmap <F12> :TagbarToggle<CR>
 " Enable commenting an entire line
 nno c ^i//<Space><ESC>^
 
@@ -154,7 +153,7 @@ set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
 set incsearch
 set backup
-set swapfile
+set noswapfile
 set background=dark
 colorscheme monokai
 let g:minimap_highlight='Visual'

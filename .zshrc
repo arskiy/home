@@ -81,3 +81,4 @@ fortune
 	autoload -U compinit && compinit -u
 
 eval $(thefuck --alias)
+alias tb="nc termbin.com 9999"
