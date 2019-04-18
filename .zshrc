@@ -3,13 +3,16 @@ export ZSH="/home/arskiy/.oh-my-zsh"
 export CARGO_HOME="/home/arskiy/.cargo"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
-
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+	startx
+fi
+alias updatenum="bash -c ~/.checkupdates 2>&/dev/null | wc -l"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
  HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
-
+wal -te --theme base16-atelier-lakeside 2>&1 1>&/dev/null
 plugins=(git rust sudo)
 
 source $ZSH/oh-my-zsh.sh
@@ -18,23 +21,19 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 
 POWERLEVEL9K_COLOR_SCHEME='dark'
-POWERLEVEL9K_USER_DEFAULT_BACKGROUND='83'
-POWERLEVEL9K_USER_DEFAULT_FOREGROUND='0'
+POWERLEVEL9K_TIME_BACKGROUND='83'
+POWERLEVEL9K_TIME_FOREGROUND='0'
 POWERLEVEL9K_STATUS_OK_BACKGROUND='238'
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='6'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='8'
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='10'
-POWERLEVEL9K_TIME_BACKGROUND="242"
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND="240"
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
-POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND="black"
 POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="84"
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir vcs)
 
 EDITOR="vim"
 alias vi="vim"
@@ -75,7 +74,7 @@ alias ks="lsd"
 alias celar="clear"
 todo
 echo ''
-fortune
+fortune | cowsay | lolcat
 [[ -s /home/arskiy/.autojump/etc/profile.d/autojump.sh ]] && source /home/arskiy/.autojump/etc/profile.d/autojump.sh
 
 	autoload -U compinit && compinit -u
