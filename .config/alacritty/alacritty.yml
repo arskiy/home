@@ -88,12 +88,13 @@ font:
     
 
     # The `style` can be specified to pick a specific face.
-    style: FuraCode Nerd Font Medium Regular Complete
-
+    #style: FuraCode Nerd Font
+      family: Source Code Pro
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
+      family: Source Code Pro
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
@@ -103,8 +104,9 @@ font:
     #style: Bold
 
   # Italic font face
-  #italic:
+  italic:
     # Font family
+      family: Source Code Pro
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
@@ -143,7 +145,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # Display the time it takes to redraw each frame.
 render_timer: false
@@ -158,7 +160,7 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x191919'
+    background: '0x171717'
     foreground: '0xeaeaea'
 
     # Bright and dim foreground colors
@@ -253,7 +255,7 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.7
+background_opacity: 1.0
 
 # Mouse bindings
 #
@@ -297,7 +299,7 @@ mouse:
     #   - (macOS) open
     #   - (Linux) xdg-open
     #   - (Windows) explorer
-    launcher: xdg-open
+    launcher: None
 
     # URL modifiers
     #

@@ -1,7 +1,6 @@
 #! /bin/sh
 
 sxhkd &
-polybar example &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -36,7 +35,7 @@ bspc config focused_frame_opacity 0.1
 ##########################
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Firefox desktop='^2'
-bspc rule -a Discord desktop='^3'
+#bspc rule -a Firefox desktop='^2'
+#bspc rule -a Discord desktop='^3'
 bspc rule -a Spotify pseudo_tiled=on
 bspc rule -a feh floating=on manage=off

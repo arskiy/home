@@ -8,15 +8,15 @@ configuration {
 	display-run:     "Execute";
 	display-window:  "Window";
 	show-icons:      true;
-	sidebar-mode:    true;
+	sidebar-mode:    false;
 }
 
 * {
-	background-color:            #000f169e;
-	text-color:                  #f1f1f1;
-	selbg:                       #6b2db6;
-	actbg:                       #3949509e;
-	urgbg:                       #6b2db6;
+	background-color:            #20212920;
+	text-color:                  #d9dafa;
+	selbg:                       #04bd67;
+	actbg:                       #2021299e;
+	urgbg:                       #04bd67;
 	winbg:			     #f1f1f1;
 
 	selected-normal-foreground:  @winbg;
@@ -45,8 +45,8 @@ configuration {
 window {
 	location:	 center;
 	anchor:		 center;
-	height:		 75%;
-	width:		 75%;
+	height:		 57.5%;
+	width:		 50%;
 	orientation: horizontal;
 	children:	 [mainbox];
 }

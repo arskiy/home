@@ -1,4 +1,3 @@
-
 # wm independent hotkeys
 #
 
@@ -13,7 +12,7 @@ super + e
 	rofi -show run -theme ~/.config/rofi/conf.rasi	
 
 super + p
-	firefox
+	qutebrowser
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -107,7 +106,8 @@ super + {_,shift + }{1-9,0}
 #
 # preselect
 #
-
+#hyper + {h,j,k,l}
+#	xdotool mousemove_relative {-30 0, 0 -30, 30 0, -30 0}
 # preselect the direction
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
@@ -139,3 +139,18 @@ super + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# move the mouse
+alt + {h,j,k,l}
+	xdotool mousemove_relative {-- -30 0,0 30,0 -30,30 0}
+
+alt + {Left,Down,Up,Right}
+	xdotool mousemove_relative {-- -20 0,0 20,0 -20,20 0}
+
+# click left button
+alt + p
+	xdotool click 1
+
+# click right button
+alt + o
+	xdotool click 3
