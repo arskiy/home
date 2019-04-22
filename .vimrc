@@ -4,7 +4,7 @@
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
+hi Normal          ctermfg=252 ctermbg=none
 let mapleader = "\<Space>"
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -16,13 +16,14 @@ Plugin 'vim-airline/vim-airline-themes'				" Airline Themes
 Plugin 'scrooloose/nerdtree'						" added nerdtree
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'anned20/vimsence'
+"Plugin 'anned20/vimsence'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'rust-lang/rust.vim'
 Plugin 'severin-lemaignan/vim-minimap'
 Plugin 'racer-rust/vim-racer'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
+Plugin 'atelierbram/vim-colors_atelier-schemes'
+" Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rdnetto/YCM-Generator'
 Plugin 'honza/vim-snippets'
 Plugin 'cespare/vim-toml'
 call vundle#end()		" required, all plugins must appear before this line.
@@ -55,8 +56,8 @@ no <Up> <Nop>
 no <Down> <Nop>
 no <Left> <Nop>
 no <Right> <Nop>
-no y "+y
-no x "+x
+"no y "+y
+"no x "+x
 
 "Disable arrow keys in Insert mode
 ino <Up> <Nop>
@@ -72,7 +73,8 @@ ino <Right> <Nop>
 
 " Always show statusline
 set laststatus=2
-
+set noswapfile
+set nobackup
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 " set insert mode as beam cursor and normal as block cursor
@@ -152,10 +154,9 @@ set splitbelow splitright
 set path+=**					" Searches current directory recursively.
 set wildmenu					" Display all matches when tab complete.
 set incsearch
-set backup
-set noswapfile
+set backspace=2
 set background=dark
-colorscheme monokai
+"colorscheme Atelier_HeathDark
 let g:minimap_highlight='Visual'
 let g:space_vim_transp_bg = 1
 let g:python_highlight_all = 1
@@ -221,12 +222,12 @@ inoremap <c-c> <ESC>
     " When the <Enter> key is pressed while the popup menu is visible, it only
     " hides the menu. Use this mapping to close the menu and also start a new
     " line.
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+"inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<X1Mouse>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<X2Mouse>"
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<X1Mouse>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<X2Mouse>"
 
 let g:python3_host_prog = '/usr/bin/python3'
 nnoremap <C-J> <C-W><C-J>

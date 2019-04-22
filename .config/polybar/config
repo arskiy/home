@@ -7,11 +7,18 @@
 ;   ██╔═══╝ ██╔═══╝  ██║  ███║ ██╔══██╗ ██║ ██╔══██╗      
 ;   ██║      ██████║ ██║   ██║ ██║  ██║ ██║ ██║  ██║     
 ;   ╚═╝      ╚═════╝ ╚═╝   ╚═╝ ╚═╝  ╚═╝ ╚═╝ ╚═╝  ╚═╝      
+;	
+;	and
 ;
+;      ___   ___  ______ ________  __
+;     / _ | / _ \/ __/ //_/  _/\ \/ /
+; 	 / __ |/ , _/\ \/ ,< _/ /   \  /
+;	/_/ |_/_/|_/___/_/|_/___/   /_/
 ;
 ;   https://github.com/Jon285/config
+;   https://github.com/arsukeey/dotfiles
 ;
-;   Just my very basic polybar config
+;   Just ~my~ our very basic polybar config
 ;   Edit it according to your needs
 ;
 ;==========================================================
@@ -52,6 +59,7 @@ font-2 = FontAwesome:size=10;0
 font-3 = NotoSans-Regular:size=10;0
 
 modules-left = filesystem temperature cpu memory battery
+modules-center = date
 modules-right = updates powermenu
 [bar/cyber]
 width = 100%
@@ -76,13 +84,14 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=8;0
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=8;0
-font-3 = FontAwesome:pixelsize=8;0
-font-4 = "Font Awesome 5 Free:style=Regular:size=8;-1"
-font-5 = "Font Awesome 5 Free:style=Solid:size=8;-1"
-font-6 = "Font Awesome 5 Brands:style=Regular:size=8;-1"
+font-0 = fixed:pixelsize=9;0
+font-1 = unifont:fontformat=truetype:size=9:antialias=false;0
+font-2 = siji:pixelsize=9;0
+font-3 = FontAwesome:pixelsize=10;0
+font-4 = "Font Awesome 5 Free:style=Regular:size=10;0"
+font-5 = "Font Awesome 5 Free:style=Solid:size=10;0"
+font-6 = "Font Awesome 5 Brands:style=Regular:size=10;0"
+font-7 = "icons\-in\-terminal:style=in-terminal:size=10;0"
 
 modules-left = bspwm
 modules-center = spotify
@@ -114,12 +123,16 @@ cursor-scroll = ns-resize
 [module/bspwm]
 type = internal/bspwm
 
-ws-icon-0 = I;
+ws-icon-0 = I;
 ws-icon-1 = II;
-ws-icon-2 = III;
-ws-icon-3 = IV;
-ws-icon-5 = V;
-ws-icon-default = 
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI; 
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;
+ws-icon-9 = X;
 
 format = <label-state> <label-mode>
 
@@ -235,7 +248,6 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
 
 label = %date% %time%
 
@@ -427,7 +439,7 @@ type = internal/fs
 interval = 25
 
 format = /: <label-mounted>
-
+format-foreground = ${colors.foreground-alt}
 ;format-underline = #5fea46
 ;format-warn-underline = ${self.format-underline}
 
