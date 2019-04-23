@@ -48,7 +48,10 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir vcs)
 EDITOR="vim"
 alias vi="vim"
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-alias less="bat"
+alias less="bat --plain"
+alias dog="bat --plain"
+alias cat="bat --plain"
+
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 alias clearcmuscache="rm /home/arskiy/.config/cmus/cache"
 function weather(){ curl -s "wttr.in"}
@@ -94,7 +97,7 @@ function extract () {
     echo "'$1' is not a valid file!"
   fi
 }
-alias paset="ponymix set-volume"
+alias paset="ponymix set-volume 1>&/dev/null"
 alias ls="lsd"
 alias l="lsd -l"
 alias la="lsd -la"
