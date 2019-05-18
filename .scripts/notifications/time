@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dunstify "Current time is" "$(date +%R)"

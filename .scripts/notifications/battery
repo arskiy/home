@@ -1,0 +1,7 @@
+#!/bin/sh
+
+capacity=$(cat /sys/class/power_supply/BAT1/capacity) || exit
+
+[ "$capacity" = "100" ] && dunstify "" "Battery is full. Nice!" && exit
+
+dunstify "Battery is at" "$capacity%"

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+
+if (($# == 1)); then
+  clang++ $1 -o ${1%.*} && echo "Compiled $1 successfully"
+else
+  echo 'Expected one argument.'
+fi

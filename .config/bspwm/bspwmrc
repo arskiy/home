@@ -1,10 +1,10 @@
 #! /bin/sh
 
 sxhkd &
-polybar -c /home/arskiy/.config/polybar/config cyber &
-polybar -c /home/arskiy/.config/polybar/config top &
+#polybar -c /home/arskiy/.config/polybar/config top &
+sh /home/arskiy/.bing.sh
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d I II III IV V VI
 
 ##########################
 #
@@ -12,12 +12,12 @@ bspc monitor -d I II III IV V VI VII VIII IX X
 #
 ##########################
 
-bspc config border_width         0
-bspc config window_gap           10
+bspc config border_width         1
+bspc config window_gap           6
 
-bspc config split_ratio         0.50
-bspc config borderless_monocle  true
-bspc config gapless_monocle     true
+#bspc config split_ratio         0.50
+#bspc config borderless_monocle  true
+#bspc config gapless_monocle     true
 bspc config focus_follows_pointer true
 bspc config auto_alternate true
 bspc config auto_cancel true
@@ -41,3 +41,4 @@ bspc rule -a qutebrowser desktop='2'
 bspc rule -a Discord desktop='1'
 bspc rule -a Spotify desktop='5' pseudo_tiled=on
 bspc rule -a feh floating=on manage=off
+bspc rule -a Emacs state=tiled

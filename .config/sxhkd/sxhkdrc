@@ -3,13 +3,20 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	st
 
 # program launcher
 super + d
 	rofi -show drun -theme ~/.config/rofi/conf.rasi	
-super + e
-	rofi -show run -theme ~/.config/rofi/conf.rasi	
+
+super + z
+	rofi -show run -theme ~/.config/rofi/flat-orange.rasi	
+
+super + x
+  man -k . | dmenu -l 30 | awk '{print $1}' | xargs -r man -Tpdf | zathura -
+
+super + c
+  /bin/ls -d /home/arskiy/Files/PDFs/* | dmenu -l 10 | awk '{gsub(/ /,"\\ ")}8' | xargs cat | zathura -
 
 super + p
 	qutebrowser
@@ -65,9 +72,6 @@ super + g
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
 
 #
 # focus/swap
@@ -80,10 +84,6 @@ super + {_,shift + }{h,j,k,l}
 # focus the node for the given path jump
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
-
-# focus the next/previous node in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -104,53 +104,65 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
-# preselect
-#
-#hyper + {h,j,k,l}
-#	xdotool mousemove_relative {-30 0, 0 -30, 30 0, -30 0}
-# preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-
-#
 # move/resize
 #
 
 # expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
+super + ctrl + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
+super + ctrl + alt + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# move the mouse
-alt + {h,j,k,l}
-	xdotool mousemove_relative {-- -30 0,0 30,0 -30,30 0}
+#
+# start notification scripts (~/.scripts/notifications)
+#
 
-alt + {Left,Down,Up,Right}
-	xdotool mousemove_relative {-- -20 0,0 20,0 -20,20 0}
+# weather 
+alt + w
+  weather
 
-# click left button
+# disk usage
+alt + s
+  disk
+
+# volume
+alt + f
+  volume
+
+# cpu stats
+alt + x
+  cpu
+
+# mem stats
+alt + m
+  mem
+
+# show current time
+alt + t
+  /home/arskiy/.scripts/notifications/time
+
+# battery
+alt + b
+  battery
+
+# show computer temperature
+alt + r
+  temp
+
+# num of packages to update
 alt + p
-	xdotool click 1
+  updates
 
-# click right button
-alt + o
-	xdotool click 3
+# show current date
+alt + d
+  /home/arskiy/.scripts/notifications/date
+
+# show help lmao
+alt + h
+  /home/arskiy/.scripts/notifications/help

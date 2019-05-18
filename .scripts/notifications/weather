@@ -1,0 +1,4 @@
+#!/bin/sh
+
+dunstify "Weather" "$(curl wttr.in/Sao-Paulo?0QT | tr -d '|()\\,`/\-_.' | tr -dc [:graph:][:cntrl:] | sed '/m/d')"
+

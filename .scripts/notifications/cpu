@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dunstify "CPU hogs" "$(cpuusage) $(ps axch o cmd:15,%cpu --sort=%cpu | tail -n 6 | awk '{ x = $0 "\n" x } END { printf "%s", x }')"

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ "$(ponymix get-volume)" = "0" ] && dunstify "Volume" "muted" && exit
+
+dunstify "Volume" "$(ponymix get-volume)%"

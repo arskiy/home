@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dunstify "Temperature:" "$(sensors | awk ' /temp1/ {print $2}')"

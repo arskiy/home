@@ -1,0 +1,3 @@
+#! /bin/sh
+
+dunstify "Today is" "$(date +%Y-%m-%d\ %A)"

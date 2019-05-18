@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dunstify "Memory hogs" "$($HOME/.scripts/notifications/memusage) $(ps axch o cmd:15,%mem --sort=%mem | tail -n 6 | awk '{ x = $0 "\n" x } END { printf "%s", x }')"
