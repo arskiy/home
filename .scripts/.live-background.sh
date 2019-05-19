@@ -1,2 +1,2 @@
 #!/bin/sh
-xwinwrap -fs -fdt -ni -b -nf -- ~/.scripts/.live-background.sh WID
+xwinwrap -fs -fdt -ni -b -nf -- .livestream.sh WID
