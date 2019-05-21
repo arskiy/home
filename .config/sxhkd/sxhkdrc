@@ -25,8 +25,9 @@ super + p
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# print screen (rofshot by astrak)
 Print
-	gnome-screenshot -i
+	/home/arskiy/.scripts/rofshot
 #
 # bspwm hotkeys
 #

@@ -40,6 +40,13 @@ color(){
 
 color
 
+
+# create a dir in /tmp with random name
+ct(){
+  tmp=$(mktemp -d)
+  cd ${tmp}
+}
+
 #
 # load *some* aliases
 #
