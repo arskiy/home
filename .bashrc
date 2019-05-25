@@ -5,12 +5,11 @@
 
 # Load PATH
 export PATH=$PATH:/home/arskiy/.local/bin:$HOME/.cargo/bin:/home/arskiy/.gem/ruby/2.6.0:/home/arskiy/.scripts:/home/arskiy/.scripts/notifications:/home/arskiy/.scripts/dmenu
-
+#
 # Load a Cargo (Rust's library manager) env var
 export CARGO_HOME="/home/arskiy/.cargo"
 
 # Load theme
-wal -te --theme vscode 2>&1 1>&/dev/null
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -40,7 +39,7 @@ color(){
 
 color
 
-
+alias unzip="unzip -d"
 # create a dir in /tmp with random name
 ct(){
   tmp=$(mktemp -d)
@@ -80,8 +79,9 @@ alias rust="cd ~/dev/Rust"
 
 # tool for sharing code
 alias h="haste | xclip -i"
-eval $(thefuck --alias)
+alias fortune="fortune /home/arskiy/.config/fortunes"
 
 todo
 fortune | cowsay | lolcat
 ls -t
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig

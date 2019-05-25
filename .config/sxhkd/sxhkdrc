@@ -137,7 +137,7 @@ alt + f
   volume
 
 # cpu stats
-alt + x
+alt + z
   cpu
 
 # mem stats
@@ -161,7 +161,7 @@ alt + p
   updates
 
 # show current date
-alt + d
+alt + q
   /home/arskiy/.scripts/notifications/date
 
 # show help lmao

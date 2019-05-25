@@ -1,9 +1,8 @@
 #! /bin/sh
 
-#polybar -c /home/arskiy/.config/polybar/config top &
-sh /home/arskiy/.bing.sh
+/home/arskiy/.scripts/bing && sleep .5
 
-bspc monitor -d I II III IV V VI
+bspc monitor -d I II III IV V 
 
 ##########################
 #
@@ -11,7 +10,7 @@ bspc monitor -d I II III IV V VI
 #
 ##########################
 
-bspc config border_width         1
+bspc config border_width         3
 bspc config window_gap           6
 
 #bspc config split_ratio         0.50
@@ -20,9 +19,9 @@ bspc config window_gap           6
 bspc config focus_follows_pointer true
 bspc config auto_alternate true
 bspc config auto_cancel true
-bspc config normal_border_color "#332d29"
+bspc config normal_border_color "#393638"
 bspc config active_border_color "#817267"
-bspc config focused_border_color "#504339"
+bspc config focused_border_color "#97a293"
 bspc config presel_border_color "#9a875f"
 bspc config urgent_border_color "#9f7155"
 bspc config focused_locked_border_color "#9a875f"
@@ -32,17 +31,16 @@ bspc config focused_frame_opacity 0.1
 # set alt as pointer modifier
 bspc config pointer_modifier mod1
 
-bspc config pointer_action3 move
-bspc config pointer_action1 resize_corner
+# i miss windowchef
+bspc config pointer_action1 move
+bspc config pointer_action3 resize_corner
 ##########################
 #
 # Rules
 #
 ##########################
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a qutebrowser desktop='2'
-bspc rule -a Discord desktop='1'
-bspc rule -a Spotify desktop='5' pseudo_tiled=on
-bspc rule -a feh floating=on manage=off
-bspc rule -a Emacs state=tiled
+bspc rule -a Gimp desktop='^8' state=floating follow=on border=off
+bspc rule -a qutebrowser desktop='2' border=off
+bspc rule -a feh floating=on manage=off border=off
+bspc rule -a Emacs state=tiled border=off
