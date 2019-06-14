@@ -15,19 +15,8 @@ check_install() {
 }
 
 imgur_upload() {
-     response=$(curl -sH "Authorization: Client-ID 9cabcfc7ca9e0a2" -F "image=@$1" "https://api.imgur.com/3/upload")
-     url=""
-
-     # get the imgur link and copy it to clipboard
-     grep -qo '"status":200' <<< "$response" && url=$(sed -e 's/.*\"'link'\":"\([^"]*\).*/\1/' <<< "$response" | sed -e 's/\\//g')
-     if [ -z "$url" ]; then
-          notify-send 'rofshot' 'Error uploading.'
-          echo "Error uploading to Imgur. Invalid response received."
-     else
-          echo -n "$url" | xclip -sel "clip"
-          notify-send 'rofshot' 'Link copied to clipboard.' -i "$1"
-          echo "Link copied to clipboard ($url)"
-     fi
+     curl -F "file=@$1" "https://0x0.st" | xclip -sel "clip"
+     notify-send 'rofshot' 'Link copied to clipboard.'  -i "$1"
 
      rm "$1"
 }
@@ -39,7 +28,7 @@ copy_image() {
      rm "$1"
 }
 
-grab_area() {
+grab_area_clip() {
      ROFI_CODE="$?"
 
      sleep .5 && maim -su >"$tmp_image"
@@ -49,39 +38,31 @@ grab_area() {
                notify-send "rofshot" "Screenshot cancelled"
                ;;
           * )
-               case "$ROFI_CODE" in
-                    10 )
-                         copy_image "$tmp_image"
-                         ;;
-                    * )
-                         imgur_upload "$tmp_image"
-                         ;;
-               esac
-               ;;
+               copy_image "$tmp_image"
      esac
 }
 
-grab_window() {
+grab_window_clip() {
      ROFI_CODE="$?"
 
      sleep .5 && maim -i $(xdotool getactivewindow)>"$tmp_image"
-     case "$ROFI_CODE" in
-          10 )
-               copy_image "$tmp_image"
-               ;;
-          * )
-               imgur_upload "$tmp_image"
-               ;;
-     esac
+     copy_image "$tmp_image"
 }
 
-grab_all() {
+grab_all_clip() {
      ROFI_CODE="$?"
 
      sleep .5 && maim >"$tmp_image"
-     case "$ROFI_CODE" in
-          10 )
-               copy_image "$tmp_image"
+     copy_image "$tmp_image"
+}
+
+grab_area_upload() {
+     sleep .5 && maim -su >"$tmp_image"
+
+     MAIM_CODE="$?"
+     case "$MAIM_CODE" in
+          1 )
+               notify-send "rofshot" "Screenshot cancelled"
                ;;
           * )
                imgur_upload "$tmp_image"
@@ -89,19 +70,37 @@ grab_all() {
      esac
 }
 
-options=( '1: Grab area' '2: Grab window' '3: Grab entire screen' )
+grab_window_upload() {
+     sleep .5 && maim -i $(xdotool getactivewindow)>"$tmp_image"
+     imgur_upload "$tmp_image"
+}
+
+grab_all_clip() {
+     sleep .5 && maim >"$tmp_image"
+     imgur_upload "$tmp_image"
+}
+options=( '1: Grab area' '2: Grab window' '3: Grab entire screen' '4: Upload area' '5: Upload window' '6: Upload entire screen')
 
 select_option() {
      case $1 in
-          '1: Grab area' )
-               grab_area
+          '1: Copy area' )
+               grab_area_clip
                ;;
-          '2: Grab window' )
-               grab_window
+          '2: Copy window' )
+               grab_window_clip
                ;;
-          '3: Grab entire screen' )
-               grab_all
+          '3: Copy entire screen' )
+               grab_all_clip
                ;;
+					'4: Upload area' )
+							 grab_area_upload
+							 ;;
+					'5: Upload window' )
+							 grab_windows_upload
+							 ;;
+					'6: Upload entire screen' )
+							 grab_all_window
+							 ;;
      esac
 }
 
