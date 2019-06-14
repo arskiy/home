@@ -22,10 +22,10 @@ imgur_upload() {
 }
 
 copy_image() {
-     xclip -sel "clip" -t image/png -i "$1"
+     xclip -sel "clipboard" -t image/png -i "$1"
      notify-send 'rofshot' 'Image copied to clipboard.' -i "$1"
 
-     rm "$1"
+     #rm "$1"
 }
 
 grab_area_clip() {
@@ -60,14 +60,7 @@ grab_area_upload() {
      sleep .5 && maim -su >"$tmp_image"
 
      MAIM_CODE="$?"
-     case "$MAIM_CODE" in
-          1 )
-               notify-send "rofshot" "Screenshot cancelled"
-               ;;
-          * )
-               imgur_upload "$tmp_image"
-               ;;
-     esac
+     imgur_upload "$tmp_image"
 }
 
 grab_window_upload() {
@@ -75,11 +68,14 @@ grab_window_upload() {
      imgur_upload "$tmp_image"
 }
 
-grab_all_clip() {
+grab_all_upload() {
+     ROFI_CODE="$?"
+
      sleep .5 && maim >"$tmp_image"
      imgur_upload "$tmp_image"
 }
-options=( '1: Grab area' '2: Grab window' '3: Grab entire screen' '4: Upload area' '5: Upload window' '6: Upload entire screen')
+
+options=( '1: Copy area' '2: Copy window' '3: Copy entire screen' '4: Upload area' '5: Upload window' '6: Upload entire screen')
 
 select_option() {
      case $1 in
@@ -96,10 +92,10 @@ select_option() {
 							 grab_area_upload
 							 ;;
 					'5: Upload window' )
-							 grab_windows_upload
+							 grab_window_upload
 							 ;;
 					'6: Upload entire screen' )
-							 grab_all_window
+							 grab_all_upload
 							 ;;
      esac
 }
