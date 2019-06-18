@@ -7,8 +7,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+Plug 'vim-scripts/Tabmerge'
 call plug#end()
 
 " no need to press an extra Ctrl W to switch buffers
@@ -16,9 +17,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
 no <C-Q> tabprev
 no <C-W> tabnext
 nnoremap <C-T> tabnewexecute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
+
 
 let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
@@ -29,6 +32,8 @@ no <Up> <Nop>
 no <Down> <Nop>
 no <Left> <Nop>
 no <Right> <Nop>
+
+" always copy to global clipboard
 no y "+y
 no x "+x
 no p "+p
@@ -50,28 +55,18 @@ ino <Down> <Nop>
 ino <Left> <Nop>
 ino <Right> <Nop>
 
-set clipboard=unnamed
-
 map <C-n> :NERDTreeToggle<CR>
 map <F2> :RustFmt<CR>
+
+" indent code on f3
 no <F3> gg=G
 
 
 " easy commenting
-au BufEnter,BufNew *.rb no c ^i#<Space><ESC>^
-au BufEnter,BufNew *.py no c ^i#<Space><ESC>^
-au BufEnter,BufNew *.sh no c ^i#<Space><ESC>^
-
-au BufEnter,BufNew *.cc no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.cpp no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.java no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.c no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.cs no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.hpp no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.hh no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.rs no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.go no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.js no c ^i//<Space><ESC>^
+au BufEnter,BufNew *.rb,*.py,*.sh no c ^i#<Space><ESC>^
+au BufEnter,BufNew *.cc,*.cpp,*.java,*.c,*.cs,*.hpp,*.hh,*.rs,*.go,*.js no c ^i//<Space><ESC>^
+au BufEnter,BufNew *.vim,*.nvim no c ^i"<Space><ESC>^
+au BufEnter,BufNew *.lua no c ^i--<Space><ESC>^
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -126,11 +121,30 @@ nnoremap ? ?\v
 nnoremap / /\v
 cnoremap %s/ %sm/
 
+" auto insert mode when entering terminal
+autocmd BufWinEnter,WinEnter term://* startinsert
+
+tnoremap <Esc> <C-\><C-n>
+
+tnoremap <C-h> <C-\><C-n><C-w><C-h>
+tnoremap <C-j> <C-\><C-n><C-w><C-j>
+tnoremap <C-k> <C-\><C-n><C-w><C-k>
+tnoremap <C-l> <C-\><C-n><C-w><C-l>
+
+tnoremap ; :
+tnoremap : <C-\><C-n>:
+" open terminal with vim
+command! Termspl split | resize 9 | terminal
+
+" au VimEnter * Termspl
+" switch to the above split pane auto
+" au VimEnter * wincmd k
+
+map <C-t> :Termspl<CR>
+
 " IDE-like brace completion
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
-
-"colorscheme space_vim_theme
 
 " Auto-format when coding Rust
 let g:rustfmt_autosave = 1
@@ -139,11 +153,7 @@ let g:rustfmt_autosave = 1
 map H ^
 map L $
 map J 5j
-" need to rebind it to nothing first because spaceVim uses K
-no  K <Nop>
 map K 5k
 
 no j gj
 no k gk
-
-let g:spacevim_autocomplete_method = "coc"
