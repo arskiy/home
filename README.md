@@ -1,10 +1,11 @@
-# My fourth rice
-![image](https://imgur.com/8ggEtEW.png)
+# My fifth rice
+![image](https://i.imgur.com/bB1cakL.png)
 
 Programs: 
-- peaclock
-- ufetch
-- lsd
+- qutebrowser
+- lolcat + figlet
+- neovim
+- slurm (network usage viewer)
 
 ## Dependencies:
 - nvim
