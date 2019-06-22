@@ -61,12 +61,11 @@ map <F2> :RustFmt<CR>
 " indent code on f3
 no <F3> gg=G
 
-
 " easy commenting
 au BufEnter,BufNew *.rb,*.py,*.sh no c ^i#<Space><ESC>^
 au BufEnter,BufNew *.cc,*.cpp,*.java,*.c,*.cs,*.hpp,*.hh,*.rs,*.go,*.js no c ^i//<Space><ESC>^
 au BufEnter,BufNew *.vim,*.nvim no c ^i"<Space><ESC>^
-au BufEnter,BufNew *.lua no c ^i--<Space><ESC>^
+au BufEnter,BufNew *.lua, Makefile, makefile no c ^i--<Space><ESC>^
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -93,6 +92,8 @@ set autoindent
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
+set expandtab
+
 set diffopt+=iwhite " No whitespace in vimdiff
 " Make diffing better: https://vimways.org/2018/the-power-of-diff/
 set diffopt+=algorithm:patience
@@ -131,6 +132,8 @@ tnoremap <C-j> <C-\><C-n><C-w><C-j>
 tnoremap <C-k> <C-\><C-n><C-w><C-k>
 tnoremap <C-l> <C-\><C-n><C-w><C-l>
 
+tnoremap <C-t> <C-\><C-n>:q<CR>
+
 tnoremap ; :
 tnoremap : <C-\><C-n>:
 " open terminal with vim
@@ -140,7 +143,7 @@ command! Termspl split | resize 9 | terminal
 " switch to the above split pane auto
 " au VimEnter * wincmd k
 
-map <C-t> :Termspl<CR>
+map <C-t> :Termspl<CR>i
 
 " IDE-like brace completion
 inoremap {<CR> {<CR>}<ESC>O
