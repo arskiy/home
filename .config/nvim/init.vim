@@ -1,6 +1,6 @@
-
 call plug#begin()
 Plug 'liuchengxu/space-vim-theme'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -8,10 +8,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 "Plug 'vim-syntastic/syntastic'
-Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
-Plug 'vim-scripts/Tabmerge'
 call plug#end()
 
+let g:deoplete#enable_at_startup = 1
 " no need to press an extra Ctrl W to switch buffers
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -55,6 +54,12 @@ ino <Down> <Nop>
 ino <Left> <Nop>
 ino <Right> <Nop>
 
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
 map <C-n> :NERDTreeToggle<CR>
 map <F2> :RustFmt<CR>
 
@@ -62,26 +67,19 @@ map <F2> :RustFmt<CR>
 no <F3> gg=G
 
 " easy commenting
-au BufEnter,BufNew *.rb,*.py,*.sh no c ^i#<Space><ESC>^
+au BufEnter,BufNew *.rb,*.py,*.sh,*.smali,Makefile,makefile no c ^i#<Space><ESC>^
 au BufEnter,BufNew *.cc,*.cpp,*.java,*.c,*.cs,*.hpp,*.hh,*.rs,*.go,*.js no c ^i//<Space><ESC>^
 au BufEnter,BufNew *.vim,*.nvim no c ^i"<Space><ESC>^
-au BufEnter,BufNew *.lua, Makefile, makefile no c ^i--<Space><ESC>^
+au BufEnter,BufNew *.lua no c ^i--<Space><ESC>^
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
 
 set incsearch
 set ignorecase
