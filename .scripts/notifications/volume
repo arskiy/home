@@ -1,5 +1,4 @@
 #!/bin/sh
 
-[ "$(ponymix get-volume)" = "0" ] && dunstify "Volume" "muted" && exit
-
-dunstify "Volume" "$(ponymix get-volume)%"
+# special thanks to https://unix.stackexchange.com/questions/89571/how-to-get-volume-level-from-the-command-line
+notify-send "Volume level" "$(amixer sget Master | awk -F "[][]" '/dB/ { print $2 }')"

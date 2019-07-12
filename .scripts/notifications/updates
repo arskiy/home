@@ -1,3 +1,3 @@
 #! /bin/sh
 
-dunstify "Updates" "Packages to update: $(checkupdates | wc -l)"
+dunstify "Updates" "Packages to update: $(xbps-install -Sun | wc -l)"
