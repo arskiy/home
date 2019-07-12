@@ -4,7 +4,7 @@ cp ~/.config/nvim/init.vim .config/nvim/init.vim
 cp ~/.config/rofi/* .config/rofi/
 cp ~/.config/bspwm/bspwmrc .config/bspwm/bspwmrc
 cp ~/.config/sxhkd/sxhkdrc .config/sxhkd/sxhkdrc
-cp ~/.config/qutebrowser/* .config/qutebrowser/
+cp -r ~/.config/qutebrowser/* .config/qutebrowser/
 
 cp ~/.xinitrc .
 
