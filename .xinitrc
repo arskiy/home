@@ -1,6 +1,7 @@
-setxkbmap br &
-compton &
+setxkbmap br 
+setxkbmap -option caps:escape
 dunst &
-/home/arskiy/.scripts/bing && sleep 0.5 &
+xsetroot -gray
+/home/arskiy/.scripts/bing &
 sxhkd &
 exec bspwm

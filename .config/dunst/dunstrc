@@ -1,5 +1,6 @@
 [global]
     font = OpenSans 12
+    icon_position = right
 
     # allow a small subset of html markup:
     # <b>bold</b>

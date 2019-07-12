@@ -1,7 +1,6 @@
-# by astrak (https://git.astrak.co/astrak/dots/src/branch/master/bin/bin/rofshot)
-# if some real slight modification by me (arskiy), some delay bc it was showing dmenu in the screen shot
-
 #!/bin/bash
+
+# (originally) by astrak (https://git.astrak.co/astrak/dots/src/branch/master/bin/bin/rofshot)
 
 # screenshot filename
 tmp_image=/tmp/rofshot.$USER.$$.png
@@ -23,9 +22,9 @@ imgur_upload() {
 
 copy_image() {
      xclip -sel "clipboard" -t image/png -i "$1"
-     notify-send 'rofshot' 'Image copied to clipboard.' -i "$1"
+     notify-send "rofshot" "Image copied to clipboard." -i "$1"
 
-     #rm "$1"
+     rm "$1"
 }
 
 grab_area_clip() {

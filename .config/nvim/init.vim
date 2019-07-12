@@ -7,6 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'beyondmarc/glsl.vim'
 "Plug 'vim-syntastic/syntastic'
 call plug#end()
 
@@ -26,6 +27,8 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:airline#extensions#tabline#enabled = 1
+
+let g:lisp_rainbow = 1
 
 no <Up> <Nop>
 no <Down> <Nop>
@@ -71,6 +74,7 @@ au BufEnter,BufNew *.rb,*.py,*.sh,*.smali,Makefile,makefile no c ^i#<Space><ESC>
 au BufEnter,BufNew *.cc,*.cpp,*.java,*.c,*.cs,*.hpp,*.hh,*.rs,*.go,*.js no c ^i//<Space><ESC>^
 au BufEnter,BufNew *.vim,*.nvim no c ^i"<Space><ESC>^
 au BufEnter,BufNew *.lua no c ^i--<Space><ESC>^
+au BufEnter,BufNew *.lisp no c ^i;<Space><ESC>^
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.

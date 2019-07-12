@@ -1,12 +1,12 @@
 #! /bin/sh
 
 today=$(date +%Y:%m:%d)
-x="$HOME/.bing-wallpapers/$today.jpg"
+image="$HOME/.bing-wallpapers/$today.jpg"
 url=$(curl "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1" | jq .images[0].url | tr -d '",')
 
-wget -O $x "https://bing.com$url"
+wget -O $image "https://bing.com$url"
 
-feh --bg-scale $x
+/usr/bin/feh --bg-scale $image
 
 # Remove wget's logs
-rm ~/wget-log*
+rm wget-log*
