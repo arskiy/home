@@ -138,7 +138,7 @@ c.content.headers.custom                         = {}
 c.content.headers.do_not_track                   = True
 c.content.headers.user_agent                     = None
 c.content.host_blocking.enabled                  = True
-c.content.host_blocking.lists                    = ['https://www.malwaredomainlist.com/hostslist/hosts.txt', 'http://someonewhocares.org/hosts/hosts', 'http://winhelp2002.mvps.org/hosts.zip', 'http://malwaredomains.lehigh.edu/files/justdomains.zip', 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext']
+c.content.host_blocking.lists                    = ['https://www.malwaredomainlist.com/hostslist/hosts.txt', 'http://someonewhocares.org/hosts/hosts', 'http://winhelp2002.mvps.org/hosts.zip', 'http://malwaredomains.lehigh.edu/files/justdomains.zip', 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext', 'http://sbc.io/hosts/alternates/fakenews-gambling/hosts']
 c.content.host_blocking.whitelist                = ['qutebrowser.org']
 c.content.hyperlink_auditing                     = False
 c.content.images                                 = True
