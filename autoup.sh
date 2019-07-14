@@ -10,6 +10,8 @@ cp ~/.xinitrc .
 
 cp -r ~/.scripts/* .scripts/
 
+cp -r ~/Files/st/ st
+
 git add .
 git commit -m "upload via script on $(date)"
 git push

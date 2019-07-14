@@ -29,7 +29,9 @@ config.bind('K', 'tab-next')
 config.bind('<j>', 'scroll-px 0 100')
 config.bind('<k>', 'scroll-px 0 -100')
 
-c.auto_save.session                              = False
+c.spellcheck.languages                           = ['pt-BR', 'en-US']
+
+c.auto_save.session                              = True
 
 c.backend                                        = 'webengine'
 

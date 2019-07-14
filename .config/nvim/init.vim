@@ -85,15 +85,17 @@ endfunction
 
 " Use <c-space> to trigger completion.
 
+set hidden
+
 set incsearch
 set ignorecase
 set smartcase
 set gdefault
 
 set autoindent
-" 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
 set expandtab
 
 set diffopt+=iwhite " No whitespace in vimdiff
