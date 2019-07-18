@@ -28,8 +28,6 @@ copy_image() {
 }
 
 grab_area_clip() {
-     ROFI_CODE="$?"
-
      sleep .5 && maim -su >"$tmp_image"
      MAIM_CODE="$?"
      case "$MAIM_CODE" in
@@ -42,34 +40,35 @@ grab_area_clip() {
 }
 
 grab_window_clip() {
-     ROFI_CODE="$?"
-
      sleep .5 && maim -i $(xdotool getactivewindow)>"$tmp_image"
      copy_image "$tmp_image"
 }
 
 grab_all_clip() {
-     ROFI_CODE="$?"
-
      sleep .5 && maim >"$tmp_image"
      copy_image "$tmp_image"
 }
 
 grab_area_upload() {
      sleep .5 && maim -su >"$tmp_image"
+     MAIM_CODE=$?
 
-     MAIM_CODE="$?"
-     imgur_upload "$tmp_image"
+     case "$MAIM_CODE" in
+          1 )
+               notify-send "rofshot" "Screenshot cancelled"
+               ;;
+          * )
+               imgur_upload "$tmp_image"
+     esac
 }
 
 grab_window_upload() {
      sleep .5 && maim -i $(xdotool getactivewindow)>"$tmp_image"
+
      imgur_upload "$tmp_image"
 }
 
 grab_all_upload() {
-     ROFI_CODE="$?"
-
      sleep .5 && maim >"$tmp_image"
      imgur_upload "$tmp_image"
 }

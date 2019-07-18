@@ -26,7 +26,11 @@ nnoremap <C-T> tabnewexecute 'source' fnamemodify(expand('<sfile>'), ':h').'/con
 let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
+
 let g:airline#extensions#tabline#enabled = 1
+
+let g:rustfmt_autosave = 1
+let g:rust_clip_command = 'xclip -selection clipboard'
 
 let g:lisp_rainbow = 1
 
@@ -68,11 +72,12 @@ map <F2> :RustFmt<CR>
 
 " indent code on f3
 no <F3> gg=G
+" au BufEnter,BufNew *.rs no <F3> :RustFmt<CR>
 
 " easy commenting
-au BufEnter,BufNew *.rb,*.py,*.sh,*.smali,Makefile,makefile no c ^i#<Space><ESC>^
+au BufEnter,BufNew *.rb,*.py,*.sh,*.smali,*akefile,*.toml no c ^i#<Space><ESC>^
 au BufEnter,BufNew *.cc,*.cpp,*.java,*.c,*.cs,*.hpp,*.hh,*.rs,*.go,*.js no c ^i//<Space><ESC>^
-au BufEnter,BufNew *.vim,*.nvim no c ^i"<Space><ESC>^
+au BufEnter,BufNew *.vim,*.nvim,.vimrc no c ^i"<Space><ESC>^
 au BufEnter,BufNew *.lua no c ^i--<Space><ESC>^
 au BufEnter,BufNew *.lisp no c ^i;<Space><ESC>^
 

@@ -3,5 +3,11 @@
 
 config_version: 2
 settings:
-  statusbar.hide:
-    global: false
+  bindings.commands:
+    global:
+      normal:
+        <Tab>: nop
+        J: tab-prev
+        K: tab-next
+        j: scroll-px 0 100
+        k: scroll-px 0 -100

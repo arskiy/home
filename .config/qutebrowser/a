@@ -1,0 +1,15 @@
+
+        path = request_url.path()
+        query = request_url.query()
+
+        if host == "www.youtube.com":
+            if str(path) == "/get_video_info":
+                if "&adformat=" in str(query):
+                    return True
+            if str(path) == "/get_midroll_info":
+                return True
+
+        return ((host in self._blocked_hosts or
+                 host in self._config_blocked_hosts) and
+                not _is_whitelisted_url(request_url))
+

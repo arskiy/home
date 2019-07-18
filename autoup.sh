@@ -7,6 +7,7 @@ cp ~/.config/sxhkd/sxhkdrc .config/sxhkd/sxhkdrc
 cp -r ~/.config/qutebrowser/* .config/qutebrowser/
 
 cp ~/.xinitrc .
+cp ~/.bashrc .
 
 cp -r ~/.scripts/* .scripts/
 
