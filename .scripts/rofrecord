@@ -9,8 +9,8 @@ check_install() {
 }
 
 TMP_AVI=$(mktemp  /tmp/$USER.XXXXXXXXX.avi)
-DEST="/home/arskiy/Files/gifs/$(date +%m:%d::%T.gif)"
-PALETTE="/home/arskiy/Files/gifs/palette.$$.png"
+DEST="$USER/Files/gifs/$(date +%m:%d::%T.gif)"
+PALETTE="$USER/Files/gifs/palette.$$.png"
 
 check_install rofi
 check_install ffmpeg
