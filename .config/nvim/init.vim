@@ -8,6 +8,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'beyondmarc/glsl.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'mbbill/undotree'
+Plug 'gcmt/wildfire.vim'
+Plug 'mattn/gist-vim'
 "Plug 'vim-syntastic/syntastic'
 call plug#end()
 
@@ -72,6 +76,7 @@ map <F2> :RustFmt<CR>
 
 " indent code on f3
 no <F3> gg=G
+no <F5> :UndotreeToggle<CR>
 " au BufEnter,BufNew *.rs no <F3> :RustFmt<CR>
 
 " easy commenting
@@ -80,6 +85,9 @@ au BufEnter,BufNew *.cc,*.cpp,*.java,*.c,*.cs,*.hpp,*.hh,*.rs,*.go,*.js no c ^i/
 au BufEnter,BufNew *.vim,*.nvim,.vimrc no c ^i"<Space><ESC>^
 au BufEnter,BufNew *.lua no c ^i--<Space><ESC>^
 au BufEnter,BufNew *.lisp no c ^i;<Space><ESC>^
+
+" remove whitespace
+autocmd FileType c,cpp,java,php,rs,lisp,rb,cc,hh,h,hpp,go,js,vim,nvim,lua,toml,py,sh autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -111,8 +119,8 @@ set diffopt+=indent-heuristic
 "When opening a new line and no filetype-specific indenting is enabled, keep the same indent as the line you're currently on
 "
 set autoindent
- 
-"Instead of failing a command because of unsaved changes, instead raise a  dialogue asking if you wish to save changed files 
+
+"Instead of failing a command because of unsaved changes, instead raise a  dialogue asking if you wish to save changed files
 set confirm
 
 " make splitting sane
