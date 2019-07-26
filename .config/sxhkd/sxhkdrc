@@ -5,6 +5,8 @@
 super + Return
 	st
 
+super
+
 # program launcher
 super + d
 	rofi -show drun -theme ~/.config/rofi/conf.rasi	
@@ -12,11 +14,8 @@ super + d
 super + z
 	rofi -show run -theme ~/.config/rofi/flat-orange.rasi	
 
-super + x
-  man -k . | dmenu -l 30 | awk '{print $1}' | xargs -r man -Tpdf | zathura -
-
-super + c
-  /bin/ls -d /home/arskiy/Files/PDFs/* | dmenu -l 10 | awk '{gsub(/ /,"\\ ")}8' | xargs cat | zathura -
+super + r
+    rofrecord
 
 super + p
 	qutebrowser
