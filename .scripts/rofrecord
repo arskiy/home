@@ -1,9 +1,21 @@
 #!/usr/bin/env bash
 
+check_install() {
+     if [[ ! $(type $1 2>/dev/null) ]]; then
+          echo "Error: missing command '$1'. Exiting."
+          notify-send 'rofrecord' "Error uploading. Missing command $1."
+          exit 1
+     fi
+}
+
 TMP_AVI=$(mktemp  /tmp/$USER.XXXXXXXXX.avi)
 DEST="/home/arskiy/Files/gifs/$(date +%m:%d::%T.gif)"
-
 PALETTE="/home/arskiy/Files/gifs/palette.$$.png"
+
+check_install rofi
+check_install ffmpeg
+check_install ffcast
+check_install gifsicle
 
 DURATION=$(seq 1 70 | awk 'NR % 5 == 0' | rofi -dmenu -i -p "> " -theme ~/.config/rofi/onedark.rasi)
 
@@ -11,8 +23,8 @@ ffcast -s % ffmpeg -y -f x11grab -show_region 1 -framerate 15 \
         -video_size %s -i %D+%c -codec:v huffyuv \
         -t $DURATION \
         -vf crop="iw-mod(iw\\,2):ih-mod(ih\\,2)" $TMP_AVI \
-&& ffmpeg -y -i $TMP_AVI -vf palettegen $PALETTE \
-&& ffmpeg -y -i $TMP_AVI -ss 0 -t $DURATION -i $PALETTE -filter_complex paletteuse -r 10 $DEST \
+&& ffmpeg -ss 0 -y -i "$TMP_AVI" -vf "scale=iw*.4:ih*.4" $DEST \
+&& gifsicle -O3 $DEST -o $DEST \
 && notify-send "rofrecord" "Gif saved."
 
 rm $TMP_AVI $PALETTE
