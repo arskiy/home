@@ -9,8 +9,6 @@ export PATH=$PATH:/home/arskiy/.local/bin:$HOME/.cargo/bin:/home/arskiy/.gem/rub
 # Load a Cargo (Rust's library manager) env var
 export CARGO_HOME="/home/arskiy/.cargo"
 
-# Load theme
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -96,6 +94,8 @@ alias fortune="fortune /home/arskiy/.config/fortunes"
 alias xins="sudo xbps-install"
 alias xqry="xbps-query"
 alias xrem="sudo xbps-remove"
+
+eval "$(hub alias -s)"
 
 todo
 fortune | cowsay | lolcat
