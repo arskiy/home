@@ -5,8 +5,6 @@
 super + Return
 	st
 
-super
-
 # program launcher
 super + d
 	rofi -show drun -theme ~/.config/rofi/conf.rasi	

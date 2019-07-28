@@ -26,7 +26,6 @@ no <C-Q> tabprev
 no <C-W> tabnext
 nnoremap <C-T> tabnewexecute 'source' fnamemodify(expand('<sfile>'), ':h').'/config/main.vim'
 
-
 let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
@@ -96,7 +95,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" Use <c-space> to trigger completion.
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 set hidden
 

@@ -4,8 +4,8 @@
 # in ~/.scripts
 
 # Load PATH
-export PATH=$PATH:/home/arskiy/.local/bin:$HOME/.cargo/bin:/home/arskiy/.gem/ruby/2.6.0:/home/arskiy/.scripts:/home/arskiy/.scripts/notifications:/home/arskiy/.scripts/dmenu:/home/arskiy/Files/jdk-11/bin/:/home/arskiy/Files/emsdk:/home/arskiy/Files/emsdk/fastcomp/emscripten:/home/arskiy/Files/emsdk/node/8.9.1_64bit/bin/node
-#
+export PATH=$PATH:/home/arskiy/.local/bin:$HOME/.cargo/bin:/home/arskiy/.gem/ruby/2.6.0:/home/arskiy/.scripts:/home/arskiy/.scripts/notifications:/home/arskiy/.scripts/dmenu:/home/arskiy/Files/jdk-11/bin/:/home/arskiy/Files/emsdk:/home/arskiy/Files/emsdk/fastcomp/emscripten:/home/arskiy/Files/emsdk/node/8.9.1_64bit/bin/node:/home/arskiy/Files/ungoogled-chromium/
+
 # Load a Cargo (Rust's library manager) env var
 export CARGO_HOME="/home/arskiy/.cargo"
 

@@ -3,11 +3,5 @@
 
 config_version: 2
 settings:
-  bindings.commands:
-    global:
-      normal:
-        <Tab>: nop
-        J: tab-prev
-        K: tab-next
-        j: scroll-px 0 100
-        k: scroll-px 0 -100
+  content.user_stylesheets:
+    global: ~/.local/share/qutebrowser/css/github-dark.css
