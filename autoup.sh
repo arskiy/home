@@ -8,6 +8,9 @@ cp -r ~/.config/qutebrowser/* .config/qutebrowser/
 
 cp ~/.xinitrc .
 cp ~/.bashrc .
+cp ~/.funcs .
+cp ~/.aliases .
+cp ~/.env_vars .
 cp ~/.inputrc .
 
 cp -r ~/.scripts/* .scripts/

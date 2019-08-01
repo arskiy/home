@@ -1,0 +1,48 @@
+alias vi="nvim"
+alias v="nvim"
+
+# rick roll on the terminal!
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias less="bat --plain"
+alias dog="bat --plain"
+alias cat="bat --plain"
+
+# my pdf reader
+alias zathura="zathura --fork"
+
+# make it easier to set pulseaudio's volume
+alias paset="ponymix set-volume 1>&/dev/null"
+
+# typos...
+alias ls="lsd"
+alias l="lsd -l"
+alias la="lsd -la"
+alias sl="lsd"
+alias ks="lsd"
+alias celar="clear"
+alias ..="cd .."
+
+# jump to current project faster
+alias curproj="cd ~/dev/"
+alias vim="nvim"
+alias rust="cd ~/dev/Rust"
+
+alias fetch="neofetch  --ascii ~/.scripts/.fetch_pastas/toucan.txt"
+alias nfetch="neofetch --ascii ~/.scripts/.fetch_pastas/new_toucan.txt"
+alias ffetch="neofetch --ascii ~/.scripts/.fetch_pastas/ferris.txt"
+alias afetch="neofetch --ascii ~/.scripts/.fetch_pastas/ahegao.txt"
+
+# tool for sharing code
+alias h="haste | xclip -i"
+alias fortune="fortune /home/arskiy/.config/fortunes"
+
+# void things
+alias xins="sudo xbps-install"
+alias xqry="xbps-query"
+alias xrem="sudo xbps-remove"
+
+
+alias feh="sxiv"
+alias unzip="7za x"
+
+eval "$(hub alias -s)"

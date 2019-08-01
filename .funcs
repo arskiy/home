@@ -1,0 +1,22 @@
+# create a dir in /tmp with random name
+ct(){
+  tmp=$(mktemp -d)
+  cd ${tmp}
+}
+
+command_not_found_handle(){
+    shuf -n 1 ~/.scripts/insults.txt
+}
+
+# load colored prompt
+color(){
+  local __user_and_host="\[\033[01;32m\]╭"
+  local __cur_location="\[\033[01;34m\]\w"
+  local __git_branch_color="\[\033[31m\]"
+  local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+  local __prompt_tail="\n\[\033[01;32m\]╰\[\033[95m\] λ"
+  local __last_color="\[\033[00m\]"
+  export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
+}
+
+color
