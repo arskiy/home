@@ -11,15 +11,13 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	startx
 fi
 
-bind ""s" self-insert"
-
 source ~/.funcs
 
 #
 # load *some* aliases
 #
 source ~/.aliases
-
+source ~/Files/emsdk/emsdk_env.sh 2>&1>/dev/null
 
 todo
 fortune | cowsay | lolcat

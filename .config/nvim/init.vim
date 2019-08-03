@@ -12,6 +12,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mbbill/undotree'
 Plug 'gcmt/wildfire.vim'
 Plug 'mattn/gist-vim'
+Plug 'wakatime/vim-wakatime'
+Plug 'elixir-editors/vim-elixir'
 "Plug 'vim-syntastic/syntastic'
 call plug#end()
 
