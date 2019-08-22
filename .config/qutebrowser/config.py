@@ -40,6 +40,8 @@ c.spellcheck.languages                           = ['pt-BR', 'en-US']
 c.auto_save.session                              = True
 
 c.backend                                        = 'webengine'
+c.qt.args                                        = ["ppapi-widevine-path=/usr/lib/chromium/libwidevinecdm.so"]
+c.content.headers.user_agent = '{ "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.13.0 Chrome/73.0.3683.105 Safari/537.36" }'
 
 c.colors.completion.category.bg                  = colour00
 c.colors.completion.category.border.bottom       = colour00
@@ -248,5 +250,5 @@ c.url.start_pages                                = '~/.config/qutebrowser/resour
 c.url.default_page                               = '~/.config/qutebrowser/resources/index.html'
 c.url.searchengines                              = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}'}
 c.window.title_format                            = '{perc}{title}{title_sep}qutebrowser'
-c.zoom.default                                   = '100%'
+c.zoom.default                                   = '90%'
 c.zoom.levels                                    = ['25%', '33%', '50%', '67%', '75%', '90%', '100%', '110%', '125%', '150%', '175%', '200%', '250%', '300%', '400%', '500%']

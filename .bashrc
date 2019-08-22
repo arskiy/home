@@ -5,6 +5,7 @@
 
 # Load PATH
 source ~/.env_vars
+source ~/.scripts/bash-wakatime.sh
 
 # Start X if on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then

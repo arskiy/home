@@ -2,7 +2,7 @@
 
 cp ~/.config/nvim/init.vim .config/nvim/init.vim
 cp ~/.config/rofi/* .config/rofi/
-cp ~/.config/bspwm/bspwmrc .config/bspwm/bspwmrc
+# cp ~/.config/bspwm/bspwmrc .config/bspwm/bspwmrc
 cp ~/.config/sxhkd/sxhkdrc .config/sxhkd/sxhkdrc
 cp -r ~/.config/qutebrowser/* .config/qutebrowser/
 
@@ -16,6 +16,7 @@ cp ~/.inputrc .
 cp -r ~/.scripts/* .scripts/
 
 cp -r ~/Files/st/ st
+cp -r ~/.xmonad/ .
 
 git add .
 git commit -m "upload via script on $(date)"

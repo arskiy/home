@@ -5,4 +5,4 @@ xsetroot -gray
 /home/arskiy/.scripts/bing &
 sxhkd &
 redshift &
-exec bspwm
+exec xmonad
