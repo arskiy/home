@@ -16,7 +16,7 @@ cp ~/.inputrc .
 cp -r ~/.scripts/* .scripts/
 
 cp -r ~/Files/st/ st
-cp -r ~/.xmonad/ .
+cp -r ~/.xmonad/xmonad.hs .xmonad/
 
 git add .
 git commit -m "upload via script on $(date)"
