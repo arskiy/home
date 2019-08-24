@@ -7,7 +7,7 @@
 source ~/.env_vars
 source ~/.scripts/bash-wakatime.sh
 
-# Start X if on tty1
+# Start X11 if on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	startx
 fi
@@ -18,7 +18,6 @@ source ~/.funcs
 # load *some* aliases
 #
 source ~/.aliases
-source ~/Files/emsdk/emsdk_env.sh 2>&1>/dev/null
 
 todo
 fortune | cowsay | lolcat
