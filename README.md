@@ -1,15 +1,13 @@
-# My fifth rice
-![image](https://i.imgur.com/bB1cakL.png)
+# My sixth rice
+![image](https://imgur.com/K7eRNg2.png)
 
-Programs: 
+## What I use:
+- Xmonad
+- doom emacs
+- cmus
 - qutebrowser
-- lolcat + figlet
-- neovim
-- slurm (network usage viewer)
-
-## Dependencies:
-- nvim
-- Tryone's compton fork
-- st
-- bspwm, sxhkd and xdo
 - dunst
+- GNU Bash
+- st
+- rofi
+- a bunch of scripts I wrote
