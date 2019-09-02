@@ -1,4 +1,2 @@
-#!/bin/sh
-
-a=$(cat); curl -X POST -s -d "$a" https://hastebin.com/documents | awk -F '"' '{print "https://hastebin.com/"$4}' | xclip -sel "clip"
-notify-send "haste" "Link copied to clipboard."
+a=$(cat); curl -X POST -s -d "$a" https://hasteb.in/documents | awk -F '"' '{print "https://hasteb.in/"$4}' | xclip -sel "clipboard";
+notify-send "hastebin" "Copied to clipboard."
