@@ -28,6 +28,16 @@ super + Escape
 # print screen (rofshot by astrak)
 Print
 	/home/arskiy/.scripts/rofshot
+
+XF86Audio{Lower,Raise}Volume
+    amixer set Master {10%-,10%+}
+
+XF86AudioMute
+    amixer set Master toggle
+
+XF86MonBrightness{Down,Up}
+    xbacklight {-dec,-inc} 10
+
 #
 # start notification scripts (~/.scripts/notifications)
 #

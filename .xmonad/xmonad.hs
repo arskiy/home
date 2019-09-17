@@ -202,8 +202,6 @@ myLayout = emptyBSP ||| Mirror tiled ||| smartBorders Full
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
-    , className =? "Emacs"           --> doFloat
-    , className =? "emacs"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 

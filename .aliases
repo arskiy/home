@@ -1,5 +1,6 @@
 alias vi="nvim"
 alias v="nvim"
+alias sudo="doas"
 
 # rick roll on the terminal!
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
