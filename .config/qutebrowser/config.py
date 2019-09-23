@@ -41,7 +41,7 @@ c.auto_save.session                              = True
 
 c.backend                                        = 'webengine'
 c.qt.args                                        = ["ppapi-widevine-path=/usr/lib/chromium/libwidevinecdm.so"]
-c.content.headers.user_agent = '{ "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/5.13.0 Chrome/73.0.3683.105 Safari/537.36" }'
+c.content.headers.user_agent = '{ "user-agent": "Mozilla/5.0 (Windows NT 6.1; rv:52.0) Gecko/20100101 Firefox/52.0" }'
 
 c.colors.completion.category.bg                  = colour00
 c.colors.completion.category.border.bottom       = colour00

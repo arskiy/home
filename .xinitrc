@@ -4,3 +4,4 @@ xsetroot -gray
 sxhkd &
 redshift &
 exec xmonad
+#exec ~/dev/c/wm/velera
