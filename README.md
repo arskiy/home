@@ -1,5 +1,5 @@
 # My sixth rice
-![image](https://imgur.com/K7eRNg2.png)
+![image](https://imgur.com/Q0hiH75.png)
 
 ## What I use:
 - Xmonad
