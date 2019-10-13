@@ -1,4 +1,4 @@
 #!/bin/sh
 
-dunstify "Weather" "$(curl wttr.in/Sao-Paulo?0QT | tr -d '|()\\,`/\-_.' | tr -dc [:graph:][:cntrl:] | sed '/m/d')"
+dunstify "Weather" "$(curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo)"
 

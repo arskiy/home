@@ -1,4 +1,4 @@
 #!/bin/sh
 
-# special thanks to https://unix.stackexchange.com/questions/89571/how-to-get-volume-level-from-the-command-line
-notify-send "Volume level" "$(amixer sget Master | awk -F "[][]" '/dB/ { print $2 }')"
+pactl list sinks | grep '^[[:space:]]Volume:' | \
+    head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'

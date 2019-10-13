@@ -1,0 +1,5 @@
+(WINEPREFIX=~/Files/Games/lol WINEARCH=win32 /opt/wine-lol/bin/wine ~/Files/Games/lol/drive_c/Riot\ Games/League\ of\ Legends/LeagueClient.exe &)
+while :
+do
+    xdotool keydown F1
+done

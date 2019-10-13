@@ -21,6 +21,9 @@ super + p
 super + o
     emacs
 
+super + m
+    togglekeymap
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -30,7 +33,7 @@ Print
 	/home/arskiy/.scripts/rofshot
 
 XF86Audio{Lower,Raise}Volume
-    amixer set Master {10%-,10%+}
+    pactl set-sink-volume 0 {-10%,+10%}
 
 XF86AudioMute
     amixer set Master toggle
@@ -38,29 +41,123 @@ XF86AudioMute
 XF86MonBrightness{Down,Up}
     xbacklight {-dec,-inc} 10
 
+XF86AudioMicMute
+    amixer set Capture toggle
+
+#
+# bspwm hotkeys
+#
+# Move floating windows (requires baskerville's xdo)
+super + {Left,Right,Up,Down}
+    xdo move {-x -20,-x +20,-y -20,-y +20}
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + q
+	bspc node -c
+
+# alternate between the tiled and monocle layout
+#super + m
+#	bspc desktop -l next
+
+# Balance tree
+super + b
+	bspc desktop -B
+
+# resize gap
+super + {minus,equal}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
+# Mirror and flip leaves of tree
+super + {comma,period}
+	bspc desktop -F {horizontal,vertical}
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest node
+super + g
+	bspc node -s biggest
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + ctrl + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + ctrl + alt + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
 #
 # start notification scripts (~/.scripts/notifications)
 #
 
-# weather 
 alt + w
-  weather
+  /home/arskiy/.scripts/notifications/weather
 
 # disk usage
 alt + s
-  disk
+  /home/arskiy/.scripts/notifications/disk
 
 # volume
 alt + f
-  volume
+  /home/arskiy/.scripts/notifications/volume
 
 # cpu stats
 alt + z
-  cpu
+  /home/arskiy/.scripts/notifications/cpu
 
 # mem stats
 alt + m
-  mem
+  /home/arskiy/.scripts/notifications/mem
 
 # show current time
 alt + t
@@ -68,15 +165,15 @@ alt + t
 
 # battery
 alt + b
-  battery
+  /home/arskiy/.scripts/notifications/battery
 
 # show computer temperature
 alt + r
-  temp
+  /home/arskiy/.scripts/notifications/temp
 
 # num of packages to update
 alt + p
-  updates
+  /home/arskiy/.scripts/notifications/updates
 
 # show current date
 alt + q

@@ -42,6 +42,7 @@ alias xins="sudo xbps-install"
 alias xqry="xbps-query"
 alias xrem="sudo xbps-remove"
 
+alias git=hub
 
 alias feh="sxiv"
 alias unzip="7za x"

@@ -1,23 +1,25 @@
+import dracula.draw
+
 # # Colour variables
-colour00                                          = '#2d2d2d'
-colour01                                          = '#393939'
-colour02                                          = '#515151'
-colour03                                          = '#747369'
-colour04                                          = '#a09f93'
-colour05                                          = '#d3d0c8'
-colour06                                          = '#e8e6df'
-colour07                                          = '#f2f0ec'
-colour08                                          = '#f2777a'
-colour09                                          = '#f99157'
-colour0A                                          = '#ffcc66'
-colour0B                                          = '#99cc99'
-colour0C                                          = '#66cccc'
-colour0D                                          = '#6699cc'
-colour0E                                          = '#cc99cc'
-colour0F                                          = '#d27b53'
+# colour00                                          = '#2d2d2d'
+# colour01                                          = '#393939'
+# colour02                                          = '#515151'
+# colour03                                          = '#747369'
+# colour04                                          = '#a09f93'
+# colour05                                          = '#d3d0c8'
+# colour06                                          = '#e8e6df'
+# colour07                                          = '#f2f0ec'
+# colour08                                          = '#f2777a'
+# colour09                                          = '#f99157'
+# colour0A                                          = '#ffcc66'
+# colour0B                                          = '#99cc99'
+# colour0C                                          = '#66cccc'
+# colour0D                                          = '#6699cc'
+# colour0E                                          = '#cc99cc'
+# colour0F                                          = '#d27b53'
 
 # Font variables
-font                                             = 'yuki'
+font                                             = 'Fira Mono:style=Regular'
 font_size                                        = '8'
 
 
@@ -27,6 +29,7 @@ c.aliases                                        = {'w': 'session-save', 'q': 'q
 c.bindings.commands = {
         'normal': {
             '<tab>': 'nop',
+            '<f1>': 'nop',
             }
         }
 config.bind('J', 'tab-prev')
@@ -35,98 +38,95 @@ config.bind('K', 'tab-next')
 config.bind('<j>', 'scroll-px 0 100')
 config.bind('<k>', 'scroll-px 0 -100')
 
-c.spellcheck.languages                           = ['pt-BR', 'en-US']
-
 c.auto_save.session                              = True
 
 c.backend                                        = 'webengine'
 c.qt.args                                        = ["ppapi-widevine-path=/usr/lib/chromium/libwidevinecdm.so"]
 c.content.headers.user_agent = '{ "user-agent": "Mozilla/5.0 (Windows NT 6.1; rv:52.0) Gecko/20100101 Firefox/52.0" }'
 
-c.colors.completion.category.bg                  = colour00
-c.colors.completion.category.border.bottom       = colour00
-c.colors.completion.category.border.top          = colour00
-c.colors.completion.category.fg                  = colour05
-c.colors.completion.even.bg                      = colour00
-c.colors.completion.fg                           = colour05
-c.colors.completion.item.selected.bg             = colour0D
-c.colors.completion.item.selected.border.bottom  = colour0D
-c.colors.completion.item.selected.border.top     = colour0D
-c.colors.completion.item.selected.fg             = colour00
-c.colors.completion.match.fg                     = colour08
-c.colors.completion.odd.bg                       = colour00
-c.colors.completion.scrollbar.bg                 = colour00
-c.colors.completion.scrollbar.fg                 = colour01
+# c.colors.completion.category.bg                  = colour00
+# c.colors.completion.category.border.bottom       = colour00
+# c.colors.completion.category.border.top          = colour00
+# c.colors.completion.category.fg                  = colour05
+# c.colors.completion.even.bg                      = colour00
+# c.colors.completion.fg                           = colour05
+# c.colors.completion.item.selected.bg             = colour0D
+# c.colors.completion.item.selected.border.bottom  = colour0D
+# c.colors.completion.item.selected.border.top     = colour0D
+# c.colors.completion.item.selected.fg             = colour00
+# c.colors.completion.match.fg                     = colour08
+# c.colors.completion.odd.bg                       = colour00
+# c.colors.completion.scrollbar.bg                 = colour00
+# c.colors.completion.scrollbar.fg                 = colour01
 
-c.colors.downloads.bar.bg                        = colour00
-c.colors.downloads.error.bg                      = colour00
-c.colors.downloads.error.fg                      = colour08
-c.colors.downloads.start.bg                      = colour00
-c.colors.downloads.start.fg                      = colour05
-c.colors.downloads.stop.bg                       = colour0B
-c.colors.downloads.stop.fg                       = colour00
-c.colors.downloads.system.bg                     = 'none'
-c.colors.downloads.system.fg                     = 'none'
+# c.colors.downloads.bar.bg                        = colour00
+# c.colors.downloads.error.bg                      = colour00
+# c.colors.downloads.error.fg                      = colour08
+# c.colors.downloads.start.bg                      = colour00
+# c.colors.downloads.start.fg                      = colour05
+# c.colors.downloads.stop.bg                       = colour0B
+# c.colors.downloads.stop.fg                       = colour00
+# c.colors.downloads.system.bg                     = 'none'
+# c.colors.downloads.system.fg                     = 'none'
 
-c.colors.hints.bg                                = colour00
-c.colors.hints.fg                                = colour05
-c.colors.hints.match.fg                          = colour0B
+# c.colors.hints.bg                                = colour00
+# c.colors.hints.fg                                = colour05
+# c.colors.hints.match.fg                          = colour0B
 
-c.colors.keyhint.bg                              = colour00
-c.colors.keyhint.fg                              = colour05
-c.colors.keyhint.suffix.fg                       = colour0A
+# c.colors.keyhint.bg                              = colour00
+# c.colors.keyhint.fg                              = colour05
+# c.colors.keyhint.suffix.fg                       = colour0A
 
-c.colors.messages.error.bg                       = colour00
-c.colors.messages.error.border                   = colour08
-c.colors.messages.error.fg                       = colour05
-c.colors.messages.info.bg                        = colour00
-c.colors.messages.info.border                    = colour01
-c.colors.messages.info.fg                        = colour05
-c.colors.messages.warning.bg                     = colour00
-c.colors.messages.warning.border                 = colour09
-c.colors.messages.warning.fg                     = colour05
+# c.colors.messages.error.bg                       = colour00
+# c.colors.messages.error.border                   = colour08
+# c.colors.messages.error.fg                       = colour05
+# c.colors.messages.info.bg                        = colour00
+# c.colors.messages.info.border                    = colour01
+# c.colors.messages.info.fg                        = colour05
+# c.colors.messages.warning.bg                     = colour00
+# c.colors.messages.warning.border                 = colour09
+# c.colors.messages.warning.fg                     = colour05
 
-c.colors.prompts.bg                              = colour00
-c.colors.prompts.border                          = '3px ' + colour0D
-c.colors.prompts.fg                              = colour05
-c.colors.prompts.selected.bg                     = colour01
-c.colors.statusbar.caret.bg                      = colour00
-c.colors.statusbar.caret.fg                      = colour0E
-c.colors.statusbar.caret.selection.bg            = colour00
-c.colors.statusbar.caret.selection.fg            = colour0E
-c.colors.statusbar.command.bg                    = colour00
-c.colors.statusbar.command.fg                    = colour05
-c.colors.statusbar.passthrough.bg                = colour00
-c.colors.statusbar.passthrough.fg                = colour0C
-c.colors.statusbar.command.private.bg            = colour00
-c.colors.statusbar.command.private.fg            = colour05
-c.colors.statusbar.insert.bg                     = colour00
-c.colors.statusbar.insert.fg                     = colour0D
-c.colors.statusbar.normal.bg                     = colour00
-c.colors.statusbar.normal.fg                     = colour05
-c.colors.statusbar.private.bg                    = colour00
-c.colors.statusbar.private.fg                    = colour05
-c.colors.statusbar.progress.bg                   = colour05
-c.colors.statusbar.url.error.fg                  = colour09
-c.colors.statusbar.url.fg                        = colour05
-c.colors.statusbar.url.hover.fg                  = colour0C
-c.colors.statusbar.url.success.http.fg           = colour08
-c.colors.statusbar.url.success.https.fg          = colour0B
-c.colors.statusbar.url.warn.fg                   = colour0A
-c.colors.tabs.bar.bg                             = colour00
-c.colors.tabs.even.bg                            = colour00
-c.colors.tabs.even.fg                            = colour05
-c.colors.tabs.indicator.error                    = '#00000000'
-c.colors.tabs.indicator.start                    = '#00000000'
-c.colors.tabs.indicator.stop                     = '#00000000'
-c.colors.tabs.indicator.system                   = 'none'
-c.colors.tabs.odd.bg                             = colour00
-c.colors.tabs.odd.fg                             = colour05
-c.colors.tabs.selected.even.bg                   = colour0D
-c.colors.tabs.selected.even.fg                   = colour00
-c.colors.tabs.selected.odd.bg                    = colour0D
-c.colors.tabs.selected.odd.fg                    = colour00
-c.colors.webpage.bg                              = 'white'
+# c.colors.prompts.bg                              = colour00
+# c.colors.prompts.border                          = '3px ' + colour0D
+# c.colors.prompts.fg                              = colour05
+# c.colors.prompts.selected.bg                     = colour01
+# c.colors.statusbar.caret.bg                      = colour00
+# c.colors.statusbar.caret.fg                      = colour0E
+# c.colors.statusbar.caret.selection.bg            = colour00
+# c.colors.statusbar.caret.selection.fg            = colour0E
+# c.colors.statusbar.command.bg                    = colour00
+# c.colors.statusbar.command.fg                    = colour05
+# c.colors.statusbar.passthrough.bg                = colour00
+# c.colors.statusbar.passthrough.fg                = colour0C
+# c.colors.statusbar.command.private.bg            = colour00
+# c.colors.statusbar.command.private.fg            = colour05
+# c.colors.statusbar.insert.bg                     = colour00
+# c.colors.statusbar.insert.fg                     = colour0D
+# c.colors.statusbar.normal.bg                     = colour00
+# c.colors.statusbar.normal.fg                     = colour05
+# c.colors.statusbar.private.bg                    = colour00
+# c.colors.statusbar.private.fg                    = colour05
+# c.colors.statusbar.progress.bg                   = colour05
+# c.colors.statusbar.url.error.fg                  = colour09
+# c.colors.statusbar.url.fg                        = colour05
+# c.colors.statusbar.url.hover.fg                  = colour0C
+# c.colors.statusbar.url.success.http.fg           = colour08
+# c.colors.statusbar.url.success.https.fg          = colour0B
+# c.colors.statusbar.url.warn.fg                   = colour0A
+# c.colors.tabs.bar.bg                             = colour00
+# c.colors.tabs.even.bg                            = colour00
+# c.colors.tabs.even.fg                            = colour05
+# c.colors.tabs.indicator.error                    = '#00000000'
+# c.colors.tabs.indicator.start                    = '#00000000'
+# c.colors.tabs.indicator.stop                     = '#00000000'
+# c.colors.tabs.indicator.system                   = 'none'
+# c.colors.tabs.odd.bg                             = colour00
+# c.colors.tabs.odd.fg                             = colour05
+# c.colors.tabs.selected.even.bg                   = colour0D
+# c.colors.tabs.selected.even.fg                   = colour00
+# c.colors.tabs.selected.odd.bg                    = colour0D
+# c.colors.tabs.selected.odd.fg                    = colour00
 
 c.completion.cmd_history_max_items               = 100
 c.completion.height                              = 150
@@ -190,8 +190,8 @@ c.fonts.tabs                                     = font_size + 'pt ' + font
 
 c.hints.auto_follow                              = 'unique-match'
 c.hints.auto_follow_timeout                      = 0
-c.hints.border                                   = '3px solid ' + colour0D
-c.hints.chars                                    = 'asdfghjklç'
+# c.hints.border                                   = '3px solid ' + colour0D
+c.hints.chars                                    = 'asdfghjkl;'
 c.hints.find_implementation                      = 'python'
 c.hints.hide_unmatched_rapid_hints               = True
 c.hints.min_chars                                = 1
@@ -240,7 +240,7 @@ c.tabs.show                                      = 'multiple'
 c.tabs.show_switching_delay                      = 800
 c.tabs.tabs_are_windows                          = False
 c.tabs.title.alignment                           = 'left'
-c.tabs.title.format                              = '{index}: {title}'
+# c.tabs.title.format                              = '{index}: {title}'
 c.tabs.title.format_pinned                       = '{index}'
 c.tabs.width                                     = '20%'
 c.tabs.indicator.width                           = 0
@@ -249,6 +249,17 @@ c.url.auto_search                                = 'naive'
 c.url.start_pages                                = '~/.config/qutebrowser/resources/index.html'
 c.url.default_page                               = '~/.config/qutebrowser/resources/index.html'
 c.url.searchengines                              = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}'}
-c.window.title_format                            = '{perc}{title}{title_sep}qutebrowser'
 c.zoom.default                                   = '90%'
 c.zoom.levels                                    = ['25%', '33%', '50%', '67%', '75%', '90%', '100%', '110%', '125%', '150%', '175%', '200%', '250%', '300%', '400%', '500%']
+
+
+dracula.draw.blood(c, {
+    'spacing': {
+        'vertical': 6,
+        'horizontal': 8
+    },
+    'font': {
+        'family': 'Menlo, Terminus, Monaco, Monospace',
+        'size': 10
+    }
+})
