@@ -1,7 +1,6 @@
 call plug#begin()
 Plug 'liuchengxu/space-vim-theme'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
@@ -14,6 +13,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'mattn/gist-vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'elixir-editors/vim-elixir'
+Plug 'junegunn/rainbow_parentheses.vim'
 "Plug 'vim-syntastic/syntastic'
 call plug#end()
 
@@ -163,6 +163,11 @@ command! Termspl split | resize 9 | terminal
 
 map <C-t> :Termspl<CR>i
 
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType lisp,clojure,scheme RainbowParentheses
+augroup END
+
 " IDE-like brace completion
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
@@ -178,3 +183,7 @@ map K 5k
 
 no j gj
 no k gk
+
+set lisp
+let g:lisp_rainbow = 1
+set wrap

@@ -43,6 +43,7 @@ alias xqry="xbps-query"
 alias xrem="sudo xbps-remove"
 
 alias git=hub
+alias qalc=qalculate.qalc
 
 alias feh="sxiv"
 alias unzip="7za x"

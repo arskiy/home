@@ -10,6 +10,8 @@ source ~/.scripts/bash-wakatime.sh
 # Start X11 if on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 	startx
+    sudo netctl start wlp3s0PitucaPlus
+    sudo systemctl stop dhcpcd
 fi
 
 source ~/.funcs

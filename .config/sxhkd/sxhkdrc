@@ -161,7 +161,7 @@ alt + m
 
 # show current time
 alt + t
-  /home/arskiy/.scripts/notifications/time
+  /home/arskiy/.scripts/notifications/hour
 
 # battery
 alt + b
