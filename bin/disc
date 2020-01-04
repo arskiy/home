@@ -1,0 +1,2 @@
+#!/bin/sh
+HOME=${HOME}/usr/local/share/discord discord

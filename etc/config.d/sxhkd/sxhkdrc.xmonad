@@ -1,0 +1,87 @@
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	st
+
+# program launcher
+super + d
+	rofi -show drun -theme ~/.config/rofi/conf.rasi	
+
+super + z
+	rofi -show run -theme ~/.config/rofi/flat-orange.rasi	
+
+super + r
+    rofrecord
+
+super + p
+	qutebrowser
+
+super + o
+    emacs
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# print screen (rofshot by astrak)
+Print
+	/home/arskiy/.scripts/rofshot
+
+XF86Audio{Lower,Raise}Volume
+    pactl set-sink-volume 0 {10%-,10%+}
+
+XF86AudioMute
+    amixer set Master toggle
+
+XF86MonBrightness{Down,Up}
+    xbacklight {-dec,-inc} 10
+
+#
+# start notification scripts (~/.scripts/notifications)
+#
+
+# weather 
+alt + w
+  /home/arskiy/.scripts/notifications/weather
+
+# disk usage
+alt + s
+  /home/arskiy/.scripts/notifications/disk
+
+# volume
+alt + f
+  /home/arskiy/.scripts/notifications/volume
+
+# cpu stats
+alt + z
+  /home/arskiy/.scripts/notifications/cpu
+
+# mem stats
+alt + m
+  /home/arskiy/.scripts/notifications/mem
+
+# show current time
+alt + t
+  /home/arskiy/.scripts/notifications/time
+
+# battery
+alt + b
+  /home/arskiy/.scripts/notifications/battery
+
+# show computer temperature
+alt + r
+  /home/arskiy/.scripts/notifications/temp
+
+# num of packages to update
+alt + p
+  /home/arskiy/.scripts/notifications/updates
+
+# show current date
+alt + q
+  /home/arskiy/.scripts/notifications/date
+
+# show help lmao
+alt + h
+  /home/arskiy/.scripts/notifications/help

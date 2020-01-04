@@ -1,7 +1,0 @@
-#!/bin/sh
-
-capacity=$(cat /sys/class/power_supply/BAT0/capacity) || exit
-
-[ "$capacity" = "100" ] && dunstify "" "Battery is full. Nice!" && exit
-
-dunstify "Battery is at" "$capacity%"

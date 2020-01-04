@@ -1,3 +1,0 @@
-#!/bin/sh
-
-dunstify "Temperature:" "$(sensors | awk '/Core/ {printf "%4s %2s %7s\n", $1, $2, $3}')"

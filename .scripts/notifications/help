@@ -1,3 +1,0 @@
-#!/bin/sh
-
-dunstify -t 5000 "HELP!" "$(echo '(alt +) w - weather' && echo 's - disk' && echo 'f - volume' && echo 'z - cpu' && echo 'm - mem' && echo 't - time' && echo 'b - battery' && echo 'r - temp' && echo 'p - updates' && echo 'q - date')"

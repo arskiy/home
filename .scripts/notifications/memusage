@@ -1,3 +1,0 @@
-#!/bin/sh
-
-dunstify "Memory usage" "$(free -h | awk '/Mem:/ {print $3 "/" $2}')"

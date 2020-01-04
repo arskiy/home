@@ -1,3 +1,0 @@
-#!/bin/sh
-
-dunstify "Disk usage" "$(df -h | grep /dev/sda1 | awk '{print $3 "/" $2}')"

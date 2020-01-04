@@ -1,3 +1,0 @@
-#!/bin/sh
-
-notify-send "Volume:" "$(ponymix | awk '/Avg./ {print $3}' | head -n 1)"

@@ -1,0 +1,2 @@
+#!/bin/sh
+HOME=${HOME}/etc/qutebrowser.d/ qutebrowser $* --target auto

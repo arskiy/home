@@ -1,6 +1,0 @@
-#!/bin/sh
-
-make
-sudo make install
-killall Xorg
-startx
