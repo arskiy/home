@@ -1,0 +1,12 @@
+# create a dir in /tmp with random name
+ct(){  
+    cd $(mktemp -d)
+}
+
+command_not_found_handle(){
+    shuf -n 1 ~/bin/insults.txt
+}
+
+PS1="> "
+
+tput smkx

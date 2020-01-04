@@ -1,0 +1,51 @@
+# aliases
+
+alias vi="nvim"
+alias v="nvim"
+alias sudo="doas"
+
+# rick roll on the terminal!
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias less="bat --plain"
+alias dog="bat --plain"
+alias cat="bat --plain"
+
+alias gotop="HOME=${HOME}/usr/local/share/gotop/ gotop"
+
+# my pdf reader
+alias zathura="zathura --fork"
+
+# make it easier to set pulseaudio's volume
+alias paset="ponymix set-volume 1>&/dev/null"
+
+# typos...
+alias ls="lsd"
+alias l="lsd -l"
+alias la="lsd -la"
+alias sl="lsd"
+alias ks="lsd"
+alias celar="clear"
+alias ..="cd .."
+
+alias wget="wget --hsts-file ${HOME}/usr/local/share/wget/wget-hsts"
+
+# jump to current project faster
+alias curproj="cd ~/dev/"
+alias vim="nvim"
+alias rust="cd ~/dev/Rust"
+
+# tool for sharing code
+alias h="haste | xclip -i"
+alias fortune="fortune /home/arskiy/.config/fortunes"
+
+# void things
+alias xins="sudo xbps-install"
+alias xqry="xbps-query"
+alias xrem="sudo xbps-remove"
+
+alias git=hub
+
+alias feh="sxiv"
+alias unzip="7za x"
+
+eval "$(hub alias -s)"
