@@ -3,3 +3,4 @@
 /.xmonad/*.o
 /.xmonad/*.hi
 /.xmonad/*.errors
+/bin/start_*
