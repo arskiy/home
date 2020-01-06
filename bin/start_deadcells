@@ -1,2 +1,0 @@
-cd ~/Files/dead-cells/
-WINEPREFIX=~/Games/dead-cells/ /opt/wine-lol/bin/wine ~/Files/dead-cells/deadcells.exe
