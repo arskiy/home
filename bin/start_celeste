@@ -1,0 +1,2 @@
+cd ~/Games/celeste/drive_c/Program\ Files/Celeste\ Farewell/
+WINEPREFIX=~/Games/celeste/ /opt/wine-lol/bin/wine Celeste.exe

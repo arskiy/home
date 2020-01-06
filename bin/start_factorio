@@ -1,0 +1,2 @@
+#!/bin/sh
+HOME=${HOME}/usr/local/steam steam steam://rungameid/427520

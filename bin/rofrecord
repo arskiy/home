@@ -10,15 +10,15 @@ check_install() {
 
 TMP_AVI=$(mktemp  /tmp/$USER.XXXXXXXXX.avi)
 TMP_GIF=$(mktemp  /tmp/$USER.XXXXXXXXXXXXXXX.avi)
-DEST="$HOME/Files/gifs/$(date +%m:%d::%T.gif)"
-PALETTE="$HOME/Files/gifs/palette.$$.png"
+DEST="$HOME/usr/gifs/$(date +%m:%d::%T.gif)"
+PALETTE="$HOME/usr/gifs/palette.$$.png"
 
 check_install rofi
 check_install ffmpeg
 check_install ffcast
 check_install gifsicle
 
-DURATION=$(seq 1 70 | awk 'NR % 5 == 0' | rofi -dmenu -i -p "> " -theme ~/.config/rofi/onedark.rasi)
+DURATION=$(seq 1 70 | awk 'NR % 5 == 0' | rofi -dmenu -i -p "> " -theme ~/etc/config.d/rofi/onedark.rasi)
 
 ffcast -s % ffmpeg -y -f x11grab -show_region 1 -framerate 15 \
         -video_size %s -i %D+%c -codec:v huffyuv \

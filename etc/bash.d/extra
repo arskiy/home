@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # create a dir in /tmp with random name
-ct(){  
+ct(){
     cd $(mktemp -d)
 }
 
@@ -10,3 +12,21 @@ command_not_found_handle(){
 PS1="> "
 
 tput smkx
+
+bind 'set completion-ignore-case on'
+bind 'set completion-map-case on'
+bind 'set show-all-if-ambiguous on'
+bind 'set mark-symlinked-directories on'
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+bind 'set match-hidden-files off'
+bind 'set page-completions off'
+bind 'set completion-query-items 200'
+bind 'set visible-stats on'
+bind 'set skip-completed-text on'
+bind 'set input-meta on'
+bind 'set output-meta on'
+bind 'set convert-meta off'
+bind 'set enable-keypad on'
+bind '"\e[3;3~": kill-word'
+bind '"s" self-insert'

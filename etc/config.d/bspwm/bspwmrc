@@ -2,9 +2,8 @@
 
 #/home/arskiy/.scripts/bing && sleep .5
 #/bin/feh --bg-scale $HOME/usr/share/wp.jpg --no-fehbg
-xsetroot -grey
+xsetroot -solid '#808080'
 compton --config $HOME/etc/config.d/compton/compton.conf &
-$HOME/etc/config.d/polybar/launch.sh
 
 bspc monitor -d I II III IV V
 
@@ -53,3 +52,5 @@ bspc rule -a feh floating=on manage=off border=off
 bspc rule -a Emacs state=tiled border=off
 bspc rule -a zathura state=tiled floating=off border=off
 bspc rule -a polybar sticky=on
+
+$HOME/etc/config.d/polybar/launch.sh
