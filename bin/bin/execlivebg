@@ -1,5 +1,0 @@
-#!/bin/bash
-
-dunstify "Starting live wallpaper..."
-
-bash .live-background.sh && bash .livestream.sh 

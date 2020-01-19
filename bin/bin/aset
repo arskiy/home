@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# simple shell script to change alsa's volume.
-
-amixer set Master $1% --quiet

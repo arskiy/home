@@ -1,4 +1,4 @@
-cp ~/bin bin -r
+cp ~/bin/* bin -r
 cp ~/etc etc
 cp ~/etc/bash.d/* etc/bash.d/
 cp ~/etc/xorg.d/* etc/xorg.d/ -r

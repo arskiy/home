@@ -1,5 +1,0 @@
-#!/bin/sh
-
-saveimage() {
-	xclip -selection clipboard -t image/png -o > $1
-}

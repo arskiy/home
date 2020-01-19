@@ -1,3 +1,0 @@
-cd ~/GOG\ Games/crypt/drive_c/GOG\ Games/Crypt\ of\ the\ Necrodancer/
-
-WINEPREFIX=~/GOG\ Games/crypt wine NecroDancer.exe

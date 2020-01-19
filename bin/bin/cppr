@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if (($# == 1)); then
-  clang++ $1 -o ${1%.*} && ./${1%.*}
-else
-  echo 'Expected one argument.'
-fi
-

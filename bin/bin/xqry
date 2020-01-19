@@ -1,3 +1,0 @@
-#!/bin/sh
-
-xbps-query $1 | sed '/32-bit/d'

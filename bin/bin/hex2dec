@@ -1,6 +1,0 @@
-#!/bin/sh
-
-for x in $@
-do
-    python -c "print(int(str('$x'), 16))"
-done
