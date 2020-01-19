@@ -1,0 +1,1 @@
+offlineimap -c /home/arskiy/etc/config.d/offlineimaprc -o && mu index --maildir /home/arskiy/usr/mail

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo mount $(/bin/ls -1 /dev/sd[^a]*) /mnt
+
+sudo cp /mnt/Garmin/Activities/* /home/arskiy/Deborah/

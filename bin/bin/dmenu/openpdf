@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/bin/ls -d /home/arskiy/Files/PDFs/* | dmenu -l 10 | awk '{gsub(/ /,"\\ ")}8' | xargs cat | zathura - --fork

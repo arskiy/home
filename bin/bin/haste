@@ -1,0 +1,2 @@
+a=$(cat); curl -X POST -s -d "$a" https://hasteb.in/documents | awk -F '"' '{print "https://hasteb.in/"$4}' | xclip -sel "clipboard";
+notify-send "hastebin" "Copied to clipboard."

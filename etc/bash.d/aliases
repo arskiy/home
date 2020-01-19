@@ -45,7 +45,6 @@ alias xrem="sudo xbps-remove"
 
 alias git=hub
 
-alias feh="sxiv"
 alias unzip="7za x"
 
 eval "$(hub alias -s)"

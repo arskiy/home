@@ -1,0 +1,116 @@
+#!/bin/bash
+
+# (originally) by astrak (https://git.astrak.co/astrak/dots/src/branch/master/bin/bin/rofshot)
+
+# screenshot filename
+tmp_image=/tmp/rofshot.$USER.$$.png
+
+check_install() {
+     if [[ ! $(type $1 2>/dev/null) ]]; then
+          echo "Error: missing command '$1'. Exiting."
+          notify-send 'rofshot' "Error uploading. Missing command $1."
+          exit 1
+     fi
+}
+
+imgur_upload() {
+     curl -F "file=@$1" "https://0x0.st" | xclip -sel "clip"
+     notify-send 'rofshot' 'Link copied to clipboard.'  -i "$1"
+
+     rm "$1"
+}
+
+copy_image() {
+     xclip -sel "clipboard" -t image/png -i "$1"
+     notify-send "rofshot" "Image copied to clipboard." -i "$1"
+
+     rm "$1"
+}
+
+grab_area_clip() {
+     sleep .5 && maim -su >"$tmp_image"
+     MAIM_CODE="$?"
+     case "$MAIM_CODE" in
+          1 )
+               notify-send "rofshot" "Screenshot cancelled"
+               ;;
+          * )
+               copy_image "$tmp_image"
+     esac
+}
+
+grab_window_clip() {
+     sleep .5 && maim -i $(xdotool getactivewindow)>"$tmp_image"
+     copy_image "$tmp_image"
+}
+
+grab_all_clip() {
+     sleep .5 && maim >"$tmp_image"
+     copy_image "$tmp_image"
+}
+
+grab_area_upload() {
+     sleep .5 && maim -su >"$tmp_image"
+     MAIM_CODE=$?
+
+     case "$MAIM_CODE" in
+          1 )
+               notify-send "rofshot" "Screenshot cancelled"
+               ;;
+          * )
+               imgur_upload "$tmp_image"
+     esac
+}
+
+grab_window_upload() {
+     sleep .5 && maim -i $(xdotool getactivewindow)>"$tmp_image"
+
+     imgur_upload "$tmp_image"
+}
+
+grab_all_upload() {
+     sleep .5 && maim >"$tmp_image"
+     imgur_upload "$tmp_image"
+}
+
+options=( '1: Copy area' '2: Copy window' '3: Copy entire screen' '4: Upload area' '5: Upload window' '6: Upload entire screen')
+
+select_option() {
+     case $1 in
+          '1: Copy area' )
+               grab_area_clip
+               ;;
+          '2: Copy window' )
+               grab_window_clip
+               ;;
+          '3: Copy entire screen' )
+               grab_all_clip
+               ;;
+					'4: Upload area' )
+							 grab_area_upload
+							 ;;
+					'5: Upload window' )
+							 grab_window_upload
+							 ;;
+					'6: Upload entire screen' )
+							 grab_all_upload
+							 ;;
+     esac
+}
+
+# check all required commands are available
+check_install "maim"
+check_install "curl"
+check_install "xclip"
+check_install "xdotool"
+
+# starting rofi in dmenu mode
+if [[ $1 == "--dmenu" ]]; then
+     select_option "$(printf "%s\n" "${options[@]}" | dots-dmenu -p "Select screenshot type ")"
+else
+     select_option "$(printf "%s\n" "${options[@]}" | rofi -dmenu \
+          -i \
+          -p "> " \
+          -kb-accept-alt "" \
+          -kb-custom-1 "Shift+Return")"
+fi
