@@ -1,4 +1,5 @@
 cp ~/bin/* bin -r
+cp ~/usr/src/* ./usr/src
 cp ~/etc/bash.d/* etc/bash.d/
 cp ~/etc/xorg.d/* etc/xorg.d/ -r
 cp ~/etc/config.d/nvim/init.vim etc/config.d/nvim/
