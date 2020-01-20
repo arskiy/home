@@ -1,0 +1,14 @@
+#+TITLE: doom-notes
+* Bindings
+** SPC s
+*** SPC s p - rg ./
+*** SPC s o - search online (opens browser)
+*** SPC s r - jump to mark
+*** SPC q r - restart emacs and load recent buffer
+*** SPC q R - restart emacs
+** ! - rotate
+** SPC w
+*** SPC w o - enlarge window, press again to go back to original state
+** C-c
+*** C-c C-<left>/C-c C-<right> - go left and right with centaur tabs
+** SPC t s - start flyspell
