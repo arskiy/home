@@ -3,6 +3,7 @@
 xrdb ${HOME}/etc/xorg.d/colors/moonbow
 xsetroot -solid '#808080'
 compton --config $HOME/etc/config.d/compton/compton.conf &
+xsetroot -cursor_name left_ptr &
 
 bspc monitor -d I II III IV V
 
