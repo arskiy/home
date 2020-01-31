@@ -13,6 +13,7 @@ cp ~/etc/config.d/zathura/* etc/config.d/zathura/ -r
 cp ~/etc/config.d/dunst/* etc/config.d/dunst/ -r
 cp ~/etc/config.d/polybar/* etc/config.d/polybar/ -r
 cp ~/etc/config.d/rofi/* etc/config.d/rofi/ -r
+cp ~/etc/config.d/qutebrowser/config.py ~/etc/config.d/qutebrowser
 cp ~/etc/config.d/windowchef/* etc/config.d/windowchef/ -r
 
 git add .
