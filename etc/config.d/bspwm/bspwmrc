@@ -1,7 +1,6 @@
 #! /bin/sh
 
-#/home/arskiy/.scripts/bing && sleep .5
-#/bin/feh --bg-scale $HOME/usr/share/wp.jpg --no-fehbg
+xrdb ${HOME}/etc/xorg.d/colors/moonbow
 xsetroot -solid '#808080'
 compton --config $HOME/etc/config.d/compton/compton.conf &
 

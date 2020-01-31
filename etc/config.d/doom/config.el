@@ -8,6 +8,8 @@
 (load! "setup-dired")
 (load! "setup-elcord")
 (load! "setup-deft")
+(load! "setup-colemak")
+(load! "rust-analyzer")
 
 (require 'zone)
 (zone-when-idle 300)
@@ -15,9 +17,15 @@
 (elcord-mode)
 (counsel-mode)
 
-(load-theme 'doom-one t)
+(load-theme 'doom-sourcerer t)
 
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
+
+(after! rustic
+  (setq lsp-rust-server 'rust-analyzer)
+  (push 'rustic-clippy flycheck-checkers))
+
+(add-hook 'rustic-mode-hook 'rust-analyzer-inlay-hints-mode)
 
 (setq
   +doom-dashboard-banner-file (expand-file-name "logo.png" doom-private-dir)

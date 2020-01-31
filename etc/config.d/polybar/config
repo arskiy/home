@@ -28,9 +28,9 @@ alert = #bd2c40
 
 [bar/main]
 monitor = ${env:MONITOR:LVDS1}
-width = 67%
+width = 100%
 height = 20
-offset-x = 16%
+offset-x = 0
 offset-y = 0
 fixed-center = true
 
@@ -54,11 +54,11 @@ module-margin-right = 1
 bottom = true
 
 font-0 = lemon:size=10;1
-font-1 = Weather Icons:size=12;1
+font-1 = Weather Icons:size=9;1
 
-modules-left = bspwm
-modules-center =
-modules-right = pulseaudio cpu blank memory blank filesystem blank battery blank temperature blank openweathermap blank date
+modules-left = bspwm spotify
+modules-center = 
+modules-right = pulseaudio blank xkeyboard blank cpu blank memory blank filesystem blank battery blank temperature blank openweathermap blank date
 
 ;tray-position = right
 ;tray-padding = 2
@@ -73,6 +73,13 @@ modules-right = pulseaudio cpu blank memory blank filesystem blank battery blank
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = "Playing: "
+format = <label>
+exec = python ~/bin/spotify_status.py -f '{artist}: {song}'
 
 [module/blank]
 type = internal/xwindow
@@ -89,18 +96,15 @@ type = internal/xwindow
 label = %title:0:30:...%
 
 [module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix-foreground = ${colors.foreground-alt}
-; format-prefix-underline = ${colors.primary}
-
-; label-layout-underline = ${colors.primary}
+type = custom/script
+exec = ~/bin/print-variant
+interval = 1
+format-prefix = "us "
+format = <label>
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
-; label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -108,7 +112,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = root%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -218,7 +222,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "mem:"
+format-prefix = "mem: "
 format-prefix-foreground = ${colors.foreground}
 ; format-underline = ${colors.primary}
 label = %percentage_used%%

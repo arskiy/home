@@ -7,3 +7,5 @@
 ;; (package! builtin-package :disable t)
 (package! elcord)
 (package! 2048-game)
+(package! ht)
+(package! dash)
