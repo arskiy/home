@@ -49,16 +49,3 @@
 
    :n "f" #'avy-goto-char-timer
    :n "C-," #'execute-extended-command))
-
-
-(add-hook 'evil-collection-setup-hook #'my-hjkl-rotation)
-(after! evil-collection
-  (evil-collection-translate-key nil 'evil-motion-state-map
-    ;; colemak hnei is qwerty hjkl
-    "n" "j"
-    "e" "k"
-    "i" "l"
-    ;; add back nei
-    "j" "e"
-    "k" "n"
-    "l" "i"))

@@ -1,0 +1,2 @@
+#!/bin/sh
+nix-env -u --dry-run | wc -l

@@ -28,9 +28,9 @@ alert = #bd2c40
 
 [bar/main]
 monitor = ${env:MONITOR:LVDS-1}
-width = 60%
+width = 70%
 height = 20
-offset-x = 20%
+offset-x = 15%
 offset-y = 0
 fixed-center = true
 
@@ -90,6 +90,12 @@ type = custom/script
 exec = ~/bin/weather.sh
 interval = 600
 label-font = 2
+
+[module/updates]
+type = custom/script
+exec = ~/bin/nix-packages
+interval = 60
+label-prefix = "update: "
 
 [module/xwindow]
 type = internal/xwindow
@@ -336,24 +342,71 @@ format-charging = <animation-charging> <label-charging>
 
 format-discharging = <animation-discharging> <label-discharging>
 ; format-discharging-underline = ${colors.secondary}
+;
+; Available tags:
+;   <label-charging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-charging>
 
-format-full-prefix = "⮏ "
-format-full-prefix-foreground = ${colors.foreground}
-; format-full-underline = ${self.format-charging-underline}
+; Available tags:
+;   <label-discharging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-discharging>
 
-ramp-capacity-foreground = ${colors.primary}
+; Available tags:
+;   <label-full> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;format-full = <ramp-capacity> <label-full>
 
-animation-charging-0 = ⮐
-animation-charging-1 = ⮑
-animation-charging-2 = ⮏
-animation-charging-foreground = ${colors.foreground}
-animation-charging-framerate = 500
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current charge rate in watts)
+label-charging = Charging %percentage%%
 
-animation-discharging-0 = ⮏
-animation-discharging-1 = ⮑
-animation-discharging-2 = ⮐
-animation-discharging-foreground = ${colors.foreground}
-animation-discharging-framerate = 1000
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+label-discharging = Discharging %percentage%%
+
+; Available tokens:
+;   %percentage% (default) - is set to 100 if full-at is reached
+;   %percentage_raw%
+label-full = Fully charged
+
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+; Only applies if <bar-capacity> is used
+bar-capacity-width = 10
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+; Only applies if <animation-discharging> is used
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+; Framerate in milliseconds
+animation-discharging-framerate = 500
 
 [module/temperature]
 type = internal/temperature
