@@ -26,6 +26,7 @@
   (push 'rustic-clippy flycheck-checkers))
 
 (setq lsp-rust-server 'rust-analyzer)
+(setq rustic-lsp-server 'rust-analyzer)
 
 (add-hook 'rustic-mode-hook 'rust-analyzer-inlay-hints-mode)
 

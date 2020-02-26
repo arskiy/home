@@ -33,8 +33,6 @@
    :nv "L" #'evil-end-of-line
 
    :n "M-/" #'comment-or-uncomment-region
-   :n "SPC d g" #'dumb-jump-go
-   :n "SPC d b" #'dumb-jump-back
 
    :n "C-c C-o" #'(dired "/home/arskiy/etc/emacs.d")
 

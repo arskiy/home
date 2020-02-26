@@ -17,6 +17,8 @@ check_install rofi
 check_install ffmpeg
 check_install ffcast
 check_install gifsicle
+check_install xwininfo
+check_install xrectsel
 
 DURATION=$(seq 1 70 | awk 'NR % 5 == 0' | rofi -dmenu -i -p "> " -theme ~/etc/config.d/rofi/onedark.rasi)
 

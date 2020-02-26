@@ -13,6 +13,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'mattn/gist-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'LnL7/vim-nix'
 "Plug 'vim-syntastic/syntastic'
 call plug#end()
 
