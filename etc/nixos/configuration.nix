@@ -13,7 +13,7 @@
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
-  boot.loader.grub.timeout = 1;
+  boot.loader.timeout = 1;
 
   # boot.loader.grub.efiSupport = true;
   # boot.loader.grub.efiInstallAsRemovable = true;
@@ -30,7 +30,14 @@
       };
     };
   };
-
+  
+  boot.cleanTmpDir = true;
+  
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
   # Select internationalisation properties.
   i18n = {
     defaultLocale = "en_US.UTF-8";
@@ -45,6 +52,8 @@
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
+  services.mingetty.autologinUser = "arskiy";
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -54,6 +63,10 @@
     git gitAndTools.hub
     lsd
     bspwm sxhkd
+
+    ripgrep
+    sqlite
+    wordnet
   ];
 
   security.sudo.wheelNeedsPassword = false;
@@ -70,6 +83,7 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
+    autorun = true;
     windowManager.bspwm.enable = true;
     displayManager.defaultSession = "none+bspwm";
     displayManager.startx.enable = true;

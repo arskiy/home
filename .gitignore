@@ -3,5 +3,5 @@
 /.xmonad/*.o
 /.xmonad/*.hi
 /.xmonad/*.errors
-*.elc
+/etc/config.d/doom/*.elc
 /bin/start_*

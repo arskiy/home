@@ -2,7 +2,7 @@ cp ~/bin/* bin -r
 cp ~/usr/src/* ./usr/src
 cp ~/etc/bash.d/* etc/bash.d/
 cp ~/etc/xorg.d/* etc/xorg.d/ -r
-cp ~/etc/configuration.nix etc/
+cp ~/etc/nixos/ etc/ -r
 cp ~/etc/config.d/nvim/init.vim etc/config.d/nvim/
 cp ~/etc/config.d/bspwm/* etc/config.d/bspwm/
 cp ~/etc/config.d/sxhkd/* etc/config.d/sxhkd/
