@@ -42,7 +42,7 @@ c.auto_save.session                              = True
 
 c.backend                                        = 'webengine'
 c.qt.args                                        = ["ppapi-widevine-path=/usr/lib/chromium/libwidevinecdm.so"]
-c.content.headers.user_agent = '{ "user-agent": "Mozilla/5.0 (Windows NT 6.1; rv:52.0) Gecko/20100101 Firefox/52.0" }'
+c.content.headers.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36'
 
 # c.colors.completion.category.bg                  = colour00
 # c.colors.completion.category.border.bottom       = colour00
@@ -146,7 +146,6 @@ c.content.geolocation                            = 'ask'
 c.content.headers.accept_language                = 'en-US,en'
 c.content.headers.custom                         = {}
 c.content.headers.do_not_track                   = False
-c.content.headers.user_agent                     = None
 c.content.host_blocking.enabled                  = True
 c.content.host_blocking.lists                    = ['https://www.malwaredomainlist.com/hostslist/hosts.txt', 'http://someonewhocares.org/hosts/hosts', 'http://winhelp2002.mvps.org/hosts.zip', 'http://malwaredomains.lehigh.edu/files/justdomains.zip', 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext', 'http://sbc.io/hosts/alternates/fakenews-gambling/hosts']
 c.content.host_blocking.whitelist                = ['qutebrowser.org']
@@ -170,7 +169,7 @@ c.downloads.location.remember                    = True
 c.downloads.location.suggestion                  = 'path'
 c.downloads.open_dispatcher                      = None
 c.downloads.position                             = 'bottom'
-c.downloads.remove_finished                      = -1
+c.downloads.remove_finished                      = 500
 
 
 c.editor.command                                 = ['st', '-e', 'nvim', '{}']
@@ -234,7 +233,7 @@ c.tabs.mousewheel_switching                      = True
 c.tabs.new_position.related                      = 'next'
 c.tabs.new_position.unrelated                    = 'last'
 c.tabs.padding                                   = {'top': 3, 'bottom': 3, 'left': 3, 'right': 3}
-c.tabs.position                                  = 'top'
+c.tabs.position                                  = 'bottom'
 c.tabs.select_on_remove                          = 'next'
 c.tabs.show                                      = 'multiple'
 c.tabs.show_switching_delay                      = 800
@@ -246,9 +245,9 @@ c.tabs.width                                     = '20%'
 c.tabs.indicator.width                           = 0
 c.tabs.wrap                                      = True
 c.url.auto_search                                = 'naive'
-c.url.start_pages                                = '~/resources/index.html'
-c.url.default_page                               = '~/resources/index.html'
-c.url.searchengines                              = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}'}
+c.url.start_pages                                = ['~/etc/config.d/qutebrowser/resources/index.html']
+c.url.default_page                               = '~/etc/config.d/qutebrowser/resources/index.html'
+c.url.searchengines                              = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}', "rust": "https://doc.rust-lang.org/stable/std/?search={}"}
 c.zoom.default                                   = '90%'
 c.zoom.levels                                    = ['25%', '33%', '50%', '67%', '75%', '90%', '100%', '110%', '125%', '150%', '175%', '200%', '250%', '300%', '400%', '500%']
 
