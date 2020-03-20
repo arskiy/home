@@ -1,9 +1,6 @@
 . ${HOME}/etc/bash.d/aliases
 . ${HOME}/etc/bash.d/extra
 
-# Start X11 if on tty1
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    startx
-    sudo netctl start wlp3s0PitucaPlus
-    sudo systemctl stop dhcpcd
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
 fi

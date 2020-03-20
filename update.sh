@@ -15,6 +15,7 @@ cp ~/etc/config.d/polybar/* etc/config.d/polybar/ -r
 cp ~/etc/config.d/rofi/* etc/config.d/rofi/ -r
 cp ~/etc/config.d/qutebrowser/config.py etc/config.d/qutebrowser
 cp ~/etc/config.d/windowchef/* etc/config.d/windowchef/ -r
+cp ~/etc/config.d/nixpkgs/ etc/config.d/ -r
 
 rm etc/config.d/doom/*.elc
 

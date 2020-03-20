@@ -1,47 +1,72 @@
 { config, pkgs, ... }:
+
+with pkgs;
+
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.git = {
+    enable = true;
+    userName = "Alice Micheloni";
+    userEmail = "alicemicheloni@tutanota.com";
+  };
+
   home.packages = [
     # xorg
-    pkgs.xorg.xbacklight
-    pkgs.xorg.xwininfo
+    xorg.xbacklight
+    xorg.xwininfo
 
     # games
-    #pkgs.steam
-    pkgs.wine
-    pkgs.winetricks
-    pkgs.xpad
+    steam
+    wine
+    winetricks
+    xpad
 
     # gui misc
-    pkgs.kolourpaint
-    #pkgs.firefox
+    kolourpaint
+    discord
+    gimp
+    sxiv
 
     # cli misc
-    pkgs.htop
-    pkgs.fortune
-    pkgs.ffmpeg
-    pkgs.ffcast
-    pkgs.gifsicle
+    htop
+    fortune
+    ffmpeg
+    ffcast
+    imagemagick
+    gifsicle
+    maim
+    xclip
+    xdotool
+    jq
+    p7zip
+    toilet
+    xrectsel
+    unrar
 
     # development
-    pkgs.git
-    pkgs.cmake
-    pkgs.radare2
-    pkgs.rustup
+    cmake
+    radare2
+    rustup
+    emacs
 
-    pkgs.clang
-    pkgs.clang-tools
+    clang
+    clang-tools
 
     # documents
-    pkgs.libreoffice
-    pkgs.texlive.combined.scheme-medium
+    libreoffice
+    zathura
+    texlive.combined.scheme-medium
 
     # eye candy
-    pkgs.rofi
+    rofi
+    polybar
+    dunst
+    libnotify
 
     # networking
-    pkgs.qbittorrent
+    qbittorrent
 
   ];
 }

@@ -16,7 +16,7 @@ super + r
     rofrecord
 
 super + p
-	qtb
+	firefox
 
 super + o
     emacs
