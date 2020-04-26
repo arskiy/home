@@ -54,27 +54,20 @@
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
+
   services.mingetty.autologinUser = "arskiy";
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = let 
-    myPythonPackages = pythonPackages: with pythonPackages; [
-      numpy
-      pandas
-      fire
-      tqdm
-      tensorflow
-    ];
-
   in with pkgs; [
-    (python3.withPackages myPythonPackages)
-    wget neovim file killall htop gotop
+    wget file killall htop gotop
     gnumake rustup gcc pkg-config automake
     zip unzip
     git gitAndTools.hub
     lsd
     bspwm sxhkd
+    neovim emacsUnstable
 
     ripgrep
     sqlite
@@ -109,16 +102,17 @@
 
   hardware.opengl.driSupport32Bit = true;
 
-  services.picom = {
-    enable = true;
-    shadow = true;
-    fade = false;
-  };
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.arskiy = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
   };
+
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
+    }))
+  ];
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
