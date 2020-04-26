@@ -1,1 +1,2 @@
 usr/src/**/* linguist-vendored
+*.html linguist-vendored
