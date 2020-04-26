@@ -1,2 +1,2 @@
 usr/src/**/* linguist-vendored
-*.html linguist-vendored
+etc/config.d/qutebrowser/resources/* linguist-vendored
