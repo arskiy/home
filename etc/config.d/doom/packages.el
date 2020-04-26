@@ -9,3 +9,4 @@
 (package! 2048-game)
 (package! ht)
 (package! dash)
+(package! tide :disable t)

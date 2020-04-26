@@ -16,10 +16,11 @@ with pkgs;
     # xorg
     xorg.xbacklight
     xorg.xwininfo
+    xorg.libX11
 
     # games
     steam
-    wine
+    wineWowPackages.stable
     winetricks
     xpad
 
@@ -28,6 +29,8 @@ with pkgs;
     discord
     gimp
     sxiv
+    qalculate-gtk
+    corefonts
 
     # cli misc
     htop
@@ -44,15 +47,22 @@ with pkgs;
     toilet
     xrectsel
     unrar
+    bat
+    libqalculate
+    moreutils
+    youtube-dl
+    vlc
+    languagetool
 
     # development
     cmake
     radare2
     rustup
-    emacs
+    hugo
 
     clang
     clang-tools
+    lldb
 
     # documents
     libreoffice

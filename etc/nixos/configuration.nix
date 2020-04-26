@@ -29,6 +29,7 @@
         pskRaw = "c2d1b3a3c686ad153802bf85fccf8400df4283f0c1b36629fdb47283321ff5bb";
       };
     };
+    firewall.allowedUDPPorts = [9993];
   };
   
   boot.cleanTmpDir = true;
@@ -38,6 +39,7 @@
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
+
   # Select internationalisation properties.
   i18n = {
     defaultLocale = "en_US.UTF-8";
@@ -56,7 +58,17 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = let 
+    myPythonPackages = pythonPackages: with pythonPackages; [
+      numpy
+      pandas
+      fire
+      tqdm
+      tensorflow
+    ];
+
+  in with pkgs; [
+    (python3.withPackages myPythonPackages)
     wget neovim file killall htop gotop
     gnumake rustup gcc pkg-config automake
     zip unzip

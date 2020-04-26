@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 . ${HOME}/etc/bash.d/aliases
 . ${HOME}/etc/bash.d/extra
 

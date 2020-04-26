@@ -9,23 +9,15 @@
 (load! "setup-elcord")
 (load! "setup-deft")
 (load! "setup-colemak")
-(load! "rust-analyzer")
-
-(require 'zone)
-(zone-when-idle 300)
 
 (elcord-mode)
 (counsel-mode)
 
 (load-theme 'doom-sourcerer t)
 
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
-
 (after! rustic
-  (setq lsp-rust-server 'rust-analyzer)
   (push 'rustic-clippy flycheck-checkers))
 
-(setq lsp-rust-server 'rust-analyzer)
 (setq rustic-lsp-server 'rust-analyzer)
 
 (add-hook 'rustic-mode-hook 'rust-analyzer-inlay-hints-mode)
@@ -44,4 +36,14 @@
   max-lisp-eval-depth 5000
   doom-font (font-spec :family "scientifica" :size 12)
   mu4e-use-fancy-chars t
-  mu4e-view-show-images t)
+  mu4e-view-show-images t
+  langtool-language-tool-jar "/nix/store/d5ycz0991v0g93m4bicl7bs4yjih64d5-LanguageTool-4.9/share/languagetool-commandline.jar"
+  bookmark-default-file "/home/arskiy/etc/config.d/doom/bookmarks"
+
+  internal-lisp-face-attributes [nil
+   :family :foundry :swidth :height :weight :slant :underline :inverse
+   :foreground :background :stipple :overline :strike :box
+   :font :inherit :fontset :vector :extend]
+
+  lsp-idle-delay 0.550
+  read-process-output-max (* 1024 1024))

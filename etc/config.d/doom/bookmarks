@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("configuration.nix"
+ (filename . "/etc/nixos/configuration.nix")
+ (front-context-string . "\" \"video\" ]; # E")
+ (rear-context-string . "roups = [ \"wheel")
+ (position . 2738))
+("etc"
+ (filename . "~/etc/")
+ (front-context-string . "config.d\n  drwxr")
+ (rear-context-string . "0K Apr 25 23:04 ")
+ (position . 169))
+("doom"
+ (filename . "~/etc/config.d/doom/")
+ (front-context-string . "config.el\n  -rw-")
+ (rear-context-string . "4K Apr 26 11:36 ")
+ (position . 240))
+)

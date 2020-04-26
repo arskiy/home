@@ -9,6 +9,27 @@ command_not_found_handle(){
     shuf -n 1 ~/bin/insults.txt
 }
 
+j() {
+    FILE=$(~/bin/get-bookmark $1)
+    
+    if [ -d "${FILE}" ]; then
+        cd ${FILE}
+    else
+        nvim ${FILE}
+    fi
+}
+
+_j_complete() {
+    local cur prev names
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    names=`$HOME/bin/get-bookmark --names | tr '\n' ' '`
+
+    COMPREPLY=($(compgen -W "${names}" "${cur}"))
+}
+
+complete -F _j_complete j
+
 PS1="> "
 
 tput smkx
