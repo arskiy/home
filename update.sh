@@ -7,7 +7,7 @@ cp ~/etc/config.d/bspwm/* etc/config.d/bspwm/
 cp ~/etc/config.d/sxhkd/* etc/config.d/sxhkd/
 cp ~/etc/config.d/doom/* etc/config.d/doom/
 cp ~/etc/config.d/doom/org/doom-notes.org etc/config.d/doom/org/
-cp ~/etc/config.d/compton/* etc/config.d/compton/
+cp ~/etc/config.d/doom/org/disciplinas etc/config.d/doom/org/ -r
 cp ~/etc/config.d/zathura/* etc/config.d/zathura/ -r
 cp ~/etc/config.d/dunst/* etc/config.d/dunst/ -r
 cp ~/etc/config.d/polybar/* etc/config.d/polybar/ -r

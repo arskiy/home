@@ -10,6 +10,8 @@ alias less="bat --plain"
 alias dog="bat --plain"
 alias cat="bat --plain"
 
+alias fltrdr="fltrdr --config-base=${HOME}/etc/config.d/fltrdr/"
+
 alias gotop="HOME=${HOME}/usr/local/share/gotop/ gotop"
 
 # my pdf reader

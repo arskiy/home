@@ -5,6 +5,7 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -27,6 +28,9 @@
     wireless.networks = {
       PitucaPlus = {
         pskRaw = "c2d1b3a3c686ad153802bf85fccf8400df4283f0c1b36629fdb47283321ff5bb";
+      };
+      Clayton = {
+        psk = "gambiarra";
       };
     };
     firewall.allowedUDPPorts = [9993];
@@ -67,7 +71,9 @@
     git gitAndTools.hub
     lsd
     bspwm sxhkd
-    neovim emacsUnstable
+    neovim
+    #emacsUnstable
+    steam
 
     ripgrep
     sqlite
@@ -108,11 +114,11 @@
     extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
   };
 
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
-    }))
-  ];
+  #nixpkgs.overlays = [
+  #  (import (builtins.fetchTarball {
+  #    url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
+  #  }))
+  #];
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database

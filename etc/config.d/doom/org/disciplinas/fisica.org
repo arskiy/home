@@ -1,0 +1,39 @@
+#+TITLE: Física
+
+Coleção Os Fundamentos da Física: https://www.souexatas.com/2015/09/os-fundamentos-da-fisica-vol-1-2-e-3.html
+
+* Campos Magnéticos
+
+* Gravitação [[https://www.stoodi.com.br/resumos/fisica/gravitacao/][Link do stoodi sobre leis de kepler e lei da gravitação universal de newton]]
+
+* Circuitos Elétricos
+
+* Energia
+
+* Pressão
+
+* Atrito
+
+* Leis de Newton
+
+* Eletromagnetismo
+
+* Pilhas eletroquímicas
+
+* Eletricidade
+
+* Hidrostática
+
+* Ondas
+
+* Ótica
+
+* Calorimetria
+
+* Usinas / Instalações residenciais
+
+* Acústica
+
+* Mecânica
+
+* Estequiometria

@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("configuration.nix"
+(("velera"
+ (filename . "~/dev/velera/")
+ (front-context-string . "audio\n  drwxr-xr")
+ (rear-context-string . "0K Feb 27 20:20 ")
+ (position . 125))
+("mentis-dir"
+ (filename . "~/dev/mentis/")
+ (front-context-string . "client-side\n  dr")
+ (rear-context-string . "0K Apr 26 00:02 ")
+ (position . 126))
+("configuration.nix"
  (filename . "/etc/nixos/configuration.nix")
  (front-context-string . "\" \"video\" ]; # E")
  (rear-context-string . "roups = [ \"wheel")

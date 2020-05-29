@@ -1,0 +1,96 @@
+#+TITLE: Matemática
+
+Coleção fundamentos da matemática: https://www.doraci.com.br/downloads/matematica/fund-mat-elem_01.pdf
+
+* Regra de três
+
+* Geometria
+** Geometria analítica:
+** Geometria espacial:
+** Prismas:
+** Áreas de figuras planas e polígonos:
+*** Raio de triangulo equilátero:
+\begin{equation}
+R = {{\sqrt{3} \times l}\over{3}}
+\end{equation}
+
+** Circunferências:
+
+
+* Equações de primeiro e segundo grau
+
+
+* Inequações de primeiro e segundo grau
+
+
+* Sistemas
+
+
+* Análise Combinatória
+
+
+* Matrizes
+
+
+* Progressões Aritméticas e Geométricas
+
+
+* Matemática financeira
+** Média aritmética comum:
+\begin{equation}
+M_{c} = {{m_{1} + m_{2} + m_{3} + ... + m_{n}}\over{n}}
+\end{equation}
+** Média aritmética ponderada:
+\begin{equation}
+M_{p} = {{(x_{1}\times{p_{1}})} + {(x_{2}\times{p_{1}})} + {(x_{3}\times{p_{3}})} + ... + {(x_{n}\times{p_{n}})}\over{p_{1} + p_{2} + p_{3} + ... + p_{n}}}
+\end{equation}
+
+** Moda:
+*** Moda é o elemento que aparece mais vezes dentro de um conjunto.
+**** Exemplo unimodal: 1; 6; 7; 2; 3; 2. A moda é 2.
+**** Exemplo bimodal: 1; 6; 2; 7; 2; 7; 8. As modas são 2 e 7.
+
+** Mediana:
+*** Mediana é o elemento que fica no meio de um conjunto ordenado.
+**** Exemplo com uma única mediana: 1,50; 1,54; 1,55; 1,60; 1,65; 1,67; 1,69; 1,75; 1,70. Md = 1,65 m
+**** Exemplo com duas medianas: (32, 27, 15, 44, 15, 32). Ao ordenar, (15, 15, 27, 32, 32, 44). Então, retiramos a média aritmética de 27 e 32, que é 29,5.
+
+
+* Grandezas proporcionais
+
+
+* Logaritmos e funções exponenciais
+
+
+* Trigonometria
+
+
+* Porcentagem
+
+
+* Troncos
+
+* Imaginarios e complexos
+x = n % 4
+i ^ x
+
+x = 0 -> 1
+x = 1 -> i
+x = 2 -> -1
+x = 3 -> -i
+
+a + bi
+** Adição:
+(a + bi) + (c + di) = a + c + (b + d)i
+
+** Multiplicação:
+distributiva
+
+** Exponenciação:
+*** Exemplo:
+(1 + i) ^ 12
+[(1 + i)²] ^ 6
+(1 + 2i + i²) ^ 6
+(2i) ^ 6
+2 ^ 6 * i ^ 6
+64 * (-1) = -64
