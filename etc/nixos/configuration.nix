@@ -72,8 +72,9 @@
     lsd
     bspwm sxhkd
     neovim
-    #emacsUnstable
-    steam
+    emacsUnstable
+    #steam
+    (texlive.combine { inherit (texlive) scheme-medium wrapfig capt-of titling titlesec fontspec pgfplots pgf; }) 
 
     ripgrep
     sqlite
@@ -114,11 +115,11 @@
     extraGroups = [ "wheel" "video" ]; # Enable ‘sudo’ for the user.
   };
 
-  #nixpkgs.overlays = [
-  #  (import (builtins.fetchTarball {
-  #    url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
-  #  }))
-  #];
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
+    }))
+  ];
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database

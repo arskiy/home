@@ -1,0 +1,4 @@
+/.auctex-auto
+*.tex
+*.log
+*.pdf

@@ -1,6 +1,164 @@
 #+TITLE: Física
+#+STARTUP: latexpreview
 
 Coleção Os Fundamentos da Física: https://www.souexatas.com/2015/09/os-fundamentos-da-fisica-vol-1-2-e-3.html
+
+* Mecânica
+
+** Movimento Uniforme
+*** Movimento sem variação na velocidade
+
+\begin{cases}
+v = \text{const} \Leftrightarrow v \neq 0 \\
+a = 0
+\end{cases}
+
+*** Como a velocidade é constante, então a velocidade média é igual a velocidade em todos os pontos do trajeto, a velocidade média é dada pela razão entre variação de espaço e tempo (m/s), (km/h)
+
+\begin{equation*}
+v_{m} = \frac{\Delta s}{\Delta t}
+\end{equation*}
+
+**** A variação de qualquer coisa $x$ indicada por $\Delta$ é dada pela quantidade final dessa coisa subtraída pela inicial ($x_{f} - x_{i}$)
+
+\begin{equation*}
+\frac{\Delta s}{\Delta t} = \frac{s_{f} - s_{i}}{t_{f} - t{i}}
+\end{equation*}
+
+*** A função horária do Espaço é uma função de 1º grau simples que retorna o Espaço Final em função do Tempo
+
+$S = S_{o} + vt \text{ ou } \Delta s = vt$
+
+** Movimento Uniformemente Variado
+*** Movimento com variação na velocidade de forma uniformizada
+
+\begin{cases}
+a = \text {const} \Leftrightarrow a \neq 0 \\
+\end{cases}
+
+*** A aceleração média (nesse caso, constante) é dada pela razão entre a variação da velocidade e o tempo
+
+\begin{equation*}
+a_{m} = \frac{\Delta v}{\Delta t}
+\end{equation*}
+
+*** A função de velocidade em relação ao tempo do M.U.V é uma função afim
+
+\begin{equation*}
+v = v_{o} + at
+\end{equation*}
+
+*** A função do espaço em função do tempo é uma função de 2º grau na ordem "c, b, a" dos coeficientes de $ax^{2} + bx + c$
+
+\begin{equation*}
+S = S_{o} + v_{o}t + \frac{a}{2} t^{2}
+\end{equation*}
+
+**** É possível descobrir o tempo $t$ em que o objeto ficou com velocidade igual a 0 pelo vértice de $x$, esse tempo é chamado de inversão de movimento
+
+\begin{equation*}
+\frac{t^{1} + t^{2}}{2} \text{ ou } -\frac{v_{o}}{a}
+\end{equation*}
+
+*** A equação de Torricelli, usado para achar os termos de espaço, aceleração e velocidade sem o tempo
+
+\begin{equation*}
+v^{2} = v_{o}^{2} + 2a\Delta s
+\end{equation*}
+
+** Tipos de Movimentos
+*** Em relação a trajetória
+\begin{cases}
+v > 0, &    \text{Movimento Progressivo} \\
+v < 0, &    \text{Movimento Retrógrado}
+\end{cases}
+
+*** Em relação ao valor da velocidade em função do tempo $v(t)$, é associado ao valor da velocidade
+\begin{cases}
+|v| > v(t), &    \text{Movimento Acelerado} \\
+|v| < v(t), &    \text{Movimento Retardado}
+\end{cases}
+
+**** Exemplo 1: Se o móvel está indo no sentido da trajetória, mas com aceleração negativa, então o movimento é considerado Progressivo Retardado, pois está indo no sentido positivo da trajetória e o módulo está sendo diminuido (aceleração negativa)
+
+** Queda Livre
+** Lançamento Vertical e Horizontal
+** Movimento Circular Uniforme
+*** Grandezas Angulares
+
+* Dinâmica
+
+** Leis de Newton
+
+*** Primeira Lei de Newton - Inércia
+
+- A primeira lei de Newton diz que um corpo tende a permanecer em repouso ou movimento uniforme até
+que uma força $\vec{F}$ seja aplicada sobre ele. A lei nos diz também que $\vec{F_{r}} = 0$ para um corpo em repouso.
+
+Quanto maior a *massa* de um corpo, *maior* sua inércia. Essa lei não pode ser visualizada na Terra, pois
+os corpos sempre estarão sujeitos a alguma força, seja ela $\vec{g}$ (gravitacional), $\vec{F_{at}}$ (atrito entre o solo
+e o corpo), entre outras.
+
+*** Segunda Lei de Newton - Principio Fundamental da Dinâmica
+
+- Essa lei relaciona a aceleração de um corpo e a massa com a força resultante no corpo. Ou seja, a mudança
+de movimento é *proporcional* à força exercida sobre ele, dando a fórmula
+
+\begin{equation*}
+\vec{F_{r}} = m\vec{a}}
+\end{equation*}
+
+A força resultante dependerá da análise vetorial das forças do corpo. Forças concorrentes $\vec{F_{1}}$ e $\vec{F_{2}}$ serão
+descritas por $\vec{F_{1}} - \vec{F_{2}} = m\vec{a}$. Forças em mesma direção no mesmo sentido irão ser somadas. Entre outras
+análises vetoriais.
+
+*** Terceira Lei de Newton - Principal da Ação-Reação
+
+- Toda força $\vec{F}$ aplicada tem uma força $\vec{F_{1}}$ na mesma direção e com mesmo módulo. Essa lei é
+  manifestada nos pares de Força Peso ($\vec{P}$) e Força Normal ($\vec{N}$), que em um plano retilíneo são iguais
+  em módulo e diferente em direção.
+
+
+** Forças
+*** Força Peso
+**** É a força exercida do movel em direção ao chão, formando um ângulo de 90°. Ela é o produto da massa pela gravidade, naturalmente por ser uma força, é dada em Newtons
+\begin{equation*}
+\vec{P} = m\vec{g}
+\end{equation*}
+
+**** No plano inclinado, há a decomposição vetorial da força peso em eixos, originando $P_{x}$ e $P_{y}$
+\begin{cases}
+P_{x} = P \sin \theta \\
+P_{y} = P \cos \theta \\
+\end{cases}
+
+*** Força Normal
+**** Força exercida pelo chão no móvel, de acordo com a terceira Lei de Newton, em um plano inclinado $\vec{N} = \vec{P}$, ou seja, o valor da força peso é igual da força normal
+
+*** Força de Atrito
+**** A força de atrito é sempre contrária a força $\vec{F}$ de movimento do móvel, é representada por $\vec{F_{at}}$, essa força é dividida em cinética e estática
+
+\begin{cases}
+\vec{F_{at}} > \vec{F}, &   \text{Objeto não pode se mover, Atrito Estático} \\
+\vec{F_{at}} < \vec{F}, &   \text{Objeto pode se mover, Atrito Cinético}
+\end{cases}
+
+**** A força de atrito é calculado pelo produto de um coeficiente de atrito e a força Normal
+\begin{equation*}
+\vec{F_{at}} = \mu \vec{N}
+\end{equation*}
+
+***** Para o plano inclinado, é apenas necessário subtituir a força normal por $P_{x}$
+\begin{equation*}
+\vec{F_{at}} = \mu\cdot P\sin \theta
+\end{equation*}
+
+*** Trabalho de uma Força
+
+**** O trabalho é dado em Joules (J) pelo produto entre a força, distância e o cosseno do ângulo formado entre esses valores.
+\begin{equation*}
+\tau = \vec{F}\cdot \vec{d}\cdot \cos \theta
+\end{equation*}
 
 * Campos Magnéticos
 
@@ -11,10 +169,6 @@ Coleção Os Fundamentos da Física: https://www.souexatas.com/2015/09/os-fundam
 * Energia
 
 * Pressão
-
-* Atrito
-
-* Leis de Newton
 
 * Eletromagnetismo
 
@@ -33,7 +187,5 @@ Coleção Os Fundamentos da Física: https://www.souexatas.com/2015/09/os-fundam
 * Usinas / Instalações residenciais
 
 * Acústica
-
-* Mecânica
 
 * Estequiometria

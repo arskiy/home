@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("velera"
+(("home-arskiy"
+ (filename . "~/")
+ (front-context-string . "dev\n  drwxr-xr-x")
+ (rear-context-string . "0K Apr 22 18:34 ")
+ (position . 220))
+("velera"
  (filename . "~/dev/velera/")
  (front-context-string . "audio\n  drwxr-xr")
  (rear-context-string . "0K Feb 27 20:20 ")

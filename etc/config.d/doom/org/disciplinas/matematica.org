@@ -1,49 +1,1634 @@
 #+TITLE: Matemática
+#+AUTHOR: Alice Micheloni (Arsukeey) & fumacci
+#+LANGUAGE: pt
+#+EMAIL: alicemicheloni@tutanota.com
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{tcolorbox}
 
 Coleção fundamentos da matemática: https://www.doraci.com.br/downloads/matematica/fund-mat-elem_01.pdf
 
-* Regra de três
+* Frações e regra de três
+** Operações em frações
+*** Adição de mesmo denominador
 
-* Geometria
-** Geometria analítica:
-** Geometria espacial:
-** Prismas:
-** Áreas de figuras planas e polígonos:
-*** Raio de triangulo equilátero:
-\begin{equation}
-R = {{\sqrt{3} \times l}\over{3}}
-\end{equation}
+\begin{equation*}
+\frac{1}{7} + \frac{2}{7} + \frac{3}{7} = \frac{1 + 2 + 3}{7} = \frac{6}{7}
+\end{equation*}
 
-** Circunferências:
+*** Adição de denominadores diferentes
+
+\begin{equation*}
+\frac{1}{3} + \frac{2}{5} = \frac{5(1) + 3(2)}{3 \cdot 5} = \frac{11}{15}
+\end{equation*}
+
+*** Adição de fração mista
+
+\begin{equation*}
+4\frac{2}{3} + 5\frac{1}{8} = 4\frac{16}{24} + 5\frac{3}{24} = 9\frac{19}{24}
+\end{equation*}
+
+*** Subtração de mesmo denominador
+
+\begin{equation*}
+\frac{8}{7} - \frac{1}{7} - \frac{2}{7} = \frac{8 - 1 - 2}{7} = \frac{5}{7}
+\end{equation*}
+
+*** Subtração de denominadores diferentes
+
+\begin{equation*}
+\frac{5}{3} - \frac{3}{4} = \frac{(5\cdot 4) - (3\cdot 3)}{(3\cdot 4)} = \frac{11}{12}
+\end{equation*}
+
+*** Multiplicação de mesmo denominador
+
+\begin{equation*}
+\frac{6}{4} \cdot \frac{3}{4} = \frac{6 \cdot 3}{4}
+\end{equation*}
+
+*** Multiplicação de denominadores distintos
+
+\begin{equation*}
+\frac{5}{2} \cdot \frac{4}{8} = \frac{5 \cdot 4}{2 \cdot 8} = \frac{20}{16}
+\end{equation*}
+
+*** Divisão
+Simplesmente invertemos a fração e trocamos sua operação pela de multiplicação, explicada acima.
+
+\begin{equation*}
+\frac{4}{3} : \frac{5}{2} = \frac{4}{3} \cdot \frac{2}{5} = \frac{4 \cdot 2}{3 \cdot 5}
+\end{equation*}
+
+** Regra de três
+$\frac{5}{x} \cdot \frac{2}{3} \rightarrow 2x = 5 \cdot 3 \rightarrow x = \frac{15}{2}$
+
+* Progressões Aritméticas e Geométricas
+** Progressão Aritmética (PA)
+*** Definição
+A Progressão Aritmética (PA) é a sequência numérica em que cada termo, a partir do segundo, é determinado pela soma do termo antecessor por uma constante r, chamada de razão. Utiliza-se a seguinte fórmula para determinar os termos da sequência:
+$a_n = a_1 + (n - 1) \cdot r$
+
+**** Soma dos n primeiros termos
+Utiliza-se a fórmula:
+
+$S_n = n \cdot \frac{(a_1 + a_n)}{2}$
+
+**** Termo central
+Em uma PA com número ímpar de termos, o termo central pode ser definido como sendo o termo que divide a PA em dois conjuntos de números de elementos iguais. O cálculo do termo central de uma PA é obtido através da média aritmética dos extremos da PA.
+$T_c = \frac{(a_1 + a_n)}{2}$
+
+*** Tipos de PA
+**** Finita
+É a PA que tem um número definido de termos. Por exemplo, uma PA de cinco termos na qual o termo inicial é 0 e a razão é 2:
+$PA(0, 2, 4, 6, 8)
+**** Infinita
+A PA é infinita quando o domínio onde ela está é infinito. Veja o exemplo abaixo:
+$PA(10, 11, 12, 13, 14...)$
+**** Crescente
+Uma PA é crescente quando a razão entre os termos é positiva, ou seja, r > 0. Assim, cada novo termo é maior que o anterior.
+**** Decrescente
+Quando a razão é negativa (r < 0), então a PA é decrescente, pois cada novo termo é menor que o anterior.
+**** Constante
+A PA pode ser constante, se r = 0. Nessa situação, os termos são todos iguais.
+** Progressão Geométrica (PG)
+*** Definição
+Define-se como uma sequência numérica em que cada termo, a partir do segundo, pode ser determinado através da multiplicação do termo anterior por uma razão q. A fórmula utilizada para a determinação dos termos de uma PG é:
+$a_n = a_1 \cdot r ^ {n - 1}$
+
+*** Soma dos n primeiros termos
+$S_n = a_1 \cdot \frac{(q ^ n - 1)}{q - 1}$
+*** Tipos
+As progressões geométricas também pode ser classificadas em finitas, infinitas, decrescentes, crescentes e constantes. Além dessas classificações, as progressões geométricas que possuem a razão negativa são chamadas de alternadas, porque seus termos são alternadamente positivos e negativos.
+* Grandezas proporcionais
+Uma grandeza é definida como algo que pode ser medido ou calculado, seja velocidade, área ou volume de um material, e é útil para comparar com outras medidas, muitas vezes de mesma unidade, representando uma razão.
+
+A proporção é uma relação de igualdade entre razões e, assim, apresenta a comparação de duas grandezas em diferentes situações.
+$\frac{a}{b} = \frac{c}{d}$
+
+** Grandezas diretamente proporcionais
++--------------------+-----+-----+-----+-----+
+|Tempo               | 2   |  3  | 4   | 5   |
++--------------------+-----+-----+-----+-----+
+|Número de impressões| 40  | 60  | 80  | 100 |
++--------------------+-----+-----+-----+-----+
+
+$\frac{2}{40} = \frac{3}{60} = \frac{4}{80} = \frac{5}{100} = \frac{1}{20}$
+
+** Grandezas inversamente proporcionais
++----------+-----+-----+-----+-----+
+|Tempo     | 2   |  4  | 5   | 1   |
++----------+-----+-----+-----+-----+
+|Velocidade| 30  | 15  | 12  | 60  |
++----------+-----+-----+-----+-----+
+
+$2 \cdot 30 = 4 \cdot 15 = 5 \cdot 12 = 1 \cdot 60$
+
+Nesse exemplo, a sequência de tempo (2, 4, 5 e 1) é inversamente proporcional à velocidade média do carro (30, 15, 12 e 60) e a constante de proporcionalidade (k) entre essas grandezas é 60.
 
 
-* Equações de primeiro e segundo grau
+* Equações/Função de Primeiro Grau
+
+A função de primeiro grau é definida pela regra $f(x) = ax + b$ com a $\neq$ 0.
+
+A variável $a$ indica se a reta é crescente ou decrescente, se $a < 0$ ou $a > 0$. $b$ é onde a reta interceptará o eixo $y$.
+
+** Domínio da Função
+
+O domínio da função são todas as soluções possíveis e válidas para $x$ no conjunto
+de soluções $\mathbb{S} \subset \mathbb{R}$ (são consideradas soluções possíveis apenas números reais).
+
+    \begin{equation*}
+        f(x) = \frac{x + 2}{x - 1}
+    \end{equation*}
+
+Nesse caso, para $f(x) \in \mathbb{R$, $x$ não pode ser igual a 1, pois caso contrário o denominador será igual a 0
+
+    \begin{equation*}
+        f(x) = \frac{x + 2}{x - 1} \neq 1
+    \end{equation*}
+
+Podemos escrever o domínio $\mathbb{D}$ como $\mathbb{R} - \{1\}$
+
+** Imagem da Função
+
+A imagem da função é o valor $y$ em função de $x$, ou seja, para $f(5)$ na função $f(x) = 2x + 3$, a imagem é 13
+
+** Raíz da Função
+
+É o valor de $y$ para $x = 0$. Tendo $ax + b = 0$
+
+\begin{gather*}
+ax + b = 0 \\
+x = \frac{b}{a}
+\end{gather*}
+
+* Equação/Função de 2º Grau
+Tem a lei de formação correspondente a $f(x) = ax^{2} + bx + c$, onde $a \neq 0$.
+
+** Coeficientes da Função
+
+$b$ indica a concavidade da parábola, $b > 0$ para cima e $b < 0$ para baixo.
+
+$c$ indica onde a parábola irá cortar o eixo $y$, este é também chamado de Termo Independente.
+
+** Raízes da Função
+
+A função do 2º grau tem no máximo 2 raízes. Dependendo apenas da discriminante $\Delta$ e seu valor numérico. A fórmula de $\Delta$ pode ser descrita pela equação.
+
+\begin{equation*}
+\Delta = b^{2} - 4ac
+\end{equation*}
+
+Caso $\Delta > 0$, então há 2 raízes reais e diferentes. Para $\Delta = 0$, há apenas 1 raíz real que satisfaz a equação. Para $\Delta < 0$, não há solução no conjunto dos números reais.
+
+Podemos utilizar da Fórmula de Bháskara para chegar nas raízes
+
+\begin{equation*}
+x = \frac{-b \pm \sqrt{\Delta}}{2a}
+\end{equation*}
+
+** Soma e Produto
+
+A fórmula de soma de duas raízes
+
+\begin{equation*}
+    x_{1} + x_{2} = -\frac{b}{a}
+\end{equation*}
+
+Para produto, temos
+
+\begin{equation*}
+x_{1}\cdot x_{2} = \frac{c}{a}
+\end{equation*}
 
 
-* Inequações de primeiro e segundo grau
+** Vértice da Parábola
+
+O vértice da parábola dado pela coordenada ($x_{v}$, $y_{v}$) representa o "ponto máximo" da parábola.
+
+*** Vértice de $x$
+
+Pode ser obtido pela média aritmética das raízes
+
+\begin{equation*}
+x_{v} = \frac{x_{1} + x_{2}}{2}
+\end{equation*}
+
+Ou pela fórmula derivada de Bhaskara
+
+\[x_{v} = -\frac{b}{2a}\]
+
+*** Vértice de $y$
+
+Pode ser obtido substituíndo $x$ pelo próprio vértice de $x$, ou pela fórmula
+
+\[y_{v} = -\frac{\Delta}{4a}\]
 
 
-* Sistemas
+** Equações modulares
+$|3| = 3$ e $|-3| = 3$
+
+*** Propriedades do módulo
+**** Propriedade 1
+i$|x| = |-x|$
+**** Propriedade 2
+$|x ^ 2| = |x| ^ 2 = x ^ 2$
+**** Propriedade 3
+$|x \cdot y| = |x| \cdot |y|$
+**** Propriedade 4
+$|x + y| \leqslant |x| + |y|$
+
+*** Exemplo 1
+$|x| = 5$
+$x = \pm 5$
+
+*** Exemplo 2 (incógnita de um único lado)
+$|x + 1| = 4$
+
+Pode ser:
+$x + 1 = 4 \Rightarrow x = 3$
+ou
+$x + 1 = -4 \Rightarrow x = -5$
+então:
+$S = \{-5, 3\}$
+
+*** Exemplo 3 (incógnita em ambos lados)
+$|x + 1| = 2x - 1$
+
+$x + 1 = 2x - 1$
+$x = 2$
+
+ou
+
+$x + 1 = -2x + 1$
+$x = 0$
+$S = \{0, 2\}$
+*** Exemplo 4 (resultado negativo)
+$|2x - 1| = -5$
+$S = \{\}$
+*** Exemplo 5 (equação quadrática envolta)
+$|x ^ 2 - 5x + 8| = 2$
+
+$x ^ 2 - 5x + 8 = 2$
+$x_1 = 2$, $x_2 = 3$
+
+ou
+
+$x ^ 2 - 5x + 8 = -2$
+Não existem raízes reais, então:
+
+$S = \{2, 3\}$
+*** Exemplo 6 (equação quadrática fica apenas em torno da incógnita, substituição)
+$x ^ 2 - 3|x| + 2 = 0$
+
+$|x| ^ 2 = |x ^ 2| = x ^ 2$
+
+$|x| ^ 2 - 3|x| + 2 = 0$
+
+$y ^ 2 - 3y + 2 = 0$
+
+$y_1 = 1$, $y_2 = 2$
+
+$|x| = y$
+
+$S = \{-2, -1, 1, 2\}$
+*** Exemplo 7 (módulo de ambos lados da equalidade)
+$|x + 1| = |3x - 7|$
+
+$x + 1 = 3x - 7$
+$x = 4$
+
+ou
+
+$x + 1 = -3x + 7$
+$x = \frac{3}{2}$
+
+$S = \{\frac{3}{2}, 4\}$
+* Inequações de 1º e 2º grau
+** Inequações modulares
+*** Condição de existência do módulo
+Se $|x| < k$, então $-k < x < k$
+Se $|x| > k$, então $x < -k$ ou $x > k$
+
+*** Exemplo 1
+$|x| \leqslant 6$
+Se $|x| < k$, então $-k < x < k$
+
+$S = \{x \in \mathbb{R} | -6 < x < 6\}$
+
+*** Exemplo 2
+$|x - 7| < 2$
+
+$-2 < x - 7 < 2$
+$-2 + 7 < x < 2 + 7$
+$5 < x < 9$
+*** Exemplo 3
+$|x ^ 2 - 5x| > 6$
+
+$x ^ 2 - 5x - 6 > 0$
+$x < -1$ ou $x > 6$
+
+ou
+
+$x ^ 2 - 5x + 6 > 0$
+$x > 2$ ou $x < 3$
+
+$S = \{x \in \mathbb{R} | x < -1 \text{ ou } 2 < x < 3 \text{ ou } x > 6\}$
+*** Exemplo 4
+$2 \leqslant |2x + 1| \leqslant 10$
+
+(1) $|2x + 1| \leqslant 10$
+(2) $|2x + 1| \geqslant 2$
+
+(1) $-10 \leqslant 2x + 1 \leqslant 10$
+$-11 \leqslant 2x \leqslant 9$
+$\frac{-11}{2} \leqslant x \leqslant \frac{9}{2}$
+
+(2)
+$x \leqslant -\frac{3}{2}$
+$x \geqslant \frac{1}{2}$
 
 
-* Análise Combinatória
+
+[[./img/ineq-modular-graph.png]]
+
+$S = \{x \in \mathbb{R} | x \leqslant \frac{-3}{2} \text{ ou } x \geqslant \frac{1}{2}\}$
+
+** Exemplos de 1º grau
+*** Exemplo 1
+$3x - 5 > 62$
+$3x < 40 - 19$
+$x < \frac{21}{3}$
+$x < 7$
+
+*** Exemplo 2
+$15 - 7x \geqslant 2x - 30$
+$-7x -2x \geqslant -30 -15$
+$-9x \geqslant -45 (-1)$
+$9x \leqslant 45$
+$x \leqslant \frac{45}{9} \Rightarrow x \leqslant 5$
+** Exemplos de 2º grau
+*** Exemplo 1
+$x ^ 2 - x - 4 < 0$
+$\Delta = (-1) ^ 2 - 4 \cdot 1 \cdot (-6)$
+$\Delta = 1 + 24 \Rightarrow \Delta = 25$
+$x_1 = 3, x_2 = -2$
+[[./img/grafico-ineq.png]]
+$S = \{x \in \mathbb{R} | -2 < x < 3\}$
+
+
+* Conjuntos
+** Símbolos
+Para indicar que $x$ pertence ao conjunto $A$, usamos: $x \in A$
+Para indicar que $x$ não pertence ao conjunto $A$, usamos: $x \notin A$
+
+Chama-se *conjunto unitário* aquele que possui um único elemento.
+Chama-se *conjunto vazio* aquele que não possui elemento algum. $\emptyset$
+Chama-se conjunto universo $U$ ao qual pertencem todos os elementos utilizados no tal assunto.
+
+Conjuntos iguais:
+$\forall \rightarrow \text{para todo}$
+$A = B \Leftrightarrow (\forall x) (x \in A \Leftrightarrow x \in B)$
+
+** Subconjuntos
+Um conjunto A é subconjunto de B se, e somente se, todo elemento de A também pertence a B. Com a notação $A \subset B$.
+** União
+$A \cup B = \{x | x \in A \text{ ou } x \in B\}$
+
+$\{a, b\} \cup \{a, b, c, d\} = \{a, b, c, d\}$
+** Intersecção
+$A \cap B = {x | x \in A \text{ e } x \in B}}$
+
+$\{a, b, c\} \cap \{b, c, d, e\} = \{b, c\}$
+** Diferença
+$A - B = \{x | x \in A \text{ e } x \notin B\}$
+$\{a, b, c\} - \{b, c\} = \{a\}$
+
+$C_A ^ B = A - B$
+** Símbolos para conjuntos matemáticos
+*** $\mathbb{N}$ - Números naturais (n >= 0)
+*** $\mathbb{Z}$ - Números inteiros
+*** $\mathbb{Q}$ - Números racionais
+*** $\mathbb{I}$ - Números irracionais
+*** $\mathbb{R}$ - Números reais
+*** $\mathbb{C}$ - Números complexos
+
+*** $\mathbb{R} ^ *$ - Números reais diferentes de zero
+*** $\mathbb{R}_+$ - Números reais positivos, incluindo zero
+*** $\mathbb{R}_-$ - Números reais negativos, incluindo zero
+*** $\mathbb{R}_+ ^ *$ - Números reais diferentes de zero positivos
+*** $\mathbb{R} - \{n\}}$ - Números reais exceto $n$
+
+
+* Sistemas de Equações
+** Definição
+Para encontrarmos numa equação de 1º grau com duas incógnitas, por exemplo,
+4x + 3y = 0, os valores de x e de y é preciso relacionar essa equação com outra ou outras com as mesmas incógnitas. Essa relação é chamada de sistema.
+
+Um sistema de equação de 1º grau com duas incógnitas é formado por: duas equações de 1º grau com duas incógnitas diferentes em cada equação. Veja um exemplo:
+$\left\{\begin{array}{ll}(1): x+y=20\\(2): 3x+4y=72\end{array}\right$
+
+*** Método de substituição
+Escolhemos a equação 1 e isolamos o $x$: $x = 20 - y$
+
+Agora na equação substituímos $x$ por $20 - y$.
+$3(20 - y) + 4y = 72$
+$60 - 3y + 4y = 72$
+$-3y + 4y  72 - 60$
+$y = 12$
+
+Agora voltamos na primeira equação:
+$x = 20 - 12$
+$x = 8$
+
+Portanto, $S = \{8, 12\}$
+
+
 
 
 * Matrizes
+** Definição
+Dados dois números $m$ e $n$ natuais e não nulos, chama-se /matriz m por n/. Toda tabela M formada por números reais distribuídos em m linhas e n colunas.
+
+Exemplo:
+\begin{align*}
+\begin{bmatrix}
+    x_{11} & x_{12} & x_{13} & \dots  & x_{1n} \\
+    x_{21} & x_{22} & x_{23} & \dots  & x_{2n} \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    x_{m1} & x_{m2} & x_{m3} & \dots  & x_{mn}
+\end{bmatrix}
+\end{align*}
+
+\begin{align*}
+\begin{bmatrix}
+    4 & -3 \\
+    \frac{3}{7} & 2 \\
+    4 & 1
+\end{bmatrix}
+\end{align*}
+
+É uma matriz $3 \times 2$
+** Matrizes especiais
+*** Matriz linha
+É uma matriz $1 \times n$.
+\begin{align*}
+\begin{bmatrix}
+    4 & -3 & 1 & 7
+\end{bmatrix}
+\end{align*}
+*** Matriz coluna
+É uma matriz $m \times 1$.
+\begin{align*}
+\begin{bmatrix}
+    4 \\
+    3 \\
+    9 \\
+    -4
+\end{bmatrix}
+\end{align*}
+*** Matriz nula
+É uma matriz que tem todos os elementos iguais a zero.
+
+\begin{align*}
+\begin{bmatrix}
+    0 & 0 & 0 \\
+    0 & 0 & 0
+\end{bmatrix}
+\end{align*}
+
+É a matriz nula do tipo $2 \times 3$
+*** Matriz quadrada de ordem n
+É toda matriz do tipo $n \times n$, i.e. uma matriz que tem número igual de linhas e colunas:
+\begin{align*}
+\begin{bmatrix}
+    -7 & 2 \\
+    10 & 9
+\end{bmatrix}
+\end{align*}
+**** Diagonais principal e secundária
+[[./img/quadrada-ordem-3-diags.png]]
+
+É uma matriz quadrada de ordem 3. Sua diagonal principal é $\{8, 4, 3\}$ e sua diagonal secundária é $\{-7, 4, -1\}$
+**** Matriz diagonal
+É toda matriz quadrada em que os elementos que não pertencem à diagonal principal são iguais a zero
+\begin{align*}
+\begin{bmatrix}
+    -3 & 0 \\
+    0 & 9
+\end{bmatrix}
+\end{align*}
+
+**** Matriz unidade/identidade de ordem n
+É toda matriz diagonal em que os elementos da diagonal principal são iguais a 1.
+\begin{align*}
+\begin{bmatrix}
+    1 & 0 \\
+    0 & 1
+\end{bmatrix}
+\end{align*}
+
+** Operações
+*** Matriz transposta
+\begin{align*}
+\begin{bmatrix}
+    0 & 6 \\
+    -1 & 2 \\
+    5 & 0
+\end{bmatrix}
+^ t
+=
+\begin{bmatrix}
+    0 & -1 & 5 \\
+    6 & 2 & 0 \\
+\end{bmatrix}
+\end{align*}
+
+\begin{align*}
+\begin{bmatrix}
+    2 & 0 & 3 \\
+    5 & 4 & 3 \\
+    2 & -1 & 0
+\end{bmatrix}
+^ t
+=
+\begin{bmatrix}
+    2 & 5 & 2 \\
+    0 & 4 & -1 \\
+    3 & 3 & 0
+\end{bmatrix}
+\end{align*}
+*** Adição de matrizes
+\begin{align*}
+
+\begin{bmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6
+\end{bmatrix}
++
+\begin{bmatrix}
+    4 & -1 & 1 \\
+    -4 & 0 & -6
+\end{bmatrix}
+=
+\begin{bmatrix}
+    1 + 4 & 2 - 1 & 3 + 1 \\
+    4 - 4 & 5 + 0 & 6 - 6
+\end{bmatrix}
+=
+\begin{bmatrix}
+    5 & 1 & 4 \\
+    0 & 5 & 0
+\end{bmatrix}
+
+\end{align*}
+
+*** Subtração de matrizes
+    \begin{align*}
+-
+\begin{bmatrix}
+    1 & \frac{4}{5}\\
+    -3 & \sqrt{2}
+\end{bmatrix}
+=
++
+\begin{bmatrix}
+    -1 & -\frac{4}{5}\\
+    3 & -\sqrt{2}
+\end{bmatrix}
+\end{align*}
+
+*** Produto de real por matriz
+\begin{align*}
+3
+\cdot
+\begin{bmatrix}
+    1 & \frac{4}{5}\\
+    -3 & \sqrt{2}
+\end{bmatrix}
+=
+\begin{bmatrix}
+    3 & \frac{12}{5}\\
+    -9 & 3\sqrt{2}
+\end{bmatrix}
+\end{align*}
+*** Produto de matrizes
+Essa operação só pode ser feita se $n$ de A for igual ao $m$ de B
+E a matriz produto terá o número de linhas $m$ de A e o número de colunas $n$ de B
+
+$A_{m \times p} \cdot B_{p \times n} = (A \cdot B)_{m \times n}$, e $p = p$
+
+[[./img/produto-matrizquadrada.png]]
+
+[[./img/produto-matriznaoquadrada.png]]
 
 
-* Progressões Aritméticas e Geométricas
+**** Propriedades
+- Associativa, $(A \cdot B) \cdot C = A \cdot (B \cdot C)$
+- Distributiva em relação à adição, $A \cdot (B + C) = A \cdot B + A \cdot C$, ou $(A + B) \cdot C = A \cdot C + B \cdot C$
+- Elemento neutro, $A \cdot I_n = I_n \cdot A = A$, sendo $I_n$ a matriz identidade de ordem n
+*** Matriz inversa
+Dada uma matriz $A$, quadrada, de ordem $n$, se existir uma matriz $A'$, de mesma ordem, tal que $A \cdot A' = A' \cdot A = In$ , então $A'$ é matriz inversa de $A$ . Representamos a matriz inversa por $A ^ {-1}$.
+** Determinantes
+Toda matriz quadrada está associada a um número que chamamos de *determinante*.
+*** Definição (n < 3)
+**** Ordem 1
+
+Se M é de ordem 1, então det M é o único elemeneto de M.
+
+**** Ordem 2
+Se M é de ordem 2, então det M é o produto dos elementos da diagonal principal menos o produto dos elementos da diagonal secundaria.
+
+\begin{align*}
+M =
+\begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+\end{bmatrix}
+\Rightarrow
+\det M =
+a_{11}a_{22} - a_{12}a_{21}
+\end{align*}
+
+*** Menor complementar
+**** Exemplo 1 (ordem 2)
+\begin{align*}
+M =
+\begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+\end{bmatrix}
+\Rightarrow
+MC_{11} = a_{22}
+\end{align*}
+**** Exemplo 2 (ordem 3)
+\begin{align*}
+M =
+\begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33} \\
+\end{bmatrix}
+MC_{11} =
+\begin{bmatrix}
+    a_{22} & a_{23} \\
+    a_{32} & a_{33}
+\end{bmatrix}
+=
+a_{22}a_{33} - a_{23}a_{32} \\
+MC_{12} =
+\begin{bmatrix}
+    a_{21} & a_{23} \\
+    a_{31} & a_{33}
+\end{bmatrix}
+=
+a_{21}a_{33} - a_{23}a_{31}
+\end{align*}
+*** Cofator
+Chamamos de cofator ou complemento algébrico relativo a um elemento $a_{ij}$ de uma matriz quadrada de ordem $n$ o número $A_{ij}$ tal que  $A_{ij} = (-1) ^ {i+j} \cdot MC ^ {ij}$.
+**** Exemplo 1
+\begin{align*}
+M =
+\begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22} \\
+\end{bmatrix}
+A_{11} = (-1) ^ {1 + 1} \cdot a_{22} = +a_{22} \\
+A_{12} = (-1) ^ {1 + 2} \cdot a_{21} = -a_{21} \\
+\end{align*}
+**** Exemplo 2
+\begin{align*}
+M =
+\begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33} \\
+\end{bmatrix}
+A_{22} = (-1) ^ {2 + 2} \cdot (a_{11} a_{33} - a_{13} a_{31}) \\
+A_{23} = (-1) ^ {2 + 3} \cdot (a_{11} a_{32} - a_{12} a_{31}) \\
+A_{31} = (-1) ^ {3 + 1} \cdot (a_{12} a_{23} - a_{13} a_{22})
+\end{align*}
+
+*** Regra de Sarrus (n = 3)
+\begin{align*}
+M =
+\begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{bmatrix}
+\\
+\begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{bmatrix}
+\begin{matrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22} \\
+    a_{31} & a_{32}
+\end{matrix}
+\end{align*}
+
+[[./img/matrix-sarrus.png]]
+*** Teorema de Laplace (n $\geqslant$ 2)
+Escolha uma fila (linha ou coluna) qualquer e some os produtos \newline dos elementos da matriz M por seus respectivos cofatores. Assim, podemos definir o teorema pela fórmula
+$\sum_{i=1} ^ m a_{ij}A_{ij}$
+
+Escolhemos a linha 2 para este exemplo.
+
+\begin{align*}
+A =
+\begin{bmatrix}
+    2 & 1 & 6 & 0 \\
+    5 & 0 & 1 & -3 \\
+    -2 & 5 & 1 & 8 \\
+    11 & 4 & -2 & -7
+\end{bmatrix} \\
+\text{Como estamos usando a segunda linha, temos } \\
+D = 5 \cdot A_{21} + 0 \cdot A_{22} + 1 \cdot A_{23} + (-3) \cdot A_{24} \\
+D = 5 \cdot (-411) + 0 \cdot 462 + 1 \cdot 60 + (-3) \cdot (-399) \\
+D = -2055 + 0 + 60 + 1197 \\
+\det A = -798
+\end{align*}
+E o determinante, obviamente, será igual independente da linha ou coluna escolhida.
+*** Propriedades
+**** Quando todos os elementos de uma fila (linha ou coluna) são nulos, o determinante dessa matriz é nulo.
+\begin{align*}
+M =
+\begin{bmatrix}
+    4 & 0 & 2 \\
+    9 & 0 & 21 \\
+    7 & 0 & 8
+\end{bmatrix} \\
+\det M = 0
+\end{align*}
+
+**** Quando duas fileiras de uma matriz são iguais, seu determinante é nulo.
+\begin{align*}
+M =
+\begin{bmatrix}
+    4 & 5 & 2 & 7 \\
+    9 & 1 & 21 & 8 \\
+    4 & 5 & 2 & 7 \\
+    41 & 10 & 32 & 1
+\end{bmatrix} \\
+\det M = 0
+\end{align*}
+**** Quando duas fileiras paralelas de uma matriz são proporcionais, seu determinante é nulo.
+\begin{align*}
+M =
+\begin{bmatrix}
+    1 & 5 & 2 \\
+    2 & 1 & 4 \\
+    3 & 2 & 6 \\
+\end{bmatrix} \\
+C_3 = 2C_1 \\
+\det M = 0
+\end{align*}
+
+**** Quando os elementos de uma fila de uma matriz são combinações lineares dos elementos correspondentes de filas paralelas, seu determinante é nulo.
+[[./img/prop4-matriz.png]]
+**** Teorema de Jacobi: o determinante de uma matriz não se altera quando somamos aos elementos de uma fila uma combinação linear dos elementos correspondentes de filas paralelas.
+\begin{align*}
+M =
+\begin{bmatrix}
+    1 & 2 & 3 \\
+    2 & 1 & 2 \\
+    2 & 4 & 3 \\
+\end{bmatrix} = 9 \\
+M =
+\begin{bmatrix}
+    1 + 2 \cdot 2 & 2 & 3 \\
+    2 + 1 \cdot 2 & 1 & 2 \\
+    2 + 4 \cdot 2 & 4 & 3 \\
+\end{bmatrix} =
+\begin{bmatrix}
+    5 & 2 & 3 \\
+    4 & 1 & 2 \\
+    10 & 4 & 3 \\
+\end{bmatrix} = 9
+\end{align*}
+
+**** O determinante de uma matriz e o de sua transposta são iguais.
+\begin{align*}
+A =
+\begin{bmatrix}
+    1 & 2 & 3 \\
+    2 & 1 & 2 \\
+    2 & 4 & 3 \\
+\end{bmatrix} = 9 \\
+A ^ t =
+\begin{bmatrix}
+    1 & 2 & 2 \\
+    2 & 1 & 4 \\
+    3 & 2 & 3 \\
+\end{bmatrix} = 9
+\end{align*}
+**** Multiplicando por um número real todos os elementos de uma fila em uma matriz, o determinante dessa matriz fica multiplicado por esse número.
+\begin{align*}
+A =
+\begin{bmatrix}
+    1 & 2 & 3 \\
+    2 & 1 & -1 \\
+    3 & 2 & 1 \\
+\end{bmatrix} = -4 \\
+C_1 = C_1 * 2 \\
+A =
+\begin{bmatrix}
+    1 \cdot 2 & 2 & 3 \\
+    2 \cdot 2 & 1 & -1 \\
+    3 \cdot 2 & 2 & 1 \\
+\end{bmatrix} = 2(-4) = -8
+\end{align*}
+
+**** Quando trocamos as posições de duas filas paralelas, o determinante de uma matriz muda de sinal.
+[[./img/prop8-matriz.png]]
+**** Quando, em uma matriz, os elementos acima ou abaixo da diagonal principal são todos nulos, o determinante é igual ao produto dos elementos dessa diagonal.
+[[./img/prop9-matriz.png]]
+**** Quando, em uma matriz, os elementos acima ou abaixo da diagonal secundária são todos nulos, o determinante é igual ao produto dos elementos dessa diagonal multiplicado por $(-1) ^ {\frac{n(n - 1)}{2}}$.
+\begin{align*}
+A =
+\begin{bmatrix}
+    0 & a \\
+    b & x \\
+\end{bmatrix} = -a \cdot b \\
+\begin{bmatrix}
+    0 & 0 & a \\
+    0 & b & x \\
+    c & y & z \\
+\end{bmatrix} = -a \cdot b \cdot c \\
+\end{align*}
+
+**** Para A e B matrizes quadradas de ordem n, $\det(AB) = \det A \cdot \det B$. Como $A \cdot A ^ {-1} = 1 \Rightarrow \det A ^ {-1} = \frac{1}{\det A}$
+\begin{align*}
+A =
+\begin{bmatrix}
+    2 & 1 \\
+    3 & 4 \\
+\end{bmatrix},
+B =
+\begin{bmatrix}
+    1 & 0 \\
+    2 & 2 \\
+\end{bmatrix},
+A \cdot B =
+\begin{bmatrix}
+4 & 2 \\
+11 & 8
+\end{bmatrix} \\
+\det(AB) = \det A \cdot \det B \Rightarrow 10 = 5 \cdot 2
+\end{align*}
+
+**** Se $K \in \mathbb{R}$, então $\det(K \cdot A) = K ^ n \cdot \det A$
+\begin{align*}
+K = 3, A =
+\begin{bmatrix}
+    2 & 1 \\
+    4 & 5 \\
+\end{bmatrix}\text{, e } K \cdot A =
+\begin{bmatrix}
+    6 & 3 \\
+    12 & 15 \\
+\end{bmatrix} \\
+\det(K \cdot A) = K ^ n \cdot \det A \\ 54 = 3 ^ 2 \cdot 6
+\end{align*}
+
+* Geometria espacial TODO
+** Pontos, retas e planos
+Pontos são representados por letras maiúsculas do nosso alfabeto, retas por letras minúsculas, e planos por letras minúsculas do alfabeto grego.
+** Axiomas
+Axiomas, ou postulados (P), são proposições aceitas como verdadeiras sem demonstração e que servem de base para o desenvolvimento de uma teoria.
+1. A reta é infinita, ou seja, contém infinitos pontos.
+2. Por um ponto podem ser traçadas infinitas retas.
+3. Por dois pontos distintos passa uma única reta.
+4. Um ponto qualquer de uma reta divide-a em duas semirretas.
+5. Por três pontos não-colineares passa um único plano.
+6. O plano é infinito, isto é, ilimitado.
+7. Por uma reta pode ser traçada uma infinidade de planos.
+8. Toda reta pertencente a um plano divide-o em duas regiões chamadas semiplanos.
+9. Qualquer plano divide o espaço em duas regiões chamadas semiespaços.
+** Diedros, triedos, poliedros
+*** Diedro
+Dois semiplanos não-coplanares, com origem numa mesma reta, determinam uma figura geométrica chamada ângulo diédrico, ou simplesmente diedro.
+*** Triedos
+Três semi-retas não-coplanares, com origem num mesmo ponto, determinam três ângulos que formam uma figura geométrica chamada ângulo triédrico, ou simplesmente triedro.
+*** Ângulo poliédrico
+Sejam  n ($n \geqslant 3$) semirretas de mesma origem tais que nunca fiquem três num mesmo semiplano. Essas semirretas determinam n ângulos em que o plano de cada um deixa as outras semirretas em um mesmo semiespaço. A figura formada por esses ângulos é o ângulo poliédrico.
+*** Poliedros
+Chamamos de poliedro o sólido limitado por quatro ou mais polígonos planos, pertencentes a planos diferentes e que têm dois a dois somente uma aresta em comum. Veja alguns exemplos:
+[[./img/poliedros.png]]
+**** Poliedros convexos e côncavos
+Observando os poliedros acima, podemos notar que, considerando qualquer uma de suas faces, os poliedros encontram-se inteiramente no mesmo semiespaço que essa face determina. Assim, esses poliedros são denominados convexos.
+
+Isso não acontece no último poliedro, pois, em relação a duas de suas faces, ele não está contido apenas em um semi-espaço. Portanto, ele é denominado côncavo.
+**** Classificação
+Os poliedros convexos possuem nomes especiais de acordo com o número de faces, como por exemplo:
+
+- tetraedro: quatro faces
+
+- pentaedro: cinco faces
+
+- hexaedro: seis faces
+
+- heptaedro: sete faces
+
+- octaedro: oito faces
+
+- icosaedro: vinte faces
+
+**** Platônicos
+Diz-se que um poliedro é platônico se, e somente se:
+
+a) for convexo;
+
+b) em todo vértice concorrer o mesmo número de arestas;
+
+c) toda face tiver o mesmo número de arestas;
+
+d) for válida a relação de Euler.
+** Relação de Euler
+Em todo poliedro convexo é válida a relação $V - A + F = 2$, onde V é o número de vértices, A de arestas e F de faces.
+** Triângulos
+*** Teorema de Pitágoras
+**** $H^{2} = C_1^{2} + C_2^{2}$
+
+*** Teorema de Tales
+Tendo 2 triângulos semelhantes com medidas $\overline{\rm AC}$ e $\overline{\rm BD}$
+
+\begin{equation*}
+\frac{A}{B} = \frac{C}{D}
+\end{equation*}
+
+*** Raio de triangulo equilátero:
+\begin{equation*}
+R = {{\sqrt{3} \times l}\over{3}}
+\end{equation*}
+*** Área de um Triângulo
+\begin{equation*}
+A = \frac{b\cdot h}{2}
+\end{equation*}
+** Prismas
+*** Classificação
+Um prisma pode ser:
+- Reto: quando as arestas laterais são perpendiculares aos planos das bases;
+- Oblíquo: quando as arestas laterais são oblíquas aos planos das bases.
+  [[./img/prisma reto e obliquo.png]]
+*** Prismas regulares
+Chamamos de prisma regular todo  prisma reto cujas bases são polígonos regulares, como por exemplo um triângulo equilátero ou hexágono.
+
+**** Área de um prisma regular
+\begin{equation*}
+A_{p} = \text{Área da Base}\times \text{Altura}
+\end{equation*}
+*** Volume
+$V = A_b \cdot h$
+$A_b$ = a área da base, $h$ = altura do prisma.
+** Paralelepípedo
+Todo prisma cujas bases são paralelogramos (quadrilátero cujos lados opostos são paralelos) recebe o nome de paralelepípedo. Assim, podemos ter:
+a) paralelepípedo oblíquo;
+[[./img/parale-obliquo.png]]
+b) paralelepípedo reto.
+[[./img/parale-reto.png]]
+
+Se o paralelepípedo reto tem bases retangulares, ele é chamado de paralelepípedo reto-retângulo, ortoedro ou paralelepípedo retângulo.
+
+*** Volume
+$V = l \cdot c \cdot a$, largura, comprimento e altura
+
+** Cubo
+Um paralelepípedo retângulo com todas as arestas congruentes (a=b=c) recebe o nome de cubo. Dessa forma, as seis faces são quadrados.
+*** Área
+**** Área lateral
+$A_L = 4a ^ 2$
+**** Área total
+$A_L = 6a ^ 2$
+*** Volume
+$l ^ 3$ onde $l$ é o comprimento de qualquer lado.
+** Cilindro
+*** Geratriz
+Geratriz é qualquer segmento de extremidades nos pontos das circunferências das bases
+*** Classificação
+- Circular oblíquo: quando as geratrizes são oblíquas às bases;
+- Circular reto: quando as geratrizes são perpendiculares às bases.
+
+*** Área
+$A_L = 2\pi rh$, $r$ = raio da base, $h$ = altura do cilindro
+$A_B = \pi r ^ 2$
+$A_T = A_L + 2A_B = 2 \pi r h + 2 \pi r ^ 2 = 2 \pi r (h + r)$ Área total, soma da lateral com a da base.
+*** Volume
+$\pi \cdot r ^ 2 \cdot h$, $r$ = raio de uma face regular, $h$ = altura
+*** Secção
+- Secção transversal é a região determinada pela intersecção do cilindro com um plano paralelo às bases. Todas as secções transversais são congruentes.
+  [[./img/sec-transversal.png]]
+
+- Secção meridiana é a região determinada pela intersecção do cilindro com um plano que contém o eixo.
+  [[./img/sec-meridiana.png]]
+*** Cilindro equilátero
+Todo cilindro onde $h = 2r$
+** Esfera
+*** Volume
+$\frac{4}{3}\pi r ^ 3$, onde r = raio da esfera.
+*** Superfície esférica
+$A_S = 4 \pi R ^ 2$
+** Elipsoide
+*** Volume
+$\frac{4}{3} \pi abc$ $a$, $b$, $c$ = semi-eixos do elipsoide
+** Pirâmide
+*** Área
+$A_T = A_L + A_B$
+$A_L = n \cdot \frac{bg}{2}$
+$A_B = pa$
+b = aresta,
+g = apótema,
+n = número de arestas laterais
+p = semiperímetro ($P / 2$) da base
+a = apótema do polígono da base
+*** Volume
+$\frac{1}{3}Ah$, $A$ = área da base, $h$ = altura
+** Cone
+[[./img/cone-reto.png]]
+$g ^ 2 = h ^ 2 + R ^ 2$, g = geratriz
+*** Área
+$A_L = \pi Rg$
+$A_B = \pi R ^ 2$
+$A_T = \pi R(g + R)$
+*** Volume
+$\frac{1}{3}\pi r ^ 2 h$, $r$ = raio do círculo na base, $h$ = altura
+** Circunferência
+*** Área de uma Circuferência
+\begin{equation*}
+A = \pi r^{2}
+\end{equation*}
+** Trapézio
+*** Área
+$\frac{1}{2}(a + b)h$, $a$ e $b$ são lados paralelos e $h$ a distância (altura) entre os lados
+** Losango
+*** Área
+$\frac{1}{2}ab$, $a$ e $b$ são o comprimento de cada uma das diagonais do losango.
+** Áreas de outras figuras planas
+*** Hexágono regular
+$\frac{3L ^ 2}{2}\sqrt{3}$, L = um dos lados do hexágono
+*** Octágono regular
+$2(1 + \sqrt{2}) l ^ 2$
+** Troncos
+*** Tronco de pirâmide
+[[./img/tronco-piramide.png]]
+$A_T = A_B + A_b + A_L$
+$V_T = \frac{h}{3}(A_B + A_b + \sqrt{A_B A_b})$
+
+Sendo V o volume da pirâmide e V' o volume da pirâmide obtido pela secção, é válida a relação $\frac{V'}{V} = (\frac{h'}{H}) ^ 3$
+*** Tronco de cone
+[[./img/area-lateral-tronco-cone.png]]
+$V = \frac{\pi h}{3}(R ^ 2 + r ^ 2 + Rr)$
+* Geometria analítica
+* Trigonometria TODO
+
+* Funções exponenciais
+** Propriedades da potenciação
+*** Expoente negativo
+
+\begin{equation*}
+{a ^ {-n}} = {{1} \over {a ^ n}} \text{ porque } a ^ 2 = a \cdot a, a ^ 1 = a, a ^ 0 = \frac{a}{a}, a ^ {-1} = a \div a \div a
+\end{equation*}
+
+*** Multiplicação de potências de mesma base
+
+\begin{equation*}
+a ^ {m} \cdot a ^ {n} = a ^ {m + n} \notag
+\end{equation*}
+
+*** Divisão de potências de mesma base
+
+\begin{equation*}
+{{a ^ m} \over {a ^ n}} = a ^ {m - n}, \{a \neq 0 \, | \, m \geqslant n\}
+\end{equation*}
+
+*** Potência de potência
+
+\begin{equation*}
+(a ^ m) ^ n = a ^ {m \cdot n}
+\end{equation*}
+
+*** Potência em uma raiz
+
+\begin{equation*}
+\sqrt[n]{a ^ m} = a ^ {m \over n}, \, \{n \in \mathbb{N} \, | \, n > 1\}
+\end{equation*}
+
+**** Exemplo:
+
+\begin{equation*}
+3 ^ {1 \over 2} = \sqrt{3}
+\end{equation*}
+
+** Propriedades da radiciação
+
+*** Racionalização de denominadores
+**** Em uma raiz quadrada:
+
+\begin{equation*}
+{1 \over {\sqrt{2}}} = {{1 \over {\sqrt{2}}} \cdot {{\sqrt{2}} \over {\sqrt{2}}} = {\sqrt{2} \over {2}}}
+\end{equation*}
+
+**** Em uma raiz não quadrada:
+
+\begin{equation*}
+{1 \over {\sqrt[5]{3 ^ 2}}} = {1 \over {\sqrt[5]{3 ^ 2}}} \cdot {{\sqrt[5]{3 ^ {5 - 2}}} \over {\sqrt[5]{3 ^ {5 -2}}}} = {1 \over {\sqrt[5]{3 ^ 2}}} \cdot {{\sqrt[5]{3 ^ 3} \over {\sqrt[5]{3 ^ 3}}} = {{\sqrt[5]{3 ^ 3}} \over 3}}
+\end{equation*}
+
+*** Multiplicação de raizes n-ésimas iguais
+
+\begin{equation*}
+\sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{ab}
+\end{equation*}
+
+*** Raiz envolta por expoente
+
+\begin{equation*}
+\left(\sqrt[n]{a}\right) ^ m = \sqrt[n]{a ^ m}}
+\end{equation*}
+
+*** Raiz envolta por raiz
+
+\begin{equation*}
+\sqrt[p]{\sqrt[n]{a}} = \sqrt[pn]{a}
+\end{equation*}
+
+*** A raiz não sofre alteração se multiplicarmos ou dividirmos o índice do radical e o expoente do radicando por um mesmo valor
+
+\begin{equation*}
+\sqrt[n \cdot p]{a ^ {m \cdot p}} = \sqrt[n]{m}, \sqrt[n:q]{a ^ {m:q}} = \sqrt[n]{m}
+\end{equation*}
+
+*** O produto de radicais de mesmo índice é igual ao produto de radicandos
+
+\begin{equation*}
+\sqrt[n]{a \cdot b} = {\sqrt[n]{a} \cdot \sqrt[n]{b}}
+\end{equation*}
+
+*** O quociente de radicais de mesmo índice é igual ao quociente de radicandos
+
+\begin{equation*}
+\sqrt[n]{a \over b} = {{\sqrt[n]{a}} \over \sqrt[n]{b}}
+\end{equation*}
+
+** Imagem
+
+\begin{equation*}
+Im = \mathbb{R_+^{}}
+\end{equation*}
+
+** Gráfico exemplo
+[[./img/exp-graph.png]]
+
+** Equações exponenciais
+*** Definição
+**** Exemplo 1
+$2 ^ x = 64$
+
+**** Exemplo 2
+$(\sqrt{3}) ^ x = \sqrt[3]{81}$
+
+**** Exemplo 3
+$4 ^ x - 2 ^ x = 2$
+
+*** Método de redução a base comum
+$a ^ b = a ^ c \Leftrightarrow b = c, \, \{0 < a \neq 1\}$
+
+**** Exemplo 1
+\begin{equation*}
+2^{x} = 64 \Leftrightarrow 2^{x} = 2^{6} \Leftrightarrow x = 6$
+\end{equation*}
+
+**** Exemplo 2
+
+\begin{align*}
+8^{x} &= {1 \over 32} \\
+2^{3x} &= {1 \over {2 ^ 5}} \\
+2^{3x} &= 2^{-5} \\
+3x &= -5 \\
+x &= \frac{5}{3}
+\end{align*}
+
+**** Exemplo 3
+
+\begin{gather*}
+(\sqrt{3})^{x} = \sqrt[3]{81} \\
+{(3 ^ {1 \over 2})^{x}} = \sqrt[3]{4} \\
+3^{x \over 2} = 3^{4 \over 3} \\
+{x \over 2} = {4 \over 3} \\
+3x = 8 \\
+x = -\frac{8}{3}
+\end{gather*}
+
+**** Exemplo 4
+\begin{equation*}
+(2 ^ x) ^ {x - 1} = 4 \Leftrightarrow 2 ^ {x ^ 2 - x} = 2 ^ 2 \Leftrightarrow x ^ 2 - x = 2 \Leftrightarrow x ^ 2 - x - 2, S = \{-1, 2\}
+\end{equation*}
+
+**** Exemplo 5
+
+\begin{gather*}
+3^{2x - 1} \cdot 9^{3x + 4} = 27 ^ {x + 1} \\
+3^{2x - 1} \cdot (3^{2})^{3x + 4} = (3^{3})^{x + 1} \\
+3^{2x - 1} \cdot 3^{6x + 8} = 3^{3x + 3} \Leftrightarrow 3^{8x + 7} = 3^{3x + 3} \\
+8x + 7 = 3x + 3 \Leftrightarrow \mathbb{S} = \Big\{-\frac{4}{5}\Big\}
+\end{gather*}
+
+**** Exemplo 6
+
+\begin{gather*}
+\sqrt{5^{x - 2}} \cdot \sqrt[x]{25^{2x - 5}} = \sqrt[2x]{5^{3x - 2}} \\
+5^\frac{x - 2}{2} \cdot (5^2)^\frac{2x - 5}{x} = 5^\frac{3x - 2}{2x} \\
+5^{\frac{x-2}{2} + \frac{4x - 10}{x}} = 5^\frac{3x - 2}{2x} \\
+{\frac{x-2}{2} + \frac{4x - 10}{x}} = \frac{3x - 2}{2x} \\
+x^{2} + 3x - 18 \Leftrightarrow x = \{3, -6 \text{ não serve pois } x > 0\}
+\end{gather*}
+
+**** Exemplo 7
+
+\begin{equation*}
+\begin{array}{l}
+2 ^ {x - 1} + 2 ^ x + 2 ^ {x + 1} - 2 ^ {x + 2} + 2 ^ {x + 3} = 120 \Leftrightarrow
+\\\\ 2 ^ x \cdot 2 ^ -1 + 2 ^ x + 2 ^ x \cdot 2 ^ 1 - 2 ^ x \cdot 2 ^ 2 + 2 ^ x \cdot 2 ^ 3 = 120 \LeftRightarrow
+\\\\ 2 ^ x \cdot (2 ^ {-1} + 1 + 2 ^ 1 - 2 ^ 2 + 2 ^ 3) = 120 \Leftrightarrow
+\\\\ 2 ^ x \cdot (\frac{1}{2} + 1 + 2 - 4 + 8) = 120 \Leftrightarrow
+\\\\ 2 ^ x \cdot \frac{15}{2} = 120 \Leftrightarrow
+\\ 2 ^ x = \frac{120}{1} : \frac{15}{2} \Leftrightarrow
+\\ 2 ^ x = \frac{120}{1} * \frac{2}{15} \Leftrightarrow
+\\ 2 ^ x = 16 \Leftrightarrow
+\\ 2 ^ x = 2 ^ 4
+\end{array}
+\end{equation*}
+
+*** Uso de incógnita auxiliar
+
+**** Exemplo 1
+
+\begin{gather*}
+4^{x} - 2^{x} = 56 \\
+(2^{2})^{x} - 2^{x} - 56 = 0 \\
+y^{2} - y - 56 = 0 \\
+y = \{8, -7\} \\
+y = 2^{x} > 0 \\
+y = 8 \\
+2^{x} = 8 \Leftrightarrow 2^{x} = 2^{3}
+\end{gather*}
+
+**** Exemplo 2
+
+\begin{gather*}
+4^{x + 1} - 9 \cdot 2^{x} + 2 = 0 \\
+4 \cdot 4^{x} - 9 \cdot 2^{x} + 2 = 0 \\
+4(2^{x})^{2} - 9 \cdot 2^{x} + 2 = 0 \\
+4y^{2} - 9y + 2 = 0 \Leftrightarrow y = \Big\{2, \, \frac{1}{4}\Big\} \\
+2^{x} = 2 \Leftrightarrow x = 1 \\
+2 ^ x = \frac{1}{4} \Leftrightarrow x = -2
+\end{gather*}
+
+**** Incógnita como expoente no resultado esperado
+
+\begin{gather*}
+4^{x} + 6^{x} = 2 \cdot 9^{x} \\
+\frac{4^{x}}{9^{x}} + \frac{6^{x}}{9^{x}} = 2 \\
+\left(\frac{4}{9}\right)^{x} + \left(\frac{6}{9}\right)^{x} - 2 = 0 \\
+\left(\frac{2}{3}\right)^{2x} + \left(\frac{2}{3}\right)^{x} - 2 = 0 \\
+y^{2} + y - 2 = 0 \rightarrow y = \{1, -2 \text{ não convém}\} \\
+\left(\frac{2}{3}\right)^{x} = 1 \rightarrow x = 0 \\ \mathbb{S} = \{0\}
+\end{gather*}
+
+*** Função quadrática como expoente
+
+\begin{gather*}
+x^{(2x^{2} - 7x + 4)} = x \\
+0^{n} = 0 \text{ (verdadeiro, logo 0 é solução)} \\
+1^{n} = 1 \text{ (verdadeiro, logo 1 é solução)} \\
+2x^{2} - 7x + 4 = 1 \\
+ 2x - 7x + 3 = 0 \rightarrow (x > 0 \neq 1) \\
+S = \Big\{0, 1, 3, \frac{1}{2}\Big\}
+\end{gather*}
+
+** Inequações exponenciais
+*** Método da redução a uma base comum
+se $a > 1$, e tem-se $a ^ b > a ^ c \Leftrightarrow b > c$
+se $0 < a < 1$, e tem-se $a ^ b > a ^ c \Leftrightarrow b < c$ (invertemos a direção do sinal pois a função será decrescente)
+*** Exemplo 1
+$2 ^ x > 128 \Leftrightarrow 2 ^ x > 2 ^ 7 \Leftrightarrow S = \{x \in \mathbb{R} | x > 7\}$
+*** Exemplo 2
+\begin{align*}
+(\frac{3}{4}) ^ x \geqslant \frac{125}{27} \\
+(\frac{3}{5}) ^ x \geqslant (\frac{3}{5}) ^ {-3} \\
+\text{Como a base é 0 < a < 1, temos: } x \leqslant -3
+\end{align*}
+*** Exemplo 3
+\begin{align*}
+(\sqrt[3]{2}) ^ x < \sqrt[4]{8} \\
+2 ^ {\frac{x}{3}} < 2 ^ \frac{3}{4} \\
+\text{Como a base é maior que 1, temos: } \frac{x}{3} < \frac{3}{4} \Leftrightarrow x < \frac{9}{4}
+\end{align*}
+
+*** Exemplo 4
+\begin{align*}
+(\frac{1}{2 ^ x}) ^ {3x + 1} \cdot 4 ^ {1 + 2x - x ^ 2} \geqslant (\frac{1}{8}) ^ {x - 1} \\
+[(\frac{1}{2}) ^ x] ^ {3x + 1} \cdot [(\frac{1}{2}) ^ {-2}] ^ {1 + 2x - x ^ 2} \geqslant [(\frac{1}{2}) ^ 3] ^ {x - 1} \\
+(\frac{1}{2}) ^ {3x ^ 2 + x} \cdot (\frac{1}{2}) ^ {-2 -4x + 2x ^ 2} \geqslant (\frac{1}{2}) ^ {3x -3} \\
+(\frac{1}{2}) ^ {5x ^ 2 - 3x - 2} \geqslant (\frac{1}{2}) ^ {3x - 3} \\
+5x ^ 2 - 6x + 1 \leqslant 0 \Leftrightarrow \frac{1}{5} \leqslant x \leqslant 1
+\end{align*}
+*** Exemplo 5
+\begin{align*}
+7 ^ {\frac{x + 1}{x - 1}} \div 7 ^ \frac{x - 1}{x + 1} < \sqrt{343} \Leftrightarrow 7 ^ {\frac{x + 1}{x - 1}} \div 7 ^ \frac{x - 1}{x + 1} < 7 ^ \frac{3}{2} \\
+\frac{x + 1}{x - 1} - \frac{x - 1}{x + 1} < \frac{3}{2} \\
+\frac{x + 1}{x - 1} - \frac{x - 1}{x + 1} - \frac{3}{2} < 0 \\
+\frac{-3x ^ 2 + 8x + 3}{2(x + 1)(x - 1)} < 0
+\end{align*}
+
+[[./img/grafico-inequacao-exp.png]]
+* Logaritmos
+** Definição de logaritmo
+*** Fórmula da equação logarítmica:
+\begin{equation*}
+\log_b a = x \Leftrightarrow a^x =  b
+\end{equation*}
+
+Onde:
+a = base, deve ser maior que zero ($a > 0$) e diferente de um ($a \neq 1$);
+b = logaritmando, deve ser maior do que zero (b > 0);
+x = logaritmo.
+
+Um logaritmo sem base especificada tem sua base equivalente a 10.
+
+*** Propriedades:
+**** Quando o logaritmando é igual à base, o logaritmo sempre será igual a 1
+\begin{equation*}
+\log_a a = 1
+\end{equation*}
+**** Logaritmo de qualquer base, cujo logaritmando seja igual a 1, terá sempre o resultado igual a 0
+\begin{equation*}
+\log_a 1 = 0
+\end{equation*}
+**** Dois logaritmos com a mesma base são iguais quando os logaritmandos também são iguais
+\begin{equation*}
+\log_a b = \log_a c \Leftrightarrow b = c
+\end{equation*}
+**** Uma potência de base a e expoente igual a logaritmo de b na base a, é igual a b.
+\begin{equation*}
+a ^ {\log_a b} = b
+\end{equation*}
+**** Quando o logaritmando é composto por uma multiplicação de números, podemos separá-los numa soma de logaritmos com a mesma base para ambos.
+\begin{equation*}
+\log_a (m \times n) = \log_a m + \log_a n
+\end{equation*}
+**** Quando o logaritmando é composto por uma divisão de números, podemos separá-los numa subtração de logaritmos com a mesma base para ambos.
+\begin{equation*}
+\log_a ({\frac{m}{n}}) = \log_a m - \log_a n
+\end{equation*}
+**** A regra da potência: o logaritmo de uma potência simplifica-se multiplicando o expoente pelo logaritmo, mantendo a mesma base e o logaritmando.
+\begin{equation*}
+\log_a ({m ^ k}) = k \times log_a m
+\end{equation*}
+
+**** Mudança de base
+$\log_a b = \frac{\log_c b}{\log_c a}$
+**** Inversão de base por logaritmando
+$\log_a b = \frac{1}{\log_b a}$
+**** Expoente da base para fração
+$\log_{a ^ \beta} b = \frac{1}{\beta}\log_a b$
+** Logaritmo neperiano (natural)
+**** Também conhecido como logaritmo natural (ln), é um logaritmo com sua base sendo o número de euler (2,718281...). Consiste na função inversa da função exponencial.
+\begin{equation*}
+\log_e b
+\end{equation*}
+** Antilogaritmo
+\begin{equation*}
+\log_a b = c \Leftrightarrow antilog_a c = b \Leftrightarrow a ^ {c} = b
+\end{equation*}
+
+** Resoluções exemplo
+*** Exemplo 1
+$\log_2 \frac{1}{8} = x \Rightarrow 2 ^ x = \frac{1}{8} \Rightarrow 2 ^ x = 2 ^ {-3}$
+
+*** Exemplo 2
+$\log_8 4 = x \Rightarrow 8 ^ x = 4 \Rightarrow 2 ^ {3x} = 2 ^ 2 \Rightarrow 3x = 2 \Rightarrow x = \frac{2}{3}$
+*** Exemplo 3
+$\log_{0,25} 32 \Rightarrow (0,25) ^ x = 32 \Rightarrow (\frac{1}{4}) ^ x = 32 \Rightarrow 2 ^ {-2x} = 2 ^ 5 \Rightarrow -2x = 5 \Rightarrow x = -\frac{5}{2}$
+*** Exemplo 4 (uso da propriedade de canelamento base-base)
+$8 ^ {\log_2 5} = (2 ^ 3) ^ {\log_2 5} = (2 ^ {\log_2 5}) ^ 3 = 5 ^ 3$
+*** Exemplo 5 (uso da propriedade de cancelamento base-base)
+$3 ^ {1 + \log_3 4} = 3 ^ 1 \cdot 3 ^ {log_3 4} = 3 \cdot 4 = 12$
+*** Exemplo 6 (uso da propriedade de mudança de base)
+Sabendo que $\log_{30} 3 = a$ e $log_{30} 5 = b$, calcule $\log_{10} 2$
+$\log_{10} 2 = \frac{\log_{30} 2}{\log_{30} 10} = \frac{\log_{30} (\frac{30}{3 \cdot 5})}{\log_{30} \frac{30}{3}} = \frac{\log_{30} 30 - \log_{30} 3 - \log_{30} 5}{\log_{30} 30 - \log_{30} 3} = \frac{1 - a - b}{1 - a}$
+
+** Resoluções exemplo retirados de prova
+*** Exemplo 1
+\begin{align*}
+
+\log_4 (7x + 3) - \log_4 (2x - 8) = 2 \\
+\log_4 \frac{7x + 3}{2x - 8} = 2 \\
+\frac{7x + 3}{2x - 8} = 16 \\
+7x + 3 = 16(2x - 8) \\
+7x - 32x = -128 - 3 \\
+x = \frac{131}{25} \\
+
+\text{C.E. 1: } 7x + 3 > 0 \Leftrightarrow x > \frac{-3}{7} \\
+\text{C.E. 2: } 2x - 8 > 0 \Leftrightarrow x > 4
+\end{align*}
+
+*** Exemplo 2
+\begin{align*}
+\log_\frac{1}{3} [\log_3 (\log_4 x)] = 0 \\
+\log_3 (\log_4 x) = (\frac{1}{3}) ^ 0 \\
+\log_4 x = 3 ^ 1 \\
+x = 4 ^ 3 \\
+x = 64 \\
+\text{C.E.: } x > 0
+\end{align*}
+*** Exemplo 3
+\begin{align*}
+y = \log_2 {x ^ 2 - 7x + 10} \\
+x ^ 2 - 7x + 10 > 0 \\
+\Delta = (-7) ^ 2 - 4 \cdot 1 \cdot 10 \\
+\Delta = 9 \\
+x = \frac{7 \pm 3}{2} \Leftrightarrow x_1 = 5, x_2 = 2 \\
+S = \{x \in \mathbb{R} | x < 2, x > 5\}
+\end{align*}
+[[./img/log-ex3-graph.png]]
+*** Exemplo 4
+\begin{align*}
+2 ^ {-3 + \log_2 9} = 2 ^ {-3} \cdot 2 ^ {\log_2 9} = \frac{1}{8} \cdot 9 = \frac{9}{8}
+\end{align*}
+*** Exemplo 5
+\begin{align*}
+7 ^ {-2 - \log_7 4} = 7 ^ {-2} \cdot 7 ^ {- \log_7 4} \Rightarrow \frac{1}{7 ^ 2} \cdot \frac{1}{7 ^ {\log_7 4}} \Rightarrow \frac{1}{49} \cdot \frac{1}{4} = \frac{1}{196}
+\end{align*}
+*** Exemplo 6
+a = $\log_{20} 2$ e b = $\log_{20} 3$
+\begin{align*}
+\log_6 5 = \frac{\log_{20} \frac{20}{4}}{\log_{20} {2 \cdot 3}} = \frac{\log_{20} 20 - \log_{20} 4}{\log_{20} 2 + \log_{20} 3} = \frac{1 - \log_{20} 2 ^ 2}{a + b} = \frac{1 - 2\log_{20} 2}{a + b} = \frac{1 - 2a}{a + b}
+\end{align*}
+*** Exemplo 7
+a = $\log_{20} 2$ e b = $\log_{20} 3$
+\begin{align*}
+\log 300 = \frac{\log_{20} 300}{\log_{20} 10} = \frac{\log_{20} 3 + \log_{20} 10 ^ 2}{\log_{20} \frac{20}{2}} = \frac{b + 2 \cdot \log_{20} \frac{20}{2}}{\log_{20} 20 - \log_{20} 2} \\
+\frac{b + 2(1 - a)}{1 - a} = \frac{b + 2 - 2a}{1 - a}
+\end{align*}
+
+* Probabilidade
+A teoria da probabilidade permite que se calcule a chance de ocorrência de um número em um experimento aleatório.
+** Espaço amostral
+É o conjunto de todos os resultados possíveis de um experimento aleatório. A letra que representa o espaço amostral é S.
+** Conceito
+Se em um fenômeno aleatório as possibilidades são igualmente prováveis, então a probabilidade de ocorrer um evento A é:
+$P(A) = \frac{\text{número de casos favoráveis}}{\text{número de casos possíveis}}$
+Por, exemplo, no lançamento de um dado, um número par pode ocorrer de 3 maneiras diferentes dentre 6 igualmente prováveis, portanto, $P = \frac{3}{6} = \frac{1}{2} = 50\%$.
+
+Dizemos que um espaço amostral S (finito) é equiprovável quando seus eventos elementares têm probabilidades iguais de ocorrência. Num espaço amostral equiprovável S (finito), a probabilidade de ocorrência de um evento A é sempre:
+
+$P(A) = \frac{\text{número de elementos de A}}{\text{número de elementos de S}} = \frac{n(A)}{n(S)}$
+
+*** Propriedades
+- Se A e A' são eventos complementares, então $P(A) + P(A') = 1$
+- $0 \leqslant P(S) \leqslant 1$
+
+* Análise Combinatória
+
+A análise combinatória é a área da Matemática responsável pela análise das possibilidades e das combinações. É um conjunto de procedimentos que possibilita a construção de grupos, formados por um número finito de elementos de um conjunto sob certas circunstâncias.
+
+Os três principais tipos de agrupamentos são *arranjos*, *permutações* e *combinações*. Cada um deles pode ser simples ou com elementos repetidos. Neste tópico, estudaremos os agrupamentos simples.
+
+** Fatorial
+O *fatorial* de um número natural n, representado por n!, é o produto de todos os inteiros positivos menores ou iguais a n.
+$n! = n \cdot (n - 1) \cdot (n - 2) \cdot ... \cdot 3 \cdot 2 \cdot 1$
+
+*** Definições especiais
+$0! = 1$
+$1! = 1$
+
+*** Exemplos
+**** Exemplo 1
+$\frac{100! + 101!}{99!} = \frac{100 \cdot 99! + 101 \cdot 100 \cdot 99!}{99!} = 100 + 101 \cdot 100 = 100 + 10100 = 10200$
+**** Exemplo 2
+$\frac{(x + 1)!}{(x - 1)!} = 56 \Rightarrow \frac{(x + 1)(x)(x - 1)!}{(x - 1)!} = 56 \Rightarrow (x + 1)(x) = 56 \Rightarrow x ^ 2 + x - 56 = 0 \Rightarrow x_1 = 7, x_2 = -8 \\ x = 7\text{. Descartamos o -8, pois não existe fatorial de número negativo.}$
+**** Exemplo 3
+Quatro times de futebol disputam o torneio dos campeões do mundo. Quantas possibilidades existem para os três primeiros lugares?
+
+R: Existem 4 possibilidades para o primeiro lugar, sobrando 3 possibilidades para o segundo lugar e 2 para o terceiro. $4 \cdot 3 \cdot 2 = 24$ possibilidades.
+** Arranjo simples
+Arranjo simples de n elementos tomados p a p, onde n>=1 e p é um número natural, é qualquer ordenação de p elementos dentre os n elementos, em que cada maneira de tomar os elementos se diferenciam pela ordem e natureza dos elementos. A fórmula para cálculo de arranjo simples é dada por: $A_{n,p} = \frac{n!}{(n - p)!}$
+
+*** Definição
+Com o conjunto $A = \{5, 6, 7, 8\}, quantos agrupamentos com 3 elementos distintos conseguimos?
+
+(5,6,7) (5,6,8) (5,7,8) (6,7,8) (5,7,6) (5,8,6) (5,8,7)
+
+(6,8,7) (6,5,7) (6,5,8) (6,7,5) (6,8,5)
+
+(7,5,8) (7,6,8) (7,8,5) (7,8,6) (7,6,5)
+
+(8,5,6) (8,5,7) (8,7,6) (7,6,5) (8,6,5) (8,7,5) (8,6,7)
+
+Observe que as sequências formadas com 3 elementos são diferentes entre si, em alguns casos o conjunto possui os mesmo termos que outro conjunto, o que muda é a posição dos elementos. Como é o caso de (5,6,7) e (5,7,6); observe que os elementos 6 e 7 trocaram de posição.
+
+Podemos representar esse arranjo simples da seguinte forma: $A_{4,3} = 24$
+** Permutação simples
+É um caso particular de arranjo simples. É o tipo de agrupamento ordenado onde entram todos os elementos.
+
+$P_n = n!$
+
+*** Exemplo 1
+Quantos números de 5 algarismos podemos formar com 12358?
+$P_5 = 5! = 120$
+*** Exemplo 2
+Quantos anagramas da palavra EDITORA começam com a letra A?
+
+Para a primeira letra existe apenas uma possibilidade, enquanto as outras 6 letras sobram, formando $1 \cdot P_6 = 6! = 720 \text{ anagramas}$
+
+Quantos anagramas da palavra EDITORA começam com a letra A e terminam com E?
+
+Para a primeira e ultima letra existe apenas uma possibilidade, enquanto as outras 5 letras sobram, formando $1 \cdot 1 \cdot P_5 = 5! = 120 \text{ anagramas}$
+
+*** Exemplo 3
+Calcule quantas maneiras você pode dispor de 4 brigadeiros e 4 beijinhos em uma fila, a fim de que não fiquem juntos dois brigadeiros ou dois beijinhos seguidos.
+
+Podemos começar contando com o beijinho ou com o brigadeiro.
+
+Assim, temos $2 \cdot P_4 ^ 2 = 1152$ maneiras.
+** Combinação simples
+Combinação simples é um tipo de agrupamento onde os arranjos são diferenciados pela natureza de seus elementos.
+
+Considerando o exemplo acima veja todas as possibilidades de triângulos formados com os quatro pontos não colineares:
+
+ABC, BAC, CAB, DAB
+ABD, BAD, CAD, DAC
+ACB, BCA, CBA, DBA
+ACD, BCD, CBD, DBC
+ADB, BDA, CDA, DCA
+ADC, BDC, CDB, DCB
+
+Isso é definido pela equação $C_{n,p} = \frac{n!}{p!(n - p)!}$, onde n é a quantidade de elementos de um conjunto e p é um número natural menor ou igual a n, que representa a quantidade de elementos que irão formar os agrupamentos.
+
+Assim, com o exemplo acima, temos $C_{4,3}$
 
 
+* Porcentagem
+** Definição
+*** Porcentagem é uma razão cujo denominador é 100 e o numerador é um número $n \in \mathbb{R}$ e pode ser expressa pelo simbolo de "%"
+
+\begin{equation*}
+\frac{n}{100}
+\end{equation*}
+
+*** A porcentagem de um número $x$ é dada pela multiplicação dessa razão centésima
+
+\begin{align*}
+\frac{n}{100} \cdot x  \text{ ou } \frac{n\cdot x}{100}
+\end{align*}
+
+*** A porcentagem $n$ de um número $x$ é proporcional a porcentagem $m$ do mesmo número $x$. Isso significa que para um mesmo número, os valores de porcentagem são proporcionais e podem ser descobertos por regra de três
+
+**** Exemplo 1
+
+***** Quanto é 40% de 150 (por regra de três)
+
+\begin{gather*}
+\frac{150}{100} = \frac{x}{40} \\
+100x = 150\cdot 40 \\
+x = 15\cdot 4 \\
+x = 60
+\end{gather*}
+
+***** Quanto é 40% de 150 (por multiplicação)
+
+\begin{gather*}
+x = \frac{150\cdot 40}{100} \\
+x = 15\cdot 4 \\
+x = 60
+\end{gather*}
+
+*** Se subtrairmos 40% do valor de $x$ obtendo $y$, e depois somar com 40 de $y$, não obteremos o valor $x$ de volta
+
+**** Exemplo 1
+
+***** Se descontarmos 60% de 100, quanto precisamos adicionar em porcentagem para voltarmos ao valor de 100?
+
+\begin{gather*}
+\frac{100\cdot 60}{100} = 60 \\
+60 + \frac{x\cdot 60}{100} = 100 \\
+\frac{x\cdot 60}{100} = 40 \\
+60x = 4000 \Leftrightarrow x \approx 66.6
+\end{gather*}
+
+Ou seja, precisamos adicionar *66%* do valor de 60 para voltarmos a 100, e não 40% como imaginado
 * Matemática financeira
 ** Média aritmética comum:
-\begin{equation}
+\begin{equation*}
 M_{c} = {{m_{1} + m_{2} + m_{3} + ... + m_{n}}\over{n}}
-\end{equation}
+\end{equation*}
 ** Média aritmética ponderada:
-\begin{equation}
-M_{p} = {{(x_{1}\times{p_{1}})} + {(x_{2}\times{p_{1}})} + {(x_{3}\times{p_{3}})} + ... + {(x_{n}\times{p_{n}})}\over{p_{1} + p_{2} + p_{3} + ... + p_{n}}}
-\end{equation}
+\begin{equation*}
+M_{p} = {{(x_{1}\times{p_{1}})} + {(x_{2}\times{p_{2}})} + {(x_{3}\times{p_{3}})} + ... + {(x_{n}\times{p_{n}})}\over{p_{1} + p_{2} + p_{3} + ... + p_{n}}}
+\end{equation*}
 
 ** Moda:
 *** Moda é o elemento que aparece mais vezes dentro de um conjunto.
@@ -55,42 +1640,71 @@ M_{p} = {{(x_{1}\times{p_{1}})} + {(x_{2}\times{p_{1}})} + {(x_{3}\times{p_{3}})
 **** Exemplo com uma única mediana: 1,50; 1,54; 1,55; 1,60; 1,65; 1,67; 1,69; 1,75; 1,70. Md = 1,65 m
 **** Exemplo com duas medianas: (32, 27, 15, 44, 15, 32). Ao ordenar, (15, 15, 27, 32, 32, 44). Então, retiramos a média aritmética de 27 e 32, que é 29,5.
 
+** Juros Simples
 
-* Grandezas proporcionais
+*** Juros é uma remuneração pelo emprestimo de dinheiro. A pessoa que empresta receberá uma quantia a mais do que emprestou
+
+\begin{equation*}
+\text{Juros } = \text{ Capital } \times \text{ Taxa } \times \text{ Tempo } \text{ou } J = C \cdot i\cdot t
+\end{equation*}
+
+**** A taxa deverá ser em forma decimal (Taxa dividido por 100). O tempo deverá ser o mesmo para taxa, por exemplo "3% ao mês/ano"
+
+*** Montante é o resultado final, ou seja, a quantia inicial emprestada somada com juros
+
+\begin{equation*}
+M = C + J
+\end{equation*}
 
 
-* Logaritmos e funções exponenciais
+** Juros compostos
+Os Juros Compostos são calculados levando em conta a atualização do capital, ou seja, o juro incide não apenas no valor inicial, mas também sobre os juros acumulados (juros sobre juros).
+
+$M = C (1+i) ^ t$
+
+Onde,
+
+M: montante
+C: capital
+i: taxa fixa
+t: período de tempo
+
+Se pretendemos calcular somente os juros, aplicamos a seguinte fórmula:
+$J = M - C$
+
+*** Exemplo
+Se um capital de R$500 é aplicado durante 4 meses no sistema de juros compostos sob uma taxa mensal fixa que produz um montante de R$800, qual será o valor da taxa mensal de juros?
+
+$800 = 500(1 + i) ^ 4$
+$\frac{800}{500} = (1 + i) ^ 4$
+$\sqrt[4]{\frac{800}{500}} = 1 + i$
+$1,125 - 1 = i$
+$i = 0,125$
+Taxa mensal: $12,5\% (0,125 * 100)$
 
 
-* Trigonometria
+* Imaginários e complexos
+$x = n \% 4$
+$i^{x}$
 
+$x = 0 \rightarrow 1$
+$x = 1 \rightarrow i$
+$x = 2 \rightarrow -1$
+$x = 3 \rightarrow -i$
 
-* Porcentagem
+$a + bi$
 
-
-* Troncos
-
-* Imaginarios e complexos
-x = n % 4
-i ^ x
-
-x = 0 -> 1
-x = 1 -> i
-x = 2 -> -1
-x = 3 -> -i
-
-a + bi
 ** Adição:
-(a + bi) + (c + di) = a + c + (b + d)i
+$(a + bi) + (c + di) = a + c + (b + d)i$
 
 ** Multiplicação:
-distributiva
+distributiva e associativa
 
 ** Exponenciação:
 *** Exemplo:
-(1 + i) ^ 12
-[(1 + i)²] ^ 6
-(1 + 2i + i²) ^ 6
-(2i) ^ 6
-2 ^ 6 * i ^ 6
-64 * (-1) = -64
+$(1 + i)^{12}$
+$[(1 + i)^{2}]^{6}$
+$(1 + 2i + i^{2})^{6}$
+$(2i)^{6}$
+$2^{6}\cdot i^{6}$
+$64 \cdot (-1) = -64$

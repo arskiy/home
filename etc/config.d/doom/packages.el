@@ -10,3 +10,6 @@
 (package! ht)
 (package! dash)
 (package! tide :disable t)
+(package! gdscript-mode
+          :recipe (:host github
+                   :repo "GDQuest/emacs-gdscript-mode"))

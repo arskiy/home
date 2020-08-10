@@ -49,6 +49,4 @@ alias tping="ping 8.8.8.8"
 
 alias git=hub
 
-alias unzip="7za x"
-
 eval "$(hub alias -s)"

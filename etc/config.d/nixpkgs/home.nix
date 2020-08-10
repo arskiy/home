@@ -2,15 +2,25 @@
 
 with pkgs;
 
+let my-python-packages = python-packages: with python-packages; [
+  pandas
+  requests
+  matplotlib
+  nltk
+]; 
+python-with-my-packages = python3.withPackages my-python-packages;
+in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  nixpkgs.config.allowUnfree = true;
 
   programs.git = {
     enable = true;
     userName = "Alice Micheloni";
     userEmail = "alicemicheloni@tutanota.com";
   };
+
 
   home.packages = [
     # xorg
@@ -19,14 +29,13 @@ with pkgs;
     xorg.libX11
 
     # games
-    steam
-    wineWowPackages.stable
+    #steam
+    wineWowPackages.staging
     winetricks
     xpad
 
     # gui misc
     kolourpaint
-    discord
     gimp
     sxiv
     qalculate-gtk
@@ -43,7 +52,6 @@ with pkgs;
     xclip
     xdotool
     jq
-    p7zip
     toilet
     xrectsel
     unrar
@@ -67,7 +75,7 @@ with pkgs;
     # documents
     libreoffice
     zathura
-    texlive.combined.scheme-medium
+    texlive.combined.scheme-full
 
     # eye candy
     rofi
